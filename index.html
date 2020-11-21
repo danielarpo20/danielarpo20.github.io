@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gif Project</title>
-    <link rel="stylesheet" href="./styles/styles.scss" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -16,7 +17,85 @@
     <script src="./scripts"></script>
   </head>
   <body>
-    <nav></nav>
+    <div class="line"></div>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <img
+          src="./assetes/logo-mobile.svg"
+          alt="logo"
+          class="navbar-logo-mobile"
+        />
+        <!-- <img src="./assetes/logo-mobile-modo-noct.svg" alt="logo" class="navbar-logo-mobile-noc"> -->
+        <!-- <img src="./assetes/logo-desktop.svg" alt="logo" class="navbar-logo-desktop"> -->
+        <!-- <img src="./assetes/Logo-modo-noc.svg" alt="logo" class="navbar-logo-desktop-noc"> -->
+      </div>
+      <ul class="navbar-items">
+        <li class="navbar-item">modo nocturno</li>
+        <li class="navbar-item">favoritos</li>
+        <li class="navbar-item">mis gifos</li>
+      </ul>
+    </nav>
+    <main>
+      <section class="principal">
+        <h1 class="principal-title">
+          Inspírate, busca, guarda, y crea los mejores
+          <span class="principal-title-GIFOS">GIFOS</span>
+        </h1>
+        <img
+          src="./assetes/ilustra_header.svg"
+          alt="ilustration-header"
+          class="principal-img"
+        />
+        <div class="searchBar">
+          <!-- icons -->
+        </div>
+        <h5 class="principal-subTitle">Trending:</h5>
+        <p class="principal-paragraph">
+          Reactions, Entertainment, Sports, Stickers, Artists
+        </p>
+      </section>
+      <section class="trending">
+        <h1 class="trending-title">Trending GIFOS</h1>
+        <p class="trending-paragraph">
+          Mira los últimos GIFOS de nuestra comunidad.
+        </p>
+        <div class="trending-gifs"></div>
+      </section>
+      <section class="searching">
+        <h1 class="searching-title">--Mascotas--</h1>
+        <div class="searching-container"></div>
+        <button class="button"></button>
+      </section>
+      <section class="favorites">
+        <img
+          src="./assetes/icon-favoritos.svg"
+          alt="favorites"
+          class="favorites-img"
+        />
+        <h1 class="favorites-title">Favoritos</h1>
+        <div class="favorites-container"></div>
+        <button class="button"></button>
+      </section>
+      <section class="myGifs">
+        <img
+          src="./assetes/icon-mis-gifos.svg"
+          alt="favorites"
+          class="myGifs-img"
+        />
+        <h1 class="myGifs-title">Mis GIFOS</h1>
+        <div class="myGifs-container"></div>
+        <button class="button"></button>
+      </section>
+      <section class="createGIF">
+        <img src="./assetes/camara.svg" alt="camara">
+        <img src="./assetes/camara-modo-noc.svg" alt="camara-noc">
+        <img src="./assetes/element-luz-camara.svg" alt="luz-camara">
+        <img src="./assetes/element_cinta2.svg" alt="luz-camara">
+        <img src="./assetes/element_cinta1-modo-noc.svg" alt="luz-camara">
+        <img src="./assetes/" alt="luz-camara">
+        <button class="button"></button>
+      </section>
+    </main>
     <footer class="footer">
       <h6 class="footer-title">Compartir en:</h6>
       <div class="footer-icons">
@@ -25,24 +104,25 @@
           rel="noreferrer noopener"
           target="_blank"
         >
-          <i class="fab fa-facebook footer-icon"></i>
+          <i class="fab fa-facebook footer-icons-icon"></i>
         </a>
         <a
           href="https://twitter.com/spotifycares?lang=en"
           rel="noreferrer noopener"
           target="_blank"
         >
-          <i class="fab fa-twitter footer-icon"></i>
+          <i class="fab fa-twitter footer-icons-icon"></i>
         </a>
         <a
           href="https://www.instagram.com/spotify/?hl=en"
           rel="noreferrer noopener"
           target="_blank"
         >
-          <i class="fab fa-instagram footer-icon"></i>
+          <i class="fab fa-instagram footer-icons-icon"></i>
         </a>
       </div>
       <h6 class="footer-pie">© GIFOS 2020 All Rights Reserved.</h6>
     </footer>
+    <div class="line"></div>
   </body>
 </html>

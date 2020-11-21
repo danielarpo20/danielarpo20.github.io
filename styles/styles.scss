@@ -2,10 +2,21 @@
 @import './generals';
 
 // Components
+@import './bottom';
+@import './searchBox';
 
 
 // Sections
+@import './exterior';
 @import './navbar';
+@import './principal';
+@import './searching';
+@import './searchingResults';
+@import './trendingGIFOS';
 @import './footer';
+@import './favorites';
+@import './myGIFOS';
+@import './createGIF';
 
 // Mixins
+@import './mixins';

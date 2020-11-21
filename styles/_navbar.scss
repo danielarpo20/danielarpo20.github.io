@@ -1,0 +1,34 @@
+.navbar {
+    background-color: $BackWhite;
+    
+
+    &-logo {
+
+        &-mobile {
+            &-noc {}
+        }
+
+        &-desktop {
+            &-noc {}
+        }
+    }
+
+    &-items {
+        &-item {}
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+
+        &-items {
+            display: flex;
+            list-style: none;
+            
+            &-item {
+            }
+        }
+    }
+}

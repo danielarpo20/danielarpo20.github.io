@@ -1,11 +1,22 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AIAA,AAAA,KAAK,CAAC;EACF,MAAM,EAAE,GAAG;EACX,gBAAgB,EHQX,OAAO;CGPf;;ACHD,AAAA,OAAO,CAAC;EACJ,gBAAgB,EJAR,OAAO;CIiBlB;;AAED,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,MAAM;EAChC,AAAA,OAAO,CAAC;IACJ,OAAO,EAAE,IAAI;IACb,eAAe,EAAE,aAAa;GASjC;EAPI,AAAD,aAAO,CAAC;IACJ,OAAO,EAAE,IAAI;IACb,UAAU,EAAE,IAAI;GAInB;;;AI/BT,AAAA,SAAS,CAAC;EACN,gBAAgB,ERCJ,OAAO;EQAnB,OAAO,EAAE,EAAE;CAOd",
     "sources": [
         "styles.scss",
         "_generals.scss",
+        "_bottom.scss",
+        "_searchBox.scss",
+        "_exterior.scss",
         "_navbar.scss",
-        "_footer.scss"
+        "_principal.scss",
+        "_searching.scss",
+        "_searchingResults.scss",
+        "_trendingGIFOS.scss",
+        "_footer.scss",
+        "_favorites.scss",
+        "_myGIFOS.scss",
+        "_createGIF.scss",
+        "_mixins.scss"
     ],
     "names": [],
     "file": "styles.css"
