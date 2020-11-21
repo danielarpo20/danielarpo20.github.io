@@ -12,29 +12,56 @@
     />
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
     />
-    <script src="./scripts"></script>
+    <script src="./scripts/script.js"></script>
   </head>
   <body>
-    <div class="line"></div>
-    <nav class="navbar">
-      <div class="navbar-logo">
+    <header class="header">
+      <div class="header-line"></div>
+
+      <div class="header-container">
         <img
           src="./assetes/logo-mobile.svg"
-          alt="logo"
-          class="navbar-logo-mobile"
+          alt="logo-mobile"
+          class="header-container-logo-mobile"
         />
-        <!-- <img src="./assetes/logo-mobile-modo-noct.svg" alt="logo" class="navbar-logo-mobile-noc"> -->
-        <!-- <img src="./assetes/logo-desktop.svg" alt="logo" class="navbar-logo-desktop"> -->
-        <!-- <img src="./assetes/Logo-modo-noc.svg" alt="logo" class="navbar-logo-desktop-noc"> -->
+        <img
+          src="./assetes/logo-mobile-modo-noct.svg"
+          alt="logo-mobile-night"
+          class="header-container-logo-mobile-noc"
+        />
+        <img
+          src="./assetes/logo-desktop.svg"
+          alt="logo-desktop"
+          class="header-container-logo-desktop"
+        />
+        <img
+          src="./assetes/Logo-modo-noc.svg"
+          alt="logo-desktop-night"
+          class="header-container-logo-desktop-noc"
+        />
+        <i class="fas fa-bars header-container-icon"></i>
+        <i class="fal fa-times header-container-icon" style="display: none"></i>
       </div>
-      <ul class="navbar-items">
-        <li class="navbar-item">modo nocturno</li>
-        <li class="navbar-item">favoritos</li>
-        <li class="navbar-item">mis gifos</li>
-      </ul>
-    </nav>
+
+      <nav class="navbar">
+        <ul class="navbar-items">
+          <li class="navbar-items-item">
+            <a href="#" class="navbar-items-item-link">modo nocturno</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#favorites" class="navbar-items-item-link">favoritos</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#mygifos" class="navbar-items-item-link">mis <span class="navbar-items-item-link-gifos">gifos</span</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
     <main>
       <section class="principal">
         <h1 class="principal-title">
@@ -66,7 +93,7 @@
         <div class="searching-container"></div>
         <button class="button"></button>
       </section>
-      <section class="favorites">
+      <section class="favorites" id='favorites'>
         <img
           src="./assetes/icon-favoritos.svg"
           alt="favorites"
@@ -76,7 +103,7 @@
         <div class="favorites-container"></div>
         <button class="button"></button>
       </section>
-      <section class="myGifs">
+      <section class="myGifs" id='mygifos'>
         <img
           src="./assetes/icon-mis-gifos.svg"
           alt="favorites"
@@ -87,12 +114,12 @@
         <button class="button"></button>
       </section>
       <section class="createGIF">
-        <img src="./assetes/camara.svg" alt="camara">
-        <img src="./assetes/camara-modo-noc.svg" alt="camara-noc">
-        <img src="./assetes/element-luz-camara.svg" alt="luz-camara">
-        <img src="./assetes/element_cinta2.svg" alt="luz-camara">
-        <img src="./assetes/element_cinta1-modo-noc.svg" alt="luz-camara">
-        <img src="./assetes/" alt="luz-camara">
+        <img src="./assetes/camara.svg" alt="camara" />
+        <img src="./assetes/camara-modo-noc.svg" alt="camara-noc" />
+        <img src="./assetes/element-luz-camara.svg" alt="luz-camara" />
+        <img src="./assetes/element_cinta2.svg" alt="luz-camara" />
+        <img src="./assetes/element_cinta1-modo-noc.svg" alt="luz-camara" />
+        <img src="./assetes/" alt="luz-camara" />
         <button class="button"></button>
       </section>
     </main>
@@ -122,7 +149,7 @@
         </a>
       </div>
       <h6 class="footer-pie">© GIFOS 2020 All Rights Reserved.</h6>
+      <!-- <div class="line"></div> -->
     </footer>
-    <div class="line"></div>
   </body>
 </html>
