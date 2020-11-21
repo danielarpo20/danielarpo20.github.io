@@ -131,8 +131,30 @@
   border-radius: 27px;
 }
 
-.principal-searchBar-iconSearch {
+.principal-searchBar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: inherit;
+}
+
+.principal-searchBar-container-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #6B7989;
+  text-align: left;
+  margin: 0;
+}
+
+.principal-searchBar-container-icon {
   color: #572EE5;
+  font-size: 24px;
 }
 
 .principal-subTitle {

@@ -38,16 +38,25 @@
         border-radius: $size27;
         border-radius: $size27;
 
-        &-text {
-            font-family: $Roboto;
-            font-size: $size16;
-            color: $BackBlack;
-            text-align: left;
-        }
-
-        &-iconSearch {
-            color: $purple;
-            font-size: $size24;
+        &-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: inherit;
+            
+            &-text {
+                font-family: $Roboto;
+                font-weight: 400;
+                font-size: $size16;
+                color: $gray;
+                text-align: left;
+                margin: 0;
+            }
+    
+            &-icon {
+                color: $purple;
+                font-size: $size24;
+            }
         }
     }
 
