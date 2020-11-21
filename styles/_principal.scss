@@ -1,16 +1,74 @@
 .principal {
-    display: none;
+    // display: none;
+    max-width: $maxWdthMobile;
+    margin: auto;
+    padding: 2em 0;
 
     &-title {
+        font-family: $Montserrat;
+        font-weight: 700;
+        font-size: $size25;
+        color: $purple;
+        text-align: center;
+        line-height: $size33;
+        width: 80%;
+        margin: auto;
+        padding-bottom: 1.5em;
 
-        &-GIFOS {}
+        &-GIFOS {
+            color: $greenLight;
+        }
     }
 
-    &-img{}
+    &-container {
+        display: flex;
+        justify-content: center;
 
-    &-searchBar{}
+        &-img {
+            max-width: 80%;
+        }
+    }
 
-    &-subTitle{}
+    &-searchBar {
+        height: 50px;
+        width: 100%;
+        margin: auto;
+        background: $BackWhite;
+        border: 1px solid $purple;
+        border-radius: $size27;
+        border-radius: $size27;
 
-    &-paragraph {}
+        &-text {
+            font-family: $Roboto;
+            font-size: $size16;
+            color: $BackBlack;
+            text-align: left;
+        }
+
+        &-iconSearch {
+            color: $purple;
+            font-size: $size24;
+        }
+    }
+
+    &-subTitle {
+        font-family: $Montserrat;
+        font-weight: 700;
+        font-size: $size16;
+        color: $purple;
+        text-align: center;
+        line-height: $size25;
+        margin: 0;
+        padding-top: 2em;
+    }
+
+    &-paragraph {
+        font-family: $Montserrat;
+        font-size: $size14;
+        color: $purple;
+        text-align: center;
+        line-height: $size25;
+        width: 60%;
+        margin: auto;
+    }
 }

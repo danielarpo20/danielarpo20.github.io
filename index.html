@@ -21,7 +21,6 @@
   <body>
     <header class="header">
       <div class="header-line"></div>
-
       <div class="header-container">
         <img
           src="./assetes/logo-mobile.svg"
@@ -46,11 +45,13 @@
         <i class="fas fa-bars header-container-icon"></i>
         <i class="fal fa-times header-container-icon" style="display: none"></i>
       </div>
-
       <nav class="navbar">
         <ul class="navbar-items">
           <li class="navbar-items-item">
             <a href="#" class="navbar-items-item-link">modo nocturno</a>
+          </li>
+          <li class="navbar-items-item">
+            <a href="#" class="navbar-items-item-link-day">modo diurno</a>
           </li>
           <li class="navbar-item">
             <a href="#favorites" class="navbar-items-item-link">favoritos</a>
@@ -68,19 +69,24 @@
           Inspírate, busca, guarda, y crea los mejores
           <span class="principal-title-GIFOS">GIFOS</span>
         </h1>
-        <img
-          src="./assetes/ilustra_header.svg"
-          alt="ilustration-header"
-          class="principal-img"
-        />
-        <div class="searchBar">
-          <!-- icons -->
+        <div class="principal-container">
+          <img
+            src="./assetes/ilustra_header.svg"
+            alt="ilustration-header"
+            class="principal-container-img"
+          />
+        </div>
+        <div class="principal-searchBar">
+          <!-- <h6 class="principal-searchBar-text">Busca GIFOS y más</h6> -->
+          <!-- <i class="fal fa-search principal-searchBar-iconSearch"></i> -->
+          <!-- <i class="fal fa-times"></i> -->
         </div>
         <h5 class="principal-subTitle">Trending:</h5>
         <p class="principal-paragraph">
           Reactions, Entertainment, Sports, Stickers, Artists
         </p>
       </section>
+
       <section class="trending">
         <h1 class="trending-title">Trending GIFOS</h1>
         <p class="trending-paragraph">
