@@ -184,8 +184,28 @@
 
 .trending {
   background-color: #F3F5F8;
-  padding: 5%;
-  display: none;
+  padding: 2em 0 4em;
+}
+
+.trending-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 30px;
+  margin: 0;
+  padding-bottom: .5em;
+}
+
+.trending-paragraph {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  line-height: 22px;
+  width: 45%;
+  margin: auto;
 }
 
 .footer {

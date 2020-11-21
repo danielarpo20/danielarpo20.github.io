@@ -1,11 +1,27 @@
 .trending {
     background-color: $BackWhiteDark;
-    padding: 5%;
-    display: none;
+    padding: 2em 0 4em;
 
-    &-title {}
+    &-title {
+        font-family: $Montserrat;
+        font-weight: 700;
+        font-size: $size20;
+        color: $purple;
+        text-align: center;
+        line-height: $size30;
+        margin: 0;
+        padding-bottom: .5em;
+    }
 
-    &-paragraph {}
+    &-paragraph {
+        font-family: $Roboto;
+        font-size: $size16;
+        color: $BackBlack;
+        text-align: center;
+        line-height: $size22;
+        width: 45%;
+        margin: auto;
+    }
 
     &-gifs {}
 }
