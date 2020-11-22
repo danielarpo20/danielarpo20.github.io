@@ -1,9 +1,22 @@
 .myGifs {
+    text-align: center;
+    padding-bottom: 4em;
     display: none;
 
     &-img {}
 
-    &-title {}
+    &-title {
+        font-family: $Montserrat;
+        font-weight: 700;
+        font-size: $size20;
+        color: $purple;
+        text-align: center;
+        line-height: $size30;
+        text-transform: capitalize;
+        margin: 0;
+    }
 
-    &-container {}
+    &-container {
+        padding: 2em 0 3em;
+    }
 }

@@ -283,10 +283,10 @@
 .favorites-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 20px;
   color: #572EE5;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
   text-transform: capitalize;
   margin: 0;
 }
@@ -296,7 +296,24 @@
 }
 
 .myGifs {
+  text-align: center;
+  padding-bottom: 4em;
   display: none;
+}
+
+.myGifs-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 30px;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.myGifs-container {
+  padding: 2em 0 3em;
 }
 
 .createGIF {
