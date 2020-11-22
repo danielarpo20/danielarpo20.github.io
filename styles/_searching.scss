@@ -1,6 +1,8 @@
 .searching {
     text-align: center;
     padding: 2em 0 5em;
+    display: none;
+
     &-title {
         font-family: $Montserrat;
         font-weight: 700;

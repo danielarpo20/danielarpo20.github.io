@@ -193,6 +193,7 @@
 .searching {
   text-align: center;
   padding: 2em 0 5em;
+  display: none;
 }
 
 .searching-title {
@@ -274,7 +275,24 @@
 }
 
 .favorites {
+  text-align: center;
+  padding-bottom: 4em;
   display: none;
+}
+
+.favorites-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 40px;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.favorites-container {
+  padding: 2em 0 3em;
 }
 
 .myGifs {
