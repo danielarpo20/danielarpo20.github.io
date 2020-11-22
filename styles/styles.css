@@ -19,7 +19,7 @@
   background-color: #572EE5;
 }
 
-.header-container {
+.header-imgContainer {
   max-width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,19 +34,25 @@
   padding-top: 1.5em;
 }
 
-.header-container-logo-mobile-noc {
+.header-imgContainer-logo-mobile-noc {
   display: none;
 }
 
-.header-container-logo-desktop {
+.header-imgContainer-logo-desktop {
   display: none;
 }
 
-.header-container-logo-desktop-noc {
+.header-imgContainer-logo-desktop-noc {
   display: none;
 }
 
-.header-container-icon {
+.header-imgContainer-icon {
+  font-size: 24px;
+  color: #572EE5;
+}
+
+.header-imgContainer-iconX {
+  display: none;
   font-size: 24px;
   color: #572EE5;
 }
@@ -58,7 +64,6 @@
   margin: 1em 0 0;
   background: rgba(87, 46, 229, 0.9);
   height: 90vh;
-  color: #FFFFFF;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 15px;
@@ -75,14 +80,69 @@
 .navbar-items-item-link {
   text-decoration: none;
   color: #FFFFFF;
+  display: block;
 }
 
 .navbar-items-item-link-gifos {
   text-transform: uppercase;
 }
 
-.navbar-items-item-link-day {
-  display: none;
+@media screen and (min-width: 1350px) {
+  .header {
+    max-width: 80%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 1em;
+  }
+  .header-imgContainer {
+    margin: 0;
+    padding: 0;
+  }
+  .header-imgContainer-logo-mobile {
+    display: none;
+  }
+  .header-imgContainer-logo-desktop {
+    display: initial;
+  }
+  .header-imgContainer-icon {
+    display: none;
+  }
+  .navbar {
+    display: initial;
+    position: initial;
+    height: initial;
+    width: initial;
+    line-height: initial;
+    background: #FFFFFF;
+    font-size: 13px;
+    margin: 0;
+  }
+  .navbar-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+  }
+  .navbar-items-item {
+    padding: 0 2em;
+  }
+  .navbar-items-item-link {
+    color: #572EE5;
+  }
 }
 
 .principal {

@@ -19,31 +19,36 @@
     <script src="./scripts/script.js"></script>
   </head>
   <body>
+    
     <header class="header">
       <div class="header-line"></div>
-      <div class="header-container">
+      <div class="header-imgContainer">
         <img
           src="./assetes/logo-mobile.svg"
           alt="logo-mobile"
-          class="header-container-logo-mobile"
+          class="header-imgContainer-logo-mobile"
         />
         <img
           src="./assetes/logo-mobile-modo-noct.svg"
           alt="logo-mobile-night"
-          class="header-container-logo-mobile-noc"
+          class="header-imgContainer-logo-mobile-noc"
         />
         <img
           src="./assetes/logo-desktop.svg"
           alt="logo-desktop"
-          class="header-container-logo-desktop"
+          class="header-imgContainer-logo-desktop"
         />
         <img
           src="./assetes/Logo-modo-noc.svg"
           alt="logo-desktop-night"
-          class="header-container-logo-desktop-noc"
+          class="header-imgContainer-logo-desktop-noc"
         />
-        <i class="fas fa-bars header-container-icon"></i>
-        <i class="fal fa-times header-container-icon" style="display: none"></i>
+        <div class="header-imgContainer-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="header-imgContainer-iconX">
+          <i class="fal fa-times"></i> 
+        </div>
       </div>
       <nav class="navbar">
         <ul class="navbar-items">
@@ -51,12 +56,9 @@
             <a href="#" class="navbar-items-item-link">modo nocturno</a>
           </li>
           <li class="navbar-items-item">
-            <a href="#" class="navbar-items-item-link-day">modo diurno</a>
-          </li>
-          <li class="navbar-item">
             <a href="#favorites" class="navbar-items-item-link">favoritos</a>
           </li>
-          <li class="navbar-item">
+          <li class="navbar-items-item">
             <a href="#mygifos" class="navbar-items-item-link">mis <span class="navbar-items-item-link-gifos">gifos</span</a>
           </li>
         </ul>

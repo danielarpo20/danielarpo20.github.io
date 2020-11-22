@@ -6,7 +6,7 @@
         background-color: $purple;
     }
 
-    &-container {
+    &-imgContainer {
         max-width: $maxWdthMobile;
         display: flex;
         justify-content: space-between;
@@ -15,7 +15,6 @@
         padding-top: 1.5em;
 
         &-logo {
-
             &-mobile {
                 &-noc {
                     display: none;
@@ -35,6 +34,12 @@
             font-size: $size24;
             color: $purple;
         }
+
+        &-iconX {
+            display: none;
+            font-size: $size24;
+            color: $purple;
+        }
     }
 }
 
@@ -45,7 +50,6 @@
     margin: 1em 0 0;
     background: rgba(87, 46, 229, 0.90);
     height: 90vh;
-    color: $BackWhite;
     font-family: $Montserrat;
     font-weight: 700;
     font-size: $size15;
@@ -61,13 +65,10 @@
             &-link {
                 text-decoration: none;
                 color: $BackWhite;
+                display: block;
 
                 &-gifos {
                     text-transform: uppercase;
-                }
-
-                &-day {
-                    display: none;
                 }
             }
 
@@ -76,5 +77,57 @@
 }
 
 @media screen and (min-width: 1350px) {
+    .header {
+        max-width: $maxWdthDesktop;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1em;
+
+        &-imgContainer {
+            margin: 0;
+            padding: 0;
+
+            &-logo {
+                &-mobile {
+                    display: none;
+                }
+
+                &-desktop {
+                    display: initial;
+                }
+            }
+
+            &-icon {
+                display: none;
+            }
+        }
+    }
+
+    .navbar {
+        display: initial;
+        position: initial;
+        height: initial;
+        width: initial;
+        line-height: initial;
+        background: $BackWhite;
+        font-size: $size13;
+        margin: 0;
+        
+        &-items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+            
+            &-item {
+                padding: 0 2em;
+                &-link {
+                    color: $purple;
+                }
     
+            }
+        }
+    }
 }
