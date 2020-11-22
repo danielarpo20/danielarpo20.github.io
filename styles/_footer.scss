@@ -1,13 +1,41 @@
 .footer {
-    display: none;
     
-    &-title {}
+    &-text {
+        font-family: $Roboto;
+        font-weight: 400;
+        font-size: $size15;
+        color: $BackBlack;
+        text-align: center;
+        margin: 0;
+        padding: 4em 0 1.5em;
+    }
     
     &-icons {
+        display: flex;
+        justify-content: center;
         
-        &-icon{}
+        &-icon{
+            font-size: $size20;
+            padding: 0 .5em;
+            color: $gray;
+        }
     }
 
-    &-pie {}
+    &-pie {
+        text-align: center;
+        font-family: $Roboto;
+        font-weight: 400;
+        font-size: $size14;
+        color: $BackBlack;
+        text-align: center;
+        line-height: $size20;
+        margin: 0;
+        padding: 3em 0 2em;
+    }
+
+    &-line {
+        height: 5px;
+        background-color: $purple;
+    }
 
 }

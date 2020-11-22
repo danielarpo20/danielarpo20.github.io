@@ -35,7 +35,7 @@
 }
 
 .header-container-icon {
-  font-size: 15px;
+  font-size: 24px;
   color: #572EE5;
 }
 
@@ -208,8 +208,46 @@
   margin: auto;
 }
 
-.footer {
-  display: none;
+.footer-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #000000;
+  text-align: center;
+  margin: 0;
+  padding: 4em 0 1.5em;
+}
+
+.footer-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-icons-icon {
+  font-size: 20px;
+  padding: 0 .5em;
+  color: #6B7989;
+}
+
+.footer-pie {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+  text-align: center;
+  line-height: 20px;
+  margin: 0;
+  padding: 3em 0 2em;
+}
+
+.footer-line {
+  height: 5px;
+  background-color: #572EE5;
 }
 
 .favorites {
