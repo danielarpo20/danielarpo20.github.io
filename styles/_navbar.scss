@@ -40,8 +40,11 @@
 
 .navbar {
     display: none;
+    position: absolute;
+    width: 100%;
+    margin: 1em 0 0;
     background: rgba(87, 46, 229, 0.90);
-    height: 80vh;
+    height: 90vh;
     color: $BackWhite;
     font-family: $Montserrat;
     font-weight: 700;
@@ -73,14 +76,5 @@
 }
 
 @media screen and (min-width: 1350px) {
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-
-        &-items {
-            display: flex;
-
-            &-item {}
-        }
-    }
+    
 }
