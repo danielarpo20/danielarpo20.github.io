@@ -1,3 +1,15 @@
+.button {
+  border: 1px solid #572EE5;
+  border-radius: 25px;
+  border-radius: 25px;
+  padding: 1em 2em;
+  color: #572EE5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  background: transparent;
+}
+
 .header {
   background-color: #FFFFFF;
 }
@@ -179,7 +191,18 @@
 }
 
 .searching {
-  display: none;
+  text-align: center;
+  padding: 2em 0 5em;
+}
+
+.searching-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 40px;
+  text-transform: capitalize;
 }
 
 .trending {

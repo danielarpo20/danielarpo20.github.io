@@ -1,7 +1,15 @@
 .searching {
-    display: none;
-
-    &-title{}
+    text-align: center;
+    padding: 2em 0 5em;
+    &-title {
+        font-family: $Montserrat;
+        font-weight: 700;
+        font-size: $size25;
+        color: $purple;
+        text-align: center;
+        line-height: $size40;
+        text-transform: capitalize;
+    }
 
     &-container {}
 }
