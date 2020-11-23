@@ -1,5 +1,4 @@
 .principal {
-    // display: none;
     max-width: $maxWdthMobile;
     margin: auto;
     padding: 2em 0;
@@ -29,7 +28,7 @@
         }
     }
 
-    &-searchBar {
+    &-bar {
         height: 50px;
         width: 100%;
         margin: auto;
@@ -37,27 +36,34 @@
         border: 1px solid $purple;
         border-radius: $size27;
         border-radius: $size27;
+        display: flex;
+        align-items: center;
 
-        &-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: inherit;
-            
-            &-text {
-                font-family: $Roboto;
-                font-weight: 400;
-                font-size: $size16;
-                color: $gray;
-                text-align: left;
-                margin: 0;
-            }
-    
-            &-icon {
-                color: $purple;
-                font-size: $size24;
-            }
+        &-searchBar {
+            width: 80%;
+            height: 44px;
+            margin-left: 1.5em;
+            border: none;
         }
+
+        ::placeholder {
+            font-family: $Roboto;
+            font-weight: 400;
+            font-size: $size16;
+            color: $gray;
+        }
+
+        &-icon {
+            color: $purple;
+            font-size: $size24;
+        }
+
+        &-containerIconX {
+            display: none;
+        }
+    }
+    :focus {
+        outline: none;
     }
 
     &-subTitle {
@@ -81,3 +87,5 @@
         margin: auto;
     }
 }
+
+@media screen and (min-width: 1350px) {}

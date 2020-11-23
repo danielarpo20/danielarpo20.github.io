@@ -1,5 +1,5 @@
 let navBars = document.querySelector("prueba");
-let navOut = document.getElementsByClassName(".");
+let navOut = document.getElementsByClassName(".navbar");
 let navToggel = document.getElementsByClassName(".");
 
 navBars.addEventListener("click", () => {
