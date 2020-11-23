@@ -134,19 +134,23 @@
             }
         }
 
-        &-buttonCreate {
-            background: transparent;
-            border: 1px solid $purple;
-            border-radius: 50%;
-            height: 50px;
-            width: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        &-link {
+            text-decoration: none;
 
-            &-icon {
-                color: $purple;
-                font-size: $size24;
+            &-buttonCreate {
+                background: transparent;
+                border: 1px solid $purple;
+                border-radius: 50%;
+                height: 50px;
+                width: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &-icon {
+                    color: $purple;
+                    font-size: $size24;
+                }
             }
         }
     }
