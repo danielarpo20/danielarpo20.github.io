@@ -2,26 +2,45 @@
     background-color: $BackWhiteDark;
     padding: 2em 0 4em;
 
-    &-title {
-        font-family: $Montserrat;
-        font-weight: 700;
-        font-size: $size20;
-        color: $purple;
+    &-container {
         text-align: center;
-        line-height: $size30;
-        margin: 0;
-        padding-bottom: .5em;
-    }
-
-    &-paragraph {
-        font-family: $Roboto;
-        font-size: $size16;
-        color: $BackBlack;
-        text-align: center;
-        line-height: $size22;
-        width: 45%;
         margin: auto;
+        width: 35%;
+
+        &-title {
+            font-family: $Montserrat;
+            font-weight: 700;
+            color: $purple;
+            font-size: $size20;
+            line-height: $size30;
+            margin: 0;
+        }
+
+        &-paragraph {
+            font-family: $Roboto;
+            font-size: $size16;
+            color: $BackBlack;
+            line-height: $size22;
+        }
     }
 
     &-gifs {}
+}
+
+@media screen and (min-width: 1350px) {
+    .trending {
+        padding: 4em 0 8em;
+
+        &-container {
+            padding-bottom: 2em;
+
+            &-title {
+                font-size: $size25;
+            }
+
+            &-paragraph {
+                font-size: $size18;
+            }
+        }
+    }
 }
