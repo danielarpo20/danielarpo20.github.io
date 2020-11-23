@@ -62,30 +62,60 @@
             display: none;
         }
     }
+
     :focus {
         outline: none;
     }
 
-    &-subTitle {
-        font-family: $Montserrat;
-        font-weight: 700;
-        font-size: $size16;
-        color: $purple;
-        text-align: center;
-        line-height: $size25;
-        margin: 0;
+    &-introContainer {
         padding-top: 2em;
-    }
-
-    &-paragraph {
-        font-family: $Montserrat;
-        font-size: $size14;
+        width: 40%;
+        margin: auto;
         color: $purple;
         text-align: center;
-        line-height: $size25;
-        width: 60%;
-        margin: auto;
+
+        &-subTitle {
+            font-family: $Montserrat;
+            font-weight: 700;
+            font-size: $size16;
+            line-height: $size25;
+            margin: 0;
+        }
+
+        &-paragraph {
+            font-family: $Montserrat;
+            font-size: $size14;
+            line-height: $size25;
+        }
     }
 }
 
-@media screen and (min-width: 1350px) {}
+@media screen and (min-width: 1350px) {
+    .principal {
+        max-width: $maxWdthDesktop;
+        padding: 5em 0;
+
+        &-title {
+            font-size: $size35;
+            width: 50%;
+            line-height: $size50;
+            padding-bottom: 1em;
+        }
+
+        &-bar {
+            width: 50%;
+        }
+
+        &-introContainer {
+            padding-top: 5em;
+
+            &-subTitle {
+                font-size: $size18;
+            }
+
+            &-paragraph {
+                font-size: $size16;
+            }
+        }
+    }
+}
