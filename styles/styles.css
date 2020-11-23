@@ -87,6 +87,10 @@
   text-transform: uppercase;
 }
 
+.navbar-buttonCreate {
+  display: none;
+}
+
 @media screen and (min-width: 1350px) {
   .header {
     max-width: 80%;
@@ -116,7 +120,9 @@
     display: none;
   }
   .navbar {
-    display: initial;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     position: initial;
     height: initial;
     width: initial;
@@ -138,10 +144,30 @@
     padding: 0;
   }
   .navbar-items-item {
-    padding: 0 2em;
+    padding-right: 4em;
   }
   .navbar-items-item-link {
     color: #572EE5;
+  }
+  .navbar-buttonCreate {
+    background: transparent;
+    border: 1px solid #572EE5;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar-buttonCreate-icon {
+    color: #572EE5;
+    font-size: 24px;
   }
 }
 

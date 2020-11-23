@@ -74,6 +74,10 @@
 
         }
     }
+
+    &-buttonCreate {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1350px) {
@@ -106,7 +110,7 @@
     }
 
     .navbar {
-        display: initial;
+        display: flex;
         position: initial;
         height: initial;
         width: initial;
@@ -114,19 +118,35 @@
         background: $BackWhite;
         font-size: $size13;
         margin: 0;
-        
+
         &-items {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0;
-            
+
             &-item {
-                padding: 0 2em;
+                padding-right: 4em;
+
                 &-link {
                     color: $purple;
                 }
-    
+            }
+        }
+
+        &-buttonCreate {
+            background: transparent;
+            border: 1px solid $purple;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-icon {
+                color: $purple;
+                font-size: $size24;
             }
         }
     }

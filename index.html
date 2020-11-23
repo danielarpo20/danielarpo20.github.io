@@ -19,9 +19,8 @@
     <script src="./scripts/script.js"></script>
   </head>
   <body>
-    
+    <div class="header-line"></div>
     <header class="header">
-      <div class="header-line"></div>
       <div class="header-imgContainer">
         <img
           src="./assetes/logo-mobile.svg"
@@ -47,7 +46,7 @@
           <i class="fas fa-bars"></i>
         </div>
         <div class="header-imgContainer-iconX">
-          <i class="fal fa-times"></i> 
+          <i class="fal fa-times"></i>
         </div>
       </div>
       <nav class="navbar">
@@ -59,9 +58,14 @@
             <a href="#favorites" class="navbar-items-item-link">favoritos</a>
           </li>
           <li class="navbar-items-item">
-            <a href="#mygifos" class="navbar-items-item-link">mis <span class="navbar-items-item-link-gifos">gifos</span</a>
+            <a href="#mygifos" class="navbar-items-item-link"
+              >mis <span class="navbar-items-item-link-gifos">gifos</span>
+            </a>
           </li>
         </ul>
+        <div class="navbar-buttonCreate">
+          <i class="fal fa-plus navbar-buttonCreate-icon"></i>
+        </div>
       </nav>
     </header>
 
@@ -80,9 +84,14 @@
         </div>
         <div class="principal-searchBar">
           <div class="principal-searchBar-container">
-            <h6 class="principal-searchBar-container-text">Busca GIFOS y más</h6>
+            <h6 class="principal-searchBar-container-text">
+              Busca GIFOS y más
+            </h6>
             <i class="fal fa-search principal-searchBar-container-icon"></i>
-            <i class="fal fa-times principal-searchBar-container-icon" style="display: none;"></i>
+            <i
+              class="fal fa-times principal-searchBar-container-icon"
+              style="display: none"
+            ></i>
           </div>
         </div>
         <h5 class="principal-subTitle">Trending:</h5>
@@ -96,16 +105,12 @@
         <div class="searching-container">
           <!-- grid - images api -->
         </div>
-        <form
-            action=""
-            rel="noreferrer noopener"
-            target="_blank"
-          >
+        <form action="" rel="noreferrer noopener" target="_blank">
           <input type="submit" value="VER MÁS" class="button" />
         </form>
       </section>
 
-      <section class="newSection" id='favorites'>
+      <section class="newSection" id="favorites">
         <img
           src="./assetes/icon-favoritos.svg"
           alt="favorites"
@@ -115,16 +120,12 @@
         <div class="newSection-container">
           <!-- grid with API GIF -->
         </div>
-        <form
-          action=""
-          rel="noreferrer noopener"
-          target="_blank"
-        >
+        <form action="" rel="noreferrer noopener" target="_blank">
           <input type="submit" value="VER MÁS" class="button" />
         </form>
       </section>
 
-      <section class="newSection" id='mygifos'>
+      <section class="newSection" id="mygifos">
         <img
           src="./assetes/icon-mis-gifos.svg"
           alt="favorites"
@@ -132,11 +133,7 @@
         />
         <h1 class="newSection-title">Mis GIFOS</h1>
         <div class="newSection-container"></div>
-        <form
-          action=""
-          rel="noreferrer noopener"
-          target="_blank"
-        >
+        <form action="" rel="noreferrer noopener" target="_blank">
           <input type="submit" value="VER MÁS" class="button" />
         </form>
       </section>
