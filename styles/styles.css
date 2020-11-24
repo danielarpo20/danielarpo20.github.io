@@ -423,6 +423,7 @@
   padding-bottom: 4em;
   max-width: 90%;
   margin: auto;
+  display: none;
 }
 
 .newSection-title {
@@ -726,5 +727,120 @@
 
 .createGIF {
   display: none;
+}
+
+.createGIF-animationCamara {
+  position: relative;
+}
+
+.createGIF-animationCamara-cameraLight {
+  position: absolute;
+  top: 0;
+  margin-top: -1.4em;
+  -webkit-animation: recording 5s infinite;
+          animation: recording 5s infinite;
+}
+
+.createGIF-animationCamara-bigTape {
+  position: absolute;
+  top: 0;
+  margin-top: -5em;
+  left: 3.5em;
+  animation: TapeBig 6s alternate-reverse infinite;
+}
+
+.createGIF-animationCamara-smallTape {
+  position: absolute;
+  left: 0;
+  margin-top: -3em;
+  -webkit-animation: TapeBig 10s infinite;
+          animation: TapeBig 10s infinite;
+}
+
+.createGIF-movieTape {
+  -webkit-animation: recording 5s forwards infinite;
+          animation: recording 5s forwards infinite;
+}
+
+@-webkit-keyframes recording {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: .5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: .5;
+  }
+  100% {
+    opacity: .2;
+  }
+}
+
+@keyframes recording {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: .5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: .5;
+  }
+  100% {
+    opacity: .2;
+  }
+}
+
+@-webkit-keyframes TapeBig {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes TapeBig {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes movieTape {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes movieTape {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
