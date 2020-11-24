@@ -15,6 +15,52 @@
   background: transparent;
 }
 
+.button:hover {
+  background: #572EE5;
+  color: #FFFFFF;
+}
+
+.buttonArrow {
+  border: 1px solid #572EE5;
+  height: 40px;
+  width: 40px;
+  padding: .5em;
+  color: #572EE5;
+  font-size: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.buttonArrow:hover {
+  color: #FFFFFF;
+  background: #572EE5;
+}
+
+.buttonPagination {
+  border: 1px solid #572EE5;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: transparent;
+  color: #572EE5;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.buttonPagination:hover {
+  color: #FFFFFF;
+  background: #572EE5;
+}
+
 .header {
   background-color: #FFFFFF;
 }

@@ -9,3 +9,43 @@
     font-weight: 700;
     background: transparent;
 }
+
+.button:hover {
+    background: $purple;
+    color: $BackWhite;
+}
+
+.buttonArrow {
+    border: 1px solid $purple;
+    height: 40px;
+    width: 40px;
+    padding: .5em;
+    color: $purple;
+    font-size: $size24;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    justify-content: center;
+}
+
+.buttonArrow:hover {
+    color: $BackWhite;
+    background: $purple;
+}
+
+.buttonPagination {
+    border: 1px solid $purple;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background: transparent;
+    color: $purple;
+    font-size: $size18;
+    text-align: center;
+    font-family: $Roboto;
+}
+
+.buttonPagination:hover {
+    color: $BackWhite;
+    background: $purple;
+}
