@@ -1,41 +1,73 @@
 .footer {
-    
-    &-text {
-        font-family: $Roboto;
-        font-weight: 400;
-        font-size: $size15;
-        color: $BackBlack;
-        text-align: center;
-        margin: 0;
-        padding: 4em 0 1.5em;
-    }
 
-    &-icons {
-        display: flex;
-        justify-content: center;
+    &-container {
 
-        &-icon {
-            font-size: $size20;
-            padding: 0 .5em;
-            color: $gray;
+        &-text {
+            font-family: $Roboto;
+            font-weight: 400;
+            font-size: $size15;
+            color: $BackBlack;
+            text-align: center;
+            margin: 0;
+            padding: 4em 0 1.5em;
+        }
+
+        &-icons {
+            display: flex;
+            justify-content: center;
+
+            &-icon {
+                font-size: $size20;
+                padding: 0 .5em;
+                color: $gray;
+            }
+        }
+
+        &-pie {
+            text-align: center;
+            font-family: $Roboto;
+            font-weight: 400;
+            font-size: $size14;
+            color: $BackBlack;
+            text-align: center;
+            line-height: $size20;
+            margin: 0;
+            padding: 3em 0 2em;
         }
     }
+}
 
-    &-pie {
-        text-align: center;
-        font-family: $Roboto;
-        font-weight: 400;
-        font-size: $size14;
-        color: $BackBlack;
-        text-align: center;
-        line-height: $size20;
-        margin: 0;
-        padding: 3em 0 2em;
+@media screen and (min-width: 1350px) {
+    .footer {
+        max-width: $maxWdthDesktop;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        padding: 3em 0;
+
+        &-container {
+            display: flex;
+            align-items: center;
+
+            &-icons {
+                padding-left: 2em;
+
+                &-icon {
+                    color: $purple;
+                }
+            }
+
+            &-text {
+                font-size: $size13;
+                padding: 0;
+            }
+
+            &-pie {
+                font-size: $size13;
+                line-height: $size13;
+                padding: 0;
+            }
+        }
     }
-
-    &-line {
-        height: 5px;
-        background-color: $purple;
-    }
-
 }

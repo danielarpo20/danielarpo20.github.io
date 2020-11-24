@@ -1,11 +1,6 @@
 .header {
     background-color: $BackWhite;
 
-    &-line {
-        height: 5px;
-        background-color: $purple;
-    }
-
     &-imgContainer {
         max-width: $maxWdthMobile;
         display: flex;
