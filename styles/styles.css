@@ -402,17 +402,70 @@
   margin-left: 2em;
 }
 
-.trending-back-card {
+.trending-card {
   height: 187px;
   width: 243px;
-  background: tomato;
+  background: #50E3C2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.trending-back-card-iconsContainer {
+.trending-card-mobile {
   display: none;
+  background: rgba(255, 255, 255, 0.9);
+  height: inherit;
 }
 
-.trending-back-card-info {
+.trending-card-mobile-iconX {
+  color: #572EE5;
+  font-size: 20px;
+}
+
+.trending-card-mobile-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.trending-card-mobile-container-info {
+  color: #000000;
+}
+
+.trending-card-mobile-container-info-user {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  margin: 0;
+  padding-bottom: .5em;
+}
+
+.trending-card-mobile-container-info-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0;
+}
+
+.trending-card-mobile-container-containerIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.trending-card-mobile-container-containerIcons-icons-icon {
+  color: #572EE5;
+  font-size: 20px;
+  padding: 1em;
+}
+
+.trending-card-back {
   display: none;
 }
 
@@ -433,21 +486,13 @@
   .trending-card {
     height: 275px;
     width: 357px;
-    background: tomato;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   .trending-card-back {
+    display: initial;
     background: #572EE5;
     opacity: .6;
     position: relative;
     height: inherit;
-    display: none;
   }
   .trending-card-back-iconsContainer {
     display: -webkit-box;
@@ -499,6 +544,9 @@
     font-size: 16px;
     font-weight: 700;
     margin: 0;
+  }
+  .trending-card-mobile {
+    display: none;
   }
 }
 

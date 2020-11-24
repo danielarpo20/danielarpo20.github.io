@@ -29,24 +29,67 @@
         margin-left: 2em;
     }
 
-    &-back {
-        &-card {
-            height: 187px;
-            width: 243px;
-            background: tomato;
+    &-card {
+        height: 187px;
+        width: 243px;
+        background: $greenLight;
+        display: flex;
+        flex-direction: column;
 
-            &-iconsContainer {
-                display: none;
+        &-mobile {
+            display: none;
+            background: rgba(255, 255, 255, 0.90);
+            height: inherit;
+            // width: 100vw;
+            // height: 100vh;
 
-                &-icons {
-                    &-icon {}
+            &-iconX {
+                color: $purple;
+                font-size: $size20;
+            }
+
+            &-container {
+                display: flex;
+                justify-content: space-between;
+
+                &-info {
+                    color: $BackBlack;
+
+                    &-user {
+                        font-family: $Roboto;
+                        font-size: $size15;
+                        margin: 0;
+                        padding-bottom: .5em;
+                    }
+
+                    &-title {
+                        font-family: $Montserrat;
+                        font-weight: 700;
+                        font-size: $size16;
+                        margin: 0;
+                    }
+
+                }
+
+                &-containerIcons {
+                    display: flex;
+
+                    &-icons {
+
+                        &-icon {
+                            color: $purple;
+                            font-size: $size20;
+                            padding: 1em;
+                        }
+                    }
                 }
             }
-
-            &-info {
-                display: none;
-            }
         }
+
+        &-back {
+            display: none;
+        }
+
     }
 
 }
@@ -75,16 +118,13 @@
         &-card {
             height: 275px;
             width: 357px;
-            background: tomato;
-            display: flex;
-            flex-direction: column;
 
             &-back {
+                display: initial;
                 background: $purple;
                 opacity: .6;
                 position: relative;
                 height: inherit;
-                display: none;
 
                 &-iconsContainer {
                     display: flex;
@@ -129,6 +169,10 @@
                         margin: 0;
                     }
                 }
+            }
+
+            &-mobile {
+                display: none;
             }
         }
     }
