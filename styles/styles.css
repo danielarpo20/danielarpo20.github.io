@@ -161,6 +161,34 @@
   }
   .navbar-items-item-link {
     color: #572EE5;
+    position: relative;
+  }
+  .navbar-items-item :first-child::after {
+    display: none;
+  }
+  .navbar-items-item :before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -20%;
+    height: .2em;
+    width: 100%;
+    color: black;
+    background: #50E3C2;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transition: -webkit-transform .4s linear;
+    transition: -webkit-transform .4s linear;
+    transition: transform .4s linear;
+    transition: transform .4s linear, -webkit-transform .4s linear;
+  }
+  .navbar-items-item :hover:before {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left;
+            transform-origin: left;
   }
   .navbar-link {
     text-decoration: none;
@@ -171,19 +199,14 @@
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    color: #572EE5;
   }
   .navbar-link-buttonCreate-icon {
-    color: #572EE5;
     font-size: 24px;
+  }
+  .navbar-link :hover {
+    background: #572EE5;
+    color: #FFFFFF;
   }
 }
 

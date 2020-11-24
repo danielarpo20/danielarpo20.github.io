@@ -135,27 +135,53 @@
 
                 &-link {
                     color: $purple;
+                    position: relative;
+                }
+
+                :first-child::after {
+                    display: none;
+                }
+
+                :before {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    bottom: -20%;
+                    height: .2em;
+                    width: 100%;
+                    color: black;
+                    background: $greenLight;
+                    transform: scaleX(0);
+                    transform-origin: right;
+                    transition: transform .4s linear;
+                }
+
+                :hover:before {
+                    transform: scaleX(1);
+                    transform-origin: left;
                 }
             }
         }
 
         &-link {
             text-decoration: none;
-
+            
             &-buttonCreate {
                 background: transparent;
                 border: 1px solid $purple;
                 border-radius: 50%;
                 height: 50px;
                 width: 50px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                color: $purple;
 
                 &-icon {
-                    color: $purple;
                     font-size: $size24;
                 }
+            }
+
+            :hover {
+                background: $purple;
+                color: $BackWhite;
             }
         }
     }
