@@ -372,16 +372,17 @@
 
 .trending {
   background-color: #F3F5F8;
-  padding: 2em 0 4em;
+  padding: 4em 0 8em;
 }
 
-.trending-container {
+.trending-textcontainer {
   text-align: center;
   margin: auto;
   width: 35%;
+  padding-bottom: 2em;
 }
 
-.trending-container-title {
+.trending-textcontainer-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #572EE5;
@@ -390,25 +391,114 @@
   margin: 0;
 }
 
-.trending-container-paragraph {
+.trending-textcontainer-paragraph {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #000000;
   line-height: 22px;
 }
 
+.trending-gifs {
+  margin-left: 2em;
+}
+
+.trending-back-card {
+  height: 187px;
+  width: 243px;
+  background: tomato;
+}
+
+.trending-back-card-iconsContainer {
+  display: none;
+}
+
+.trending-back-card-info {
+  display: none;
+}
+
 @media screen and (min-width: 1350px) {
-  .trending {
-    padding: 4em 0 8em;
-  }
   .trending-container {
-    padding-bottom: 2em;
+    max-width: 80%;
+    margin: auto;
   }
-  .trending-container-title {
+  .trending-textcontainer-title {
     font-size: 25px;
   }
-  .trending-container-paragraph {
+  .trending-textcontainer-paragraph {
     font-size: 18px;
+  }
+  .trending-gifs {
+    margin-left: 2em;
+  }
+  .trending-card {
+    height: 275px;
+    width: 357px;
+    background: tomato;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .trending-card-back {
+    background: #572EE5;
+    opacity: .6;
+    position: relative;
+    height: inherit;
+    display: none;
+  }
+  .trending-card-back-iconsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .trending-card-back-iconsContainer-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    background: #FFFFFF;
+    opacity: 0.7;
+    border-radius: 6px;
+    border-radius: 6px;
+    margin: 1em 1em 0 0;
+  }
+  .trending-card-back-iconsContainer-icons-icon {
+    color: #572EE5;
+    font-size: 18px;
+    padding: 0.5em;
+  }
+  .trending-card-back-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    justify-items: flex-end;
+    font-family: "Roboto", sans-serif;
+    color: #FFFFFF;
+    padding-left: 2em;
+    position: absolute;
+    bottom: 4em;
+  }
+  .trending-card-back-info-user {
+    font-size: 15px;
+    margin: 0;
+    padding-bottom: .5em;
+  }
+  .trending-card-back-info-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
   }
 }
 
