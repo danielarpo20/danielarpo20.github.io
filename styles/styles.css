@@ -421,7 +421,8 @@
 .newSection {
   text-align: center;
   padding-bottom: 4em;
-  display: none;
+  max-width: 90%;
+  margin: auto;
 }
 
 .newSection-title {
@@ -437,6 +438,31 @@
 
 .newSection-container {
   padding: 2em 0 3em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 120px;
+  grid-auto-columns: auto;
+  grid-gap: 2em;
+}
+
+.muestra {
+  background: #572EE5;
+}
+
+@media screen and (min-width: 1350px) {
+  .newSection {
+    max-width: 80%;
+  }
+  .newSection-title {
+    font-size: 25px;
+  }
+  .newSection-container {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+  }
 }
 
 .trending {
