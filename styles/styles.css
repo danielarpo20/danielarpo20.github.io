@@ -682,6 +682,9 @@
     padding-left: 2em;
   }
   .footer-container-icons-icon {
+    color: #6B7989;
+  }
+  .footer-container-icons :hover {
     color: #572EE5;
   }
   .footer-container-text {

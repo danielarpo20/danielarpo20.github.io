@@ -54,6 +54,10 @@
                 padding-left: 2em;
 
                 &-icon {
+                    color: $gray;
+                }
+
+                :hover {
                     color: $purple;
                 }
             }
