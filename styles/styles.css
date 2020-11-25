@@ -3,6 +3,14 @@
   background-color: #572EE5;
 }
 
+.dark-mode {
+  background: #6B7989;
+}
+
+.dark-mode-line {
+  background: #000000;
+}
+
 .button {
   border: 1px solid #572EE5;
   border-radius: 25px;

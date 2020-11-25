@@ -1,13 +1,10 @@
-let navBars = document.querySelector("prueba");
-let navOut = document.getElementsByClassName(".navbar");
-let navToggel = document.getElementsByClassName(".");
+function darkMode() {
+  let element = document.body;
+  let line = document.getElementById('line')
 
-navBars.addEventListener("click", () => {
-  if (mobileMenu.style.display === "none") {
-    mobileMenu.style.display = "flex";
-    mobileMenuBtn.innerHTML = "Close";
-  } else {
-    mobileMenu.style.display = "none";
-    mobileMenuBtn.innerHTML = "Menu";
-  }
-});
+  element.classList.toggle("dark-mode");
+
+  console.log(element)
+  console.log(line)
+  line.classList.toggle('dark-mode-line')
+}
