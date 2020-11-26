@@ -1,3 +1,20 @@
+.gifCreation {
+    background: transparent;
+    border: 1px solid $purple;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    color: $purple;
+
+    &-icon {
+        font-size: $size24;
+    }
+}
+.gifCreation:hover {
+    background: $purple;
+    color: $BackWhite;
+}
+
 .button {
     border: 1px solid $purple;
     border-radius: $size25;
@@ -9,7 +26,6 @@
     font-weight: 700;
     background: transparent;
 }
-
 .button:hover {
     background: $purple;
     color: $BackWhite;
@@ -27,10 +43,9 @@
     background: transparent;
     justify-content: center;
 }
-
 .buttonArrow:hover {
-    color: $BackWhite;
     background: $purple;
+    color: $BackWhite;
 }
 
 .buttonPagination {
@@ -44,8 +59,7 @@
     text-align: center;
     font-family: $Roboto;
 }
-
 .buttonPagination:hover {
-    color: $BackWhite;
     background: $purple;
+    color: $BackWhite;
 }

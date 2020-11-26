@@ -165,24 +165,6 @@
 
         &-link {
             text-decoration: none;
-            
-            &-buttonCreate {
-                background: transparent;
-                border: 1px solid $purple;
-                border-radius: 50%;
-                height: 50px;
-                width: 50px;
-                color: $purple;
-
-                &-icon {
-                    font-size: $size24;
-                }
-            }
-
-            :hover {
-                background: $purple;
-                color: $BackWhite;
-            }
         }
     }
 }

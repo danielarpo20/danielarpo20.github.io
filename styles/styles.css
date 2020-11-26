@@ -1,14 +1,32 @@
-.line {
-  height: 5px;
-  background-color: #572EE5;
-}
-
 .dark-mode {
   background: #6B7989;
 }
 
 .dark-mode-line {
   background: #000000;
+}
+
+.line {
+  height: 5px;
+  background-color: #572EE5;
+}
+
+.gifCreation {
+  background: transparent;
+  border: 1px solid #572EE5;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  color: #572EE5;
+}
+
+.gifCreation-icon {
+  font-size: 24px;
+}
+
+.gifCreation:hover {
+  background: #572EE5;
+  color: #FFFFFF;
 }
 
 .button {
@@ -48,8 +66,8 @@
 }
 
 .buttonArrow:hover {
-  color: #FFFFFF;
   background: #572EE5;
+  color: #FFFFFF;
 }
 
 .buttonPagination {
@@ -65,8 +83,123 @@
 }
 
 .buttonPagination:hover {
-  color: #FFFFFF;
   background: #572EE5;
+  color: #FFFFFF;
+}
+
+.animationCamara {
+  position: relative;
+}
+
+.animationCamara-cameraLight {
+  position: absolute;
+  top: 0;
+  margin-top: -1.4em;
+  -webkit-animation: recording 5s infinite;
+          animation: recording 5s infinite;
+}
+
+.animationCamara-bigTape {
+  position: absolute;
+  top: 0;
+  margin-top: -5em;
+  left: 3.5em;
+  animation: TapeBig 6s alternate-reverse infinite;
+}
+
+.animationCamara-smallTape {
+  position: absolute;
+  left: 0;
+  margin-top: -3em;
+  -webkit-animation: TapeBig 10s infinite;
+          animation: TapeBig 10s infinite;
+}
+
+@-webkit-keyframes recording {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: .5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: .5;
+  }
+  100% {
+    opacity: .2;
+  }
+}
+
+@keyframes recording {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: .5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: .5;
+  }
+  100% {
+    opacity: .2;
+  }
+}
+
+@-webkit-keyframes TapeBig {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes TapeBig {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.movieTape {
+  -webkit-animation: recording 5s forwards infinite;
+          animation: recording 5s forwards infinite;
+}
+
+@-webkit-keyframes movieTape {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes movieTape {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .header {
@@ -247,21 +380,6 @@
   .navbar-link {
     text-decoration: none;
   }
-  .navbar-link-buttonCreate {
-    background: transparent;
-    border: 1px solid #572EE5;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    color: #572EE5;
-  }
-  .navbar-link-buttonCreate-icon {
-    font-size: 24px;
-  }
-  .navbar-link :hover {
-    background: #572EE5;
-    color: #FFFFFF;
-  }
 }
 
 .principal {
@@ -407,70 +525,6 @@
   }
   .principal-introContainer-paragraph {
     font-size: 16px;
-  }
-}
-
-.searching {
-  text-align: center;
-  padding: 2em 0 5em;
-  display: none;
-}
-
-.searching-title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 25px;
-  color: #572EE5;
-  text-align: center;
-  line-height: 40px;
-  text-transform: capitalize;
-}
-
-.newSection {
-  text-align: center;
-  padding-bottom: 4em;
-  max-width: 90%;
-  margin: auto;
-  display: none;
-}
-
-.newSection-title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  color: #572EE5;
-  text-align: center;
-  line-height: 30px;
-  text-transform: capitalize;
-  margin: 0;
-}
-
-.newSection-container {
-  padding: 2em 0 3em;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 120px;
-  grid-auto-columns: auto;
-  grid-gap: 2em;
-}
-
-.muestra {
-  background: #572EE5;
-}
-
-@media screen and (min-width: 1350px) {
-  .newSection {
-    max-width: 80%;
-  }
-  .newSection-title {
-    font-size: 25px;
-  }
-  .newSection-container {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 200px;
   }
 }
 
@@ -737,118 +791,67 @@
   display: none;
 }
 
-.createGIF-animationCamara {
-  position: relative;
+.newSection {
+  text-align: center;
+  padding-bottom: 4em;
+  max-width: 90%;
+  margin: auto;
+  display: none;
 }
 
-.createGIF-animationCamara-cameraLight {
-  position: absolute;
-  top: 0;
-  margin-top: -1.4em;
-  -webkit-animation: recording 5s infinite;
-          animation: recording 5s infinite;
+.newSection-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 30px;
+  text-transform: capitalize;
+  margin: 0;
 }
 
-.createGIF-animationCamara-bigTape {
-  position: absolute;
-  top: 0;
-  margin-top: -5em;
-  left: 3.5em;
-  animation: TapeBig 6s alternate-reverse infinite;
+.newSection-container {
+  padding: 2em 0 3em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 120px;
+  grid-auto-columns: auto;
+  grid-gap: 2em;
 }
 
-.createGIF-animationCamara-smallTape {
-  position: absolute;
-  left: 0;
-  margin-top: -3em;
-  -webkit-animation: TapeBig 10s infinite;
-          animation: TapeBig 10s infinite;
+.muestra {
+  background: #572EE5;
 }
 
-.createGIF-movieTape {
-  -webkit-animation: recording 5s forwards infinite;
-          animation: recording 5s forwards infinite;
-}
-
-@-webkit-keyframes recording {
-  0% {
-    opacity: 0;
+@media screen and (min-width: 1350px) {
+  .newSection {
+    max-width: 80%;
   }
-  25% {
-    opacity: .5;
+  .newSection-title {
+    font-size: 25px;
   }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: .5;
-  }
-  100% {
-    opacity: .2;
+  .newSection-container {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
   }
 }
 
-@keyframes recording {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: .5;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: .5;
-  }
-  100% {
-    opacity: .2;
-  }
+.searching {
+  text-align: center;
+  padding: 2em 0 5em;
+  display: none;
 }
 
-@-webkit-keyframes TapeBig {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes TapeBig {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes movieTape {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: .5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes movieTape {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: .5;
-  }
-  100% {
-    opacity: 1;
-  }
+.searching-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 40px;
+  text-transform: capitalize;
 }
 /*# sourceMappingURL=styles.css.map */

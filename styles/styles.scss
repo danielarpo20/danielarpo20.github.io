@@ -1,20 +1,29 @@
 // Generals styles
-@import './generals';
+@import './lib/variables';
+
+// Common styles
+@import './lib/darkMode';
+@import './lib/lineStyle';
 
 // Components
-@import './bottom';
-@import './searchBox';
+@import './components/buttons';
+@import './components/cardHover';
+@import './components/searchBox';
+@import './components/loadingVideo';
 
+// Animations
+@import './animations/cameraRecording';
+@import './animations/movieTape';
 
 // Sections
-@import './navbar';
-@import './principal';
-@import './searching';
-@import './newSection';
-@import './searchingResults';
-@import './trendingGIFOS';
-@import './footer';
-@import './createGIF';
+@import './sections/navbar';
+@import './sections/principal';
+@import './sections/trendingGIFOS';
+@import './sections/footer';
+@import './sections/createGIF';
+@import './sections/newSection';
+@import './sections/searchingResults';
+@import './sections/searching';
 
 // Mixins
-@import './mixins';
+@import './mixins/convertToEm';
