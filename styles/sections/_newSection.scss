@@ -11,7 +11,7 @@
         font-family: $Montserrat;
         font-weight: 700;
         font-size: $size20;
-        color: $purple;
+        color: $color-purple;
         text-align: center;
         line-height: $size30;
         text-transform: capitalize;
@@ -29,7 +29,7 @@
 }
 
 .muestra {
-    background: $purple;
+    background: $color-purple;
 }
 
 @media screen and (min-width: 1350px) {

@@ -1,5 +1,5 @@
 .header {
-    background-color: $BackWhite;
+    background-color: $color-white;
 
     &-imgContainer {
         max-width: $maxWdthMobile;
@@ -27,13 +27,13 @@
 
         &-icon {
             font-size: $size24;
-            color: $purple;
+            color: $color-purple;
         }
 
         &-iconX {
             display: none;
             font-size: $size24;
-            color: $purple;
+            color: $color-purple;
         }
     }
 }
@@ -61,7 +61,7 @@
 
             &-link {
                 text-decoration: none;
-                color: $BackWhite;
+                color: $color-white;
                 display: block;
 
                 &-gifos {
@@ -75,7 +75,7 @@
                 bottom: 0;
                 left: calc(50% - 20px);
                 width: 40px;
-                border-bottom: 1px solid $BackWhite;
+                border-bottom: 1px solid $color-white;
             }
         }
     }
@@ -120,7 +120,7 @@
         height: initial;
         width: initial;
         line-height: initial;
-        background: $BackWhite;
+        background: $color-white;
         font-size: $size13;
         margin: 0;
 
@@ -134,7 +134,7 @@
                 padding-right: 4em;
 
                 &-link {
-                    color: $purple;
+                    color: $color-purple;
                     position: relative;
                 }
 
@@ -149,8 +149,8 @@
                     bottom: -20%;
                     height: .2em;
                     width: 100%;
-                    color: black;
-                    background: $greenLight;
+                    color: $color-black;
+                    background: $color-greenLight;
                     transform: scaleX(0);
                     transform-origin: right;
                     transition: transform .4s linear;

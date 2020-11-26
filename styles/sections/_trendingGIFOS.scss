@@ -1,5 +1,5 @@
 .trending {
-    background-color: $BackWhiteDark;
+    background-color: $color-whiteDark;
     padding: 4em 0 8em;
 
     &-textcontainer {
@@ -11,7 +11,7 @@
         &-title {
             font-family: $Montserrat;
             font-weight: 700;
-            color: $purple;
+            color: $color-purple;
             font-size: $size20;
             line-height: $size30;
             margin: 0;
@@ -20,7 +20,7 @@
         &-paragraph {
             font-family: $Roboto;
             font-size: $size16;
-            color: $BackBlack;
+            color: $color-black;
             line-height: $size22;
         }
     }
@@ -32,7 +32,7 @@
     &-card {
         height: 187px;
         width: 243px;
-        background: $greenLight;
+        background: $color-greenLight;
         display: flex;
         flex-direction: column;
 
@@ -44,7 +44,7 @@
             // height: 100vh;
 
             &-iconX {
-                color: $purple;
+                color: $color-purple;
                 font-size: $size20;
             }
 
@@ -53,7 +53,7 @@
                 justify-content: space-between;
 
                 &-info {
-                    color: $BackBlack;
+                    color: $color-black;
 
                     &-user {
                         font-family: $Roboto;
@@ -77,7 +77,7 @@
                     &-icons {
 
                         &-icon {
-                            color: $purple;
+                            color: $color-purple;
                             font-size: $size20;
                             padding: 1em;
                         }
@@ -121,7 +121,7 @@
 
             &-back {
                 display: initial;
-                background: $purple;
+                background: $color-purple;
                 opacity: .6;
                 position: relative;
                 height: inherit;
@@ -133,14 +133,14 @@
                     &-icons {
                         display: flex;
                         justify-content: end;
-                        background: $BackWhite;
+                        background: $color-white;
                         opacity: 0.7;
                         border-radius: 6px;
                         border-radius: 6px;
                         margin: 1em 1em 0 0;
 
                         &-icon {
-                            color: $purple;
+                            color: $color-purple;
                             font-size: $size18;
                             padding: 0.5em;
                         }
@@ -152,7 +152,7 @@
                     flex-direction: column;
                     justify-items: flex-end;
                     font-family: $Roboto;
-                    color: $BackWhite;
+                    color: $color-white;
                     padding-left: 2em;
                     position: absolute;
                     bottom: 4em;

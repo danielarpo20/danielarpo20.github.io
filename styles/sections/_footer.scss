@@ -6,7 +6,7 @@
             font-family: $Roboto;
             font-weight: 400;
             font-size: $size15;
-            color: $BackBlack;
+            color: $color-black;
             text-align: center;
             margin: 0;
             padding: 4em 0 1.5em;
@@ -19,7 +19,7 @@
             &-icon {
                 font-size: $size20;
                 padding: 0 .5em;
-                color: $gray;
+                color: $color-gray;
             }
         }
 
@@ -28,7 +28,7 @@
             font-family: $Roboto;
             font-weight: 400;
             font-size: $size14;
-            color: $BackBlack;
+            color: $color-black;
             text-align: center;
             line-height: $size20;
             margin: 0;
@@ -54,11 +54,11 @@
                 padding-left: 2em;
 
                 &-icon {
-                    color: $gray;
+                    color: $color-gray;
                 }
 
                 :hover {
-                    color: $purple;
+                    color: $color-purple;
                 }
             }
 

@@ -7,7 +7,7 @@
         font-family: $Montserrat;
         font-weight: 700;
         font-size: $size25;
-        color: $purple;
+        color: $color-purple;
         text-align: center;
         line-height: $size33;
         width: 80%;
@@ -15,7 +15,7 @@
         padding-bottom: 1.5em;
 
         &-GIFOS {
-            color: $greenLight;
+            color: $color-greenLight;
         }
     }
 
@@ -32,8 +32,8 @@
         height: 50px;
         width: 100%;
         margin: auto;
-        background: $BackWhite;
-        border: 1px solid $purple;
+        background: $color-white;
+        border: 1px solid $color-purple;
         border-radius: $size27;
         border-radius: $size27;
         display: flex;
@@ -50,11 +50,11 @@
             font-family: $Roboto;
             font-weight: 400;
             font-size: $size16;
-            color: $gray;
+            color: $color-gray;
         }
 
         &-icon {
-            color: $purple;
+            color: $color-purple;
             font-size: $size24;
         }
 
@@ -71,7 +71,7 @@
         padding-top: 2em;
         width: 40%;
         margin: auto;
-        color: $purple;
+        color: $color-purple;
         text-align: center;
 
         &-subTitle {

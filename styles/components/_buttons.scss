@@ -1,42 +1,42 @@
 .gifCreation {
     background: transparent;
-    border: 1px solid $purple;
+    border: 1px solid $color-purple;
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    color: $purple;
+    color: $color-purple;
 
     &-icon {
         font-size: $size24;
     }
 }
 .gifCreation:hover {
-    background: $purple;
-    color: $BackWhite;
+    background: $color-purple;
+    color: $color-white;
 }
 
 .button {
-    border: 1px solid $purple;
+    border: 1px solid $color-purple;
     border-radius: $size25;
     border-radius: $size25;
     padding: 1em 2em;
-    color: $purple;
+    color: $color-purple;
     font-family: $Montserrat;
     font-size: $size13;
     font-weight: 700;
     background: transparent;
 }
 .button:hover {
-    background: $purple;
-    color: $BackWhite;
+    background: $color-purple;
+    color: $color-white;
 }
 
 .buttonArrow {
-    border: 1px solid $purple;
+    border: 1px solid $color-purple;
     height: 40px;
     width: 40px;
     padding: .5em;
-    color: $purple;
+    color: $color-purple;
     font-size: $size24;
     display: flex;
     align-items: center;
@@ -44,22 +44,22 @@
     justify-content: center;
 }
 .buttonArrow:hover {
-    background: $purple;
-    color: $BackWhite;
+    background: $color-purple;
+    color: $color-white;
 }
 
 .buttonPagination {
-    border: 1px solid $purple;
+    border: 1px solid $color-purple;
     height: 32px;
     width: 32px;
     border-radius: 50%;
     background: transparent;
-    color: $purple;
+    color: $color-purple;
     font-size: $size18;
     text-align: center;
     font-family: $Roboto;
 }
 .buttonPagination:hover {
-    background: $purple;
-    color: $BackWhite;
+    background: $color-purple;
+    color: $color-white;
 }

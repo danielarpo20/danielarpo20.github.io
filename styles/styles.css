@@ -360,7 +360,7 @@
     bottom: -20%;
     height: .2em;
     width: 100%;
-    color: black;
+    color: #000000;
     background: #50E3C2;
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
