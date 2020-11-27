@@ -1,19 +1,25 @@
 .gifCreation {
-    background: transparent;
-    border: 1px solid $color-purple;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    color: $color-purple;
-    cursor: pointer;
-    
-    &-icon {
-        font-size: $size24;
-    }
+    display: none;
 }
-.gifCreation:hover {
-    background: $color-purple;
-    color: $color-white;
+
+@media screen and (min-width: 1350px) {
+    .gifCreation {
+        background: transparent;
+        border: 1px solid $color-purple;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        color: $color-purple;
+        cursor: pointer;
+        
+        &-icon {
+            font-size: $size24;
+        }
+    }
+    .gifCreation:hover {
+        background: $color-purple;
+        color: $color-white;
+    }
 }
 
 .button {

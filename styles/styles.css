@@ -7,22 +7,26 @@
 }
 
 .gifCreation {
-  background: transparent;
-  border: 1px solid #572EE5;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  color: #572EE5;
-  cursor: pointer;
+  display: none;
 }
 
-.gifCreation-icon {
-  font-size: 24px;
-}
-
-.gifCreation:hover {
-  background: #572EE5;
-  color: #FFFFFF;
+@media screen and (min-width: 1350px) {
+  .gifCreation {
+    background: transparent;
+    border: 1px solid #572EE5;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    color: #572EE5;
+    cursor: pointer;
+  }
+  .gifCreation-icon {
+    font-size: 24px;
+  }
+  .gifCreation:hover {
+    background: #572EE5;
+    color: #FFFFFF;
+  }
 }
 
 .button {
@@ -305,10 +309,6 @@
   left: calc(50% - 20px);
   width: 40px;
   border-bottom: 1px solid #FFFFFF;
-}
-
-.navbar-buttonCreate {
-  display: none;
 }
 
 @media screen and (min-width: 1350px) {
