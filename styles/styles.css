@@ -12,6 +12,7 @@
 
 @media screen and (min-width: 1350px) {
   .gifCreation {
+    display: initial;
     background: transparent;
     border: 1px solid #572EE5;
     border-radius: 50%;
@@ -326,6 +327,12 @@
             align-items: center;
     padding-top: 1em;
   }
+  .header-icon {
+    display: none;
+  }
+  .header-iconX {
+    display: none;
+  }
   .header-imgContainer {
     margin: 0;
     padding: 0;
@@ -503,7 +510,7 @@
 
 .principal-introContainer {
   padding-top: 2em;
-  width: 40%;
+  width: 60%;
   margin: auto;
   color: #572EE5;
   text-align: center;
@@ -550,13 +557,12 @@
 
 .trending {
   background-color: #F3F5F8;
-  padding: 4em 0 8em;
+  padding: 4em 0 6em;
 }
 
 .trending-textcontainer {
   text-align: center;
   margin: auto;
-  width: 35%;
   padding-bottom: 2em;
 }
 
@@ -567,6 +573,7 @@
   font-size: 20px;
   line-height: 30px;
   margin: 0;
+  padding-bottom: .5em;
 }
 
 .trending-textcontainer-paragraph {
@@ -574,6 +581,8 @@
   font-size: 16px;
   color: #000000;
   line-height: 22px;
+  width: 50%;
+  margin: auto;
 }
 
 .trending-gifs {

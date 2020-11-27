@@ -1,13 +1,12 @@
 .trending {
     background-color: $color-whiteDark;
-    padding: 4em 0 8em;
+    padding: 4em 0 6em;
 
     &-textcontainer {
         text-align: center;
         margin: auto;
-        width: 35%;
         padding-bottom: 2em;
-
+        
         &-title {
             font-family: $Montserrat;
             font-weight: 700;
@@ -15,13 +14,16 @@
             font-size: $size20;
             line-height: $size30;
             margin: 0;
+            padding-bottom: .5em;
         }
-
+        
         &-paragraph {
             font-family: $Roboto;
             font-size: $size16;
             color: $color-black;
             line-height: $size22;
+            width: 50%;
+            margin: auto;
         }
     }
 

@@ -109,6 +109,14 @@
         align-items: center;
         padding-top: 1em;
 
+        &-icon {
+            display: none;
+        }
+
+        &-iconX {
+            display: none;
+        }
+
         &-imgContainer {
             margin: 0;
             padding: 0;
