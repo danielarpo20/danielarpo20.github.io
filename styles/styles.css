@@ -6,11 +6,6 @@
   background: #000000;
 }
 
-.line {
-  height: 5px;
-  background-color: #572EE5;
-}
-
 .gifCreation {
   background: transparent;
   border: 1px solid #572EE5;
@@ -18,6 +13,7 @@
   height: 50px;
   width: 50px;
   color: #572EE5;
+  cursor: pointer;
 }
 
 .gifCreation-icon {
@@ -85,6 +81,11 @@
 .buttonPagination:hover {
   background: #572EE5;
   color: #FFFFFF;
+}
+
+.line {
+  height: 5px;
+  background-color: #572EE5;
 }
 
 .animationCamara {
@@ -204,6 +205,32 @@
 
 .header {
   background-color: #FFFFFF;
+  position: relative;
+}
+
+.header-icon {
+  font-size: 24px;
+  color: #572EE5;
+  position: absolute;
+  top: 1.5em;
+  right: 1em;
+}
+
+.header-icon.active {
+  display: none;
+}
+
+.header-iconX {
+  display: none;
+  font-size: 24px;
+  color: #572EE5;
+  position: absolute;
+  top: 1.5em;
+  right: 1em;
+}
+
+.header-iconX.active {
+  display: initial;
 }
 
 .header-imgContainer {
@@ -233,17 +260,6 @@
   display: none;
 }
 
-.header-imgContainer-icon {
-  font-size: 24px;
-  color: #572EE5;
-}
-
-.header-imgContainer-iconX {
-  display: none;
-  font-size: 24px;
-  color: #572EE5;
-}
-
 .navbar {
   display: none;
   position: absolute;
@@ -256,6 +272,10 @@
   font-size: 15px;
   text-transform: capitalize;
   line-height: 60px;
+}
+
+.navbar.active {
+  display: initial;
 }
 
 .navbar-items {

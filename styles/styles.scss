@@ -3,13 +3,13 @@
 
 // Common styles
 @import './lib/darkMode';
-@import './lib/lineStyle';
 
 // Components
 @import './components/buttons';
 @import './components/cardHover';
 @import './components/searchBox';
 @import './components/loadingVideo';
+@import './components/lineStyle';
 
 // Animations
 @import './animations/cameraRecording';

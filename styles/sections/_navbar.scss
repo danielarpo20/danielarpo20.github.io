@@ -1,5 +1,31 @@
 .header {
     background-color: $color-white;
+    position: relative;
+
+    &-icon {
+        font-size: $size24;
+        color: $color-purple;
+        position: absolute;
+        top: 1.5em;
+        right: 1em;
+
+        &.active {
+            display: none;
+        }
+    }
+    
+    &-iconX {
+        display: none;
+        font-size: $size24;
+        color: $color-purple;
+        position: absolute;
+        top: 1.5em;
+        right: 1em;
+
+        &.active {
+            display: initial;
+        }
+    }
 
     &-imgContainer {
         max-width: $maxWdthMobile;
@@ -24,17 +50,6 @@
                 }
             }
         }
-
-        &-icon {
-            font-size: $size24;
-            color: $color-purple;
-        }
-
-        &-iconX {
-            display: none;
-            font-size: $size24;
-            color: $color-purple;
-        }
     }
 }
 
@@ -50,6 +65,10 @@
     font-size: $size15;
     text-transform: capitalize;
     line-height: $size60;
+
+    &.active {
+        display: initial;
+    }
 
     &-items {
         list-style: none;

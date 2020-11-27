@@ -1,0 +1,9 @@
+// Max width
+$maxWdthMobile: 90%;
+$maxWdthDesktop: 80%;
+
+@mixin max-width($device: 90%) {
+    max-width: $device;
+    margin-left: auto;
+    margin-right: auto;
+}
