@@ -1,15 +1,20 @@
+// Dark Mode
 function darkMode() {
   let element = document.body;
-  let line = document.getElementById("line");
-
+  console.log(element);
   element.classList.toggle("dark-mode");
 
-  console.log(element);
-  console.log(line);
+  let line = document.querySelector(".line");
   line.classList.toggle("dark-mode-line");
+
+  let linksMenu = document.querySelector('.navbar-items-item-link')
+  linksMenu.classList.toggle('dark-menu')
 }
 
-// Navbar 
+
+
+
+// Navbar
 function activeMenu() {
   document.getElementById("icon");
   document.querySelector(".navbar").classList.add("active");

@@ -1,7 +1,13 @@
 .dark-mode {
-    background: $color-gray;
+    background: $color-graylight-dark;
+    color: $color-white;
 }
 
 .dark-mode-line {
-    background: #000000;
+    height: 5px;
+    background-color: $color-black;
+}
+
+.dark-menu {
+    color: $color-white;
 }

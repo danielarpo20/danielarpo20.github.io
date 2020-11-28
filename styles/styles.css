@@ -1,9 +1,15 @@
 .dark-mode {
-  background: #6B7989;
+  background: #37383C;
+  color: #FFFFFF;
 }
 
 .dark-mode-line {
-  background: #000000;
+  height: 5px;
+  background-color: #000000;
+}
+
+.dark-menu {
+  color: #FFFFFF;
 }
 
 .gifCreation {
@@ -209,7 +215,7 @@
 }
 
 .header {
-  background-color: #FFFFFF;
+  background-color: transparent;
   position: relative;
 }
 
@@ -354,7 +360,7 @@
     height: initial;
     width: initial;
     line-height: initial;
-    background: #FFFFFF;
+    background: transparent;
     font-size: 13px;
     margin: 0;
   }
@@ -448,7 +454,7 @@
   height: 50px;
   width: 100%;
   margin: auto;
-  background: #FFFFFF;
+  background: transparent;
   border: 1px solid #572EE5;
   border-radius: 27px;
   border-radius: 27px;
@@ -465,6 +471,7 @@
   height: 44px;
   margin-left: 1.5em;
   border: none;
+  background: transparent;
 }
 
 .principal-bar ::-webkit-input-placeholder {

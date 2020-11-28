@@ -32,7 +32,7 @@
         height: 50px;
         width: 100%;
         margin: auto;
-        background: $color-white;
+        background: transparent;
         border: 1px solid $color-purple;
         border-radius: $size27;
         border-radius: $size27;
@@ -44,6 +44,7 @@
             height: 44px;
             margin-left: 1.5em;
             border: none;
+            background: transparent;
         }
 
         ::placeholder {
