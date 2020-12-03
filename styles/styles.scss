@@ -10,6 +10,7 @@
 @import './components/searchBox';
 @import './components/loadingVideo';
 @import './components/lineStyle';
+@import './components/gifGalery';
 
 // Animations
 @import './animations/cameraRecording';
@@ -21,9 +22,9 @@
 @import './sections/trendingGIFOS';
 @import './sections/footer';
 @import './sections/createGIF';
-@import './sections/newSection';
 @import './sections/searchingResults';
-@import './sections/searching';
+@import './sections/favorites';
+@import './sections/myGifos';
 
 // Mixins
 @import './mixins/convertToEm';

@@ -1,9 +1,8 @@
-.newSection {
+.gifGalery {
     text-align: center;
     padding-bottom: 4em;
     max-width: $maxWdthMobile;
     margin: auto;
-    display: none;
 
     &-img {}
 
@@ -32,8 +31,17 @@
     background: $color-purple;
 }
 
+@media screen and (min-width: 768px) {
+    .gifGalery {
+        &-container {
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 200px;
+        }
+    }
+}
+
 @media screen and (min-width: 1350px) {
-    .newSection {
+    .gifGalery {
         max-width: $maxWdthDesktop;
 
         &-title {
