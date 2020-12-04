@@ -19,56 +19,58 @@
     <script src="./scripts/main.js"></script>
   </head>
   <body>
-    <div class="line"></div>
+    <div class="lineUp"></div>
     <header class="header">
-      <div class="header-icon">
-        <i class="fas fa-bars" id="icon" onclick="activeMenu()"></i>
+      <div class="header-container">
+        <div class="header-icon">
+          <i class="fas fa-bars" id="icon" onclick="activeMenu()"></i>
+        </div>
+        <div class="header-iconX" onclick="inactiveMenu()">
+          <i class="fas fa-times"></i>
+        </div>
+        <figure class="header-imgContainer">
+          <img
+            src="./assetes/logo-mobile.svg"
+            alt="logo-mobile"
+            class="header-imgContainer-logo-mobile"
+          />
+          <img
+            src="./assetes/logo-mobile-modo-noct.svg"
+            alt="logo-mobile-night"
+            class="header-imgContainer-logo-mobile-noc"
+          />
+          <img
+            src="./assetes/logo-desktop.svg"
+            alt="logo-desktop"
+            class="header-imgContainer-logo-desktop"
+          />
+          <img
+            src="./assetes/Logo-modo-noc.svg"
+            alt="logo-desktop-night"
+            class="header-imgContainer-logo-desktop-noc"
+          />
+        </figure>
+        <nav class="navbar">
+          <ul class="navbar-items">
+            <li class="navbar-items-item" onclick="darkMode()">
+              <a href="#" class="navbar-items-item-link">modo nocturno</a>
+            </li>
+            <li class="navbar-items-item">
+              <a href="#favorites" class="navbar-items-item-link">favoritos</a>
+            </li>
+            <li class="navbar-items-item">
+              <a href="#mygifos" class="navbar-items-item-link"
+                >mis <span class="navbar-items-item-link-gifos">gifos</span>
+              </a>
+            </li>
+          </ul>
+          <a href="#createGif" class="navbar-link">
+            <button type="button" class="gifCreation">
+              <i class="fal fa-plus gifCreation-icon"></i>
+            </button>
+          </a>
+        </nav>
       </div>
-      <div class="header-iconX" onclick="inactiveMenu()">
-        <i class="fas fa-times"></i>
-      </div>
-      <figure class="header-imgContainer">
-        <img
-          src="./assetes/logo-mobile.svg"
-          alt="logo-mobile"
-          class="header-imgContainer-logo-mobile"
-        />
-        <img
-          src="./assetes/logo-mobile-modo-noct.svg"
-          alt="logo-mobile-night"
-          class="header-imgContainer-logo-mobile-noc"
-        />
-        <img
-          src="./assetes/logo-desktop.svg"
-          alt="logo-desktop"
-          class="header-imgContainer-logo-desktop"
-        />
-        <img
-          src="./assetes/Logo-modo-noc.svg"
-          alt="logo-desktop-night"
-          class="header-imgContainer-logo-desktop-noc"
-        />
-      </figure>
-      <nav class="navbar">
-        <ul class="navbar-items">
-          <li class="navbar-items-item" onclick="darkMode()">
-            <a href="#" class="navbar-items-item-link">modo nocturno</a>
-          </li>
-          <li class="navbar-items-item">
-            <a href="#favorites" class="navbar-items-item-link">favoritos</a>
-          </li>
-          <li class="navbar-items-item">
-            <a href="#mygifos" class="navbar-items-item-link"
-              >mis <span class="navbar-items-item-link-gifos">gifos</span>
-            </a>
-          </li>
-        </ul>
-        <a href="#createGif" class="navbar-link">
-          <button type="button" class="gifCreation">
-            <i class="fal fa-plus gifCreation-icon"></i>
-          </button>
-        </a>
-      </nav>
     </header>
 
     <main>
@@ -101,15 +103,15 @@
         </div>
       </section>
 
-      <section class="searching">
+      <!-- <section class="searching">
         <h1 class="searching-title">--Mascotas--</h1>
-        <div class="searching-container">
+        <div class="searching-container"> -->
           <!-- grid - images api -->
-        </div>
+        <!-- </div>
         <form action="" rel="noreferrer noopener" target="_blank">
           <input type="submit" value="VER MÁS" class="button" />
         </form>
-      </section>
+      </section> -->
 
       <section class="serchingResult" id="serchingResult">
         <div class="gifGalery">
@@ -331,6 +333,6 @@
 
       <h6 class="footer-container-pie">© GIFOS 2020 All Rights Reserved.</h6>
     </footer>
-    <div class="line"></div>
+    <div class="lineDown"></div>
   </body>
 </html>

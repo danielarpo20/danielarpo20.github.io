@@ -1,4 +1,12 @@
-.line {
+.lineUp {
+    height: 5px;
+    background-color: $color-purple;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+
+.lineDown {
     height: 5px;
     background-color: $color-purple;
 }

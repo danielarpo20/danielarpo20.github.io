@@ -1,7 +1,7 @@
 .principal {
     max-width: $maxWdthMobile;
     margin: auto;
-    padding: 2em 0;
+    padding: 7em 0;
 
     &-title {
         font-family: $Montserrat;
@@ -122,7 +122,7 @@
 @media screen and (min-width: 1100px) {
     .principal {
         max-width: $maxWdthDesktop;
-        padding: 5em 0;
+        // padding: 5em 0;
 
         &-title {
             font-size: $size35;

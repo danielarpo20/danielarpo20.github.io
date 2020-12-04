@@ -1,26 +1,32 @@
 .header {
-    background-color: transparent;
-    position: relative;
+    width: 100%;
+    background-color: $color-white;
+    position: fixed;
+    z-index: 1;
+
+    &-container {
+        max-width: $maxWdthMobile;
+        margin: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
 
     &-icon {
         font-size: $size24;
         color: $color-purple;
-        position: absolute;
-        top: 1.5em;
-        right: 1em;
+        padding-top: 1.2em;
 
         &.active {
             display: none;
         }
     }
-    
+
     &-iconX {
         display: none;
         font-size: $size24;
         color: $color-purple;
-        position: absolute;
-        top: 1.5em;
-        right: 1em;
+        padding-top: 1.2em;
 
         &.active {
             display: initial;
@@ -29,11 +35,8 @@
 
     &-imgContainer {
         max-width: $maxWdthMobile;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: auto;
-        padding-top: 1.5em;
+        margin: 0;
+        padding: 1.5em 0 .5em;
 
         &-logo {
             &-mobile {
@@ -57,7 +60,6 @@
     display: none;
     position: absolute;
     width: 100%;
-    margin: 1em 0 0;
     background: rgba(87, 46, 229, 0.90);
     height: 90vh;
     font-family: $Montserrat;
@@ -68,6 +70,9 @@
 
     &.active {
         display: initial;
+        position: fixed;
+        top: 5.6em;
+        margin-left: -1.5em;
     }
 
     &-items {
@@ -100,14 +105,29 @@
     }
 }
 
+@media screen and (min-width: 768px) {
+
+    .navbar {
+
+        &.active {
+            margin-left: -2.5em;
+        }
+    }
+}
+
 @media screen and (min-width: 1350px) {
     .header {
-        max-width: $maxWdthDesktop;
-        margin: auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-top: 1em;
+
+        &-container {
+            width: $maxWdthDesktop;
+            margin: auto;
+            display: inherit;
+            flex-direction: row;
+        }
 
         &-icon {
             display: none;
@@ -152,6 +172,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 0;
+            margin: 0 0 .5em;
 
             &-item {
                 padding-right: 4em;
