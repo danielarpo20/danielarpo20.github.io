@@ -1,14 +1,41 @@
 // Colors
-$color-purple: #572EE5;
+:root {
+    --background-light: #FFFFFF;
+    --background-dark: #F3F5F8;
+    --title-color: #572EE5;
+    --menu-text-mobile: #;
+    --menu-text-desktop: #572EE5;
+    --span-color: #50E3C2;
+    --paragraph-text: #000000;
+    --components-color: #572EE5;
+    --placeholder-color: #6B7989;
+    --background-menu-mobile: #572EE5;
+    --background-menu-desktop: #572EE5;
+}
+
+[data-theme='dark'] {
+    --background-light: #37383C;
+    --background-dark: #222326;
+    --title-color: #FFFFFF;
+    --menu-text-mobile: #;
+    --menu-text-desktop: #FFFFFF;
+    --span-color: #50E3C2;
+    --paragraph-text: #FFFFFF;
+    --components-color: #FFFFFF;
+}
+
 $color-white: #FFFFFF;
 $color-whiteDark: #F3F5F8;
+$color-gray-dark: #222326;
+$color-graylight-dark: #37383C;
+
+
+$color-purple: #572EE5;
 $color-grayLight: #9CAFC3;
 $color-gray: #6B7989;
 $color-greenLight: #50E3C2;
 
 // Color Dark mode
-$color-gray-dark: #222326;
-$color-graylight-dark: #37383C;
 $color-black: #000000;
 
 // Font Family

@@ -16,16 +16,15 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
-    <script src="./scripts/main.js"></script>
   </head>
   <body>
     <div class="lineUp"></div>
     <header class="header">
       <div class="header-container">
         <div class="header-icon">
-          <i class="fas fa-bars" id="icon" onclick="activeMenu()"></i>
+          <i class="fas fa-bars" id="icon"></i>
         </div>
-        <div class="header-iconX" onclick="inactiveMenu()">
+        <div class="header-iconX" id="iconX">
           <i class="fas fa-times"></i>
         </div>
         <figure class="header-imgContainer">
@@ -106,8 +105,8 @@
       <!-- <section class="searching">
         <h1 class="searching-title">--Mascotas--</h1>
         <div class="searching-container"> -->
-          <!-- grid - images api -->
-        <!-- </div>
+      <!-- grid - images api -->
+      <!-- </div>
         <form action="" rel="noreferrer noopener" target="_blank">
           <input type="submit" value="VER MÁS" class="button" />
         </form>
@@ -115,65 +114,65 @@
 
       <section class="serchingResult" id="serchingResult">
         <div class="gifGalery">
-        <h1 class="gifGalery-title">Búsqueda</h1>
-        <div class="gifGalery-container">
-          <!-- grid with API GIF -->
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-        </div>
-        <button type="button" class="button">VER MÁS</button>
+          <h1 class="gifGalery-title">Búsqueda</h1>
+          <div class="gifGalery-container">
+            <!-- grid with API GIF -->
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+          </div>
+          <button type="button" class="button">VER MÁS</button>
         </div>
       </section>
 
       <section class="favorites" id="favorites">
         <div class="gifGalery">
           <img
-          src="./assetes/icon-favoritos.svg"
-          alt="favorites"
-          class="gifGalery-img"
-        />
-        <h1 class="gifGalery-title">Favoritos</h1>
-        <div class="gifGalery-container">
-          <!-- grid with API GIF -->
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-        </div>
-        <button type="button" class="button">VER MÁS</button>
+            src="./assetes/icon-favoritos.svg"
+            alt="favorites"
+            class="gifGalery-img"
+          />
+          <h1 class="gifGalery-title">Favoritos</h1>
+          <div class="gifGalery-container">
+            <!-- grid with API GIF -->
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+          </div>
+          <button type="button" class="button">VER MÁS</button>
         </div>
       </section>
 
       <section class="myGifos" id="mygifos">
         <div class="gifGalery">
           <img
-          src="./assetes/icon-mis-gifos.svg"
-          alt="favorites"
-          class="gifGalery-img"
-        />
-        <h1 class="gifGalery-title">Mis GIFOS</h1>
-        <div class="gifGalery-container">
-          <!-- grid with API GIF -->
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-          <div class="muestra"></div>
-        </div>
-        <button type="button" class="button">VER MÁS</button>
+            src="./assetes/icon-mis-gifos.svg"
+            alt="favorites"
+            class="gifGalery-img"
+          />
+          <h1 class="gifGalery-title">Mis GIFOS</h1>
+          <div class="gifGalery-container">
+            <!-- grid with API GIF -->
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+            <div class="muestra"></div>
+          </div>
+          <button type="button" class="button">VER MÁS</button>
         </div>
       </section>
 
@@ -334,5 +333,6 @@
       <h6 class="footer-container-pie">© GIFOS 2020 All Rights Reserved.</h6>
     </footer>
     <div class="lineDown"></div>
+    <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>
