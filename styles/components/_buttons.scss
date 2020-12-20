@@ -6,11 +6,11 @@
     .gifCreation {
         display: initial;
         background: transparent;
-        border: 1px solid $color-purple;
+        border: 1px solid var(--icon-text-color);
         border-radius: 50%;
         height: 50px;
         width: 50px;
-        color: $color-purple;
+        color: var(--icon-text-color);
         cursor: pointer;
         
         &-icon {
@@ -18,33 +18,36 @@
         }
     }
     .gifCreation:hover {
-        background: $color-purple;
-        color: $color-white;
+        background: var(--icon-text-color);
+        color: var(--buttom-hover);
+    }
+    .gifCreation:active {
+        background: $buttom-active;
     }
 }
 
 .button {
-    border: 1px solid $color-purple;
+    border: 1px solid var(--icon-text-color);
     border-radius: $size25;
     border-radius: $size25;
     padding: 1em 2em;
-    color: $color-purple;
+    color: var(--icon-text-color);
     font-family: $Montserrat;
     font-size: $size13;
     font-weight: 700;
     background: transparent;
 }
 .button:hover {
-    background: $color-purple;
-    color: $color-white;
+    background: var(--icon-text-color);
+    color: var(--buttom-hover);
 }
 
 .buttonArrow {
-    border: 1px solid $color-purple;
+    border: 1px solid var(--icon-text-color);
     height: 40px;
     width: 40px;
     padding: .5em;
-    color: $color-purple;
+    color: var(--icon-text-color);
     font-size: $size24;
     display: flex;
     align-items: center;
@@ -52,22 +55,22 @@
     justify-content: center;
 }
 .buttonArrow:hover {
-    background: $color-purple;
-    color: $color-white;
+    background: var(--icon-text-color);
+    color: var(--buttom-hover);
 }
 
 .buttonPagination {
-    border: 1px solid $color-purple;
+    border: 1px solid var(--icon-text-color);
     height: 32px;
     width: 32px;
     border-radius: 50%;
     background: transparent;
-    color: $color-purple;
+    color: var(--icon-text-color);
     font-size: $size18;
     text-align: center;
     font-family: $Roboto;
 }
 .buttonPagination:hover {
-    background: $color-purple;
-    color: $color-white;
+    background: var(--icon-text-color);
+    color: var(--buttom-hover);
 }

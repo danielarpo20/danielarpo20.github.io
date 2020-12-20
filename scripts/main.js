@@ -1,8 +1,9 @@
-import {activeMenu, inactiveMenu} from './_navbar.js'
+import { activeMenu, inactiveMenu, darkMode } from "./navbar/mainNav.js";
 
 function main() {
   activeMenu();
   inactiveMenu();
+  darkMode();
 }
 
-main()
+main();

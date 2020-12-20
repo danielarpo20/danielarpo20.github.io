@@ -1,6 +1,6 @@
 .lineUp {
     height: 5px;
-    background-color: $color-purple;
+    background-color: var(--line-color);
     width: 100%;
     position: fixed;
     z-index: 2;
@@ -8,5 +8,5 @@
 
 .lineDown {
     height: 5px;
-    background-color: $color-purple;
+    background-color: var(--line-color);
 }

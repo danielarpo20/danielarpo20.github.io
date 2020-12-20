@@ -1,20 +1,23 @@
 .header {
     width: 100%;
-    background-color: $color-white;
+    background-color: var(--background-light);
     position: fixed;
     z-index: 1;
 
     &-container {
-        max-width: $maxWdthMobile;
-        margin: auto;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
+        
+        &-wrapper {
+            max-width: $maxWdthMobile;
+            margin: auto;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
     }
 
     &-icon {
         font-size: $size24;
-        color: $color-purple;
+        color: VAR(--icon-text-color);
         padding-top: 1.2em;
 
         &.active {
@@ -25,7 +28,7 @@
     &-iconX {
         display: none;
         font-size: $size24;
-        color: $color-purple;
+        color: var(--icon-text-color);
         padding-top: 1.2em;
 
         &.active {
@@ -60,7 +63,7 @@
     display: none;
     position: absolute;
     width: 100%;
-    background: rgba(87, 46, 229, 0.90);
+    background: var(--navbar-bg-mobile);
     height: 90vh;
     font-family: $Montserrat;
     font-weight: 700;
@@ -72,7 +75,7 @@
         display: initial;
         position: fixed;
         top: 5.6em;
-        margin-left: -1.5em;
+        // margin: auto;x   
     }
 
     &-items {
@@ -105,16 +108,6 @@
     }
 }
 
-@media screen and (min-width: 768px) {
-
-    .navbar {
-
-        &.active {
-            margin-left: -2.5em;
-        }
-    }
-}
-
 @media screen and (min-width: 1350px) {
     .header {
         display: flex;
@@ -125,8 +118,13 @@
         &-container {
             width: $maxWdthDesktop;
             margin: auto;
-            display: inherit;
+            display: flex;
             flex-direction: row;
+            justify-content: space-between;
+
+            &-wrapper {
+                margin: 0;
+            }
         }
 
         &-icon {
@@ -178,7 +176,7 @@
                 padding-right: 4em;
 
                 &-link {
-                    color: $color-purple;
+                    color: var(--icon-text-color);
                     position: relative;
                 }
 
@@ -193,7 +191,6 @@
                     bottom: -20%;
                     height: .2em;
                     width: 100%;
-                    color: $color-black;
                     background: $color-greenLight;
                     transform: scaleX(0);
                     transform-origin: right;

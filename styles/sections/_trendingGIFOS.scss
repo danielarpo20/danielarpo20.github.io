@@ -1,5 +1,5 @@
 .trending {
-    background-color: $color-whiteDark;
+    background-color: var(--background-dark);
     padding: 4em 0 6em;
 
     &-textcontainer {
@@ -10,7 +10,7 @@
         &-title {
             font-family: $Montserrat;
             font-weight: 700;
-            color: $color-purple;
+            color: var(--icon-text-color);
             font-size: $size20;
             line-height: $size30;
             margin: 0;
@@ -20,7 +20,7 @@
         &-paragraph {
             font-family: $Roboto;
             font-size: $size16;
-            color: $color-black;
+            color: var(--text-color);
             line-height: $size22;
             width: 50%;
             margin: auto;
@@ -46,7 +46,7 @@
             // height: 100vh;
 
             &-iconX {
-                color: $color-purple;
+                color: var(--icon-text-color);
                 font-size: $size20;
             }
 
@@ -55,7 +55,7 @@
                 justify-content: space-between;
 
                 &-info {
-                    color: $color-black;
+                    color: var(--text-color);
 
                     &-user {
                         font-family: $Roboto;
@@ -79,7 +79,7 @@
                     &-icons {
 
                         &-icon {
-                            color: $color-purple;
+                            color: var(--icon-text-color);
                             font-size: $size20;
                             padding: 1em;
                         }
@@ -123,7 +123,7 @@
 
             &-back {
                 display: initial;
-                background: $color-purple;
+                background: var(--icon-text-color);
                 opacity: .6;
                 position: relative;
                 height: inherit;
@@ -142,7 +142,7 @@
                         margin: 1em 1em 0 0;
 
                         &-icon {
-                            color: $color-purple;
+                            color: var(--icon-text-color);
                             font-size: $size18;
                             padding: 0.5em;
                         }

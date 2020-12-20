@@ -21,38 +21,42 @@
     <div class="lineUp"></div>
     <header class="header">
       <div class="header-container">
-        <div class="header-icon">
-          <i class="fas fa-bars" id="icon"></i>
+        <div class="header-container-wrapper">
+          <div class="header-icon">
+            <i class="fas fa-bars" id="icon"></i>
+          </div>
+          <div class="header-iconX" id="iconX">
+            <i class="fas fa-times"></i>
+          </div>
+          <figure class="header-imgContainer">
+            <img
+              src="./assetes/logo-mobile.svg"
+              alt="logo-mobile"
+              class="header-imgContainer-logo-mobile"
+            />
+            <img
+              src="./assetes/logo-mobile-modo-noct.svg"
+              alt="logo-mobile-night"
+              class="header-imgContainer-logo-mobile-noc"
+            />
+            <img
+              src="./assetes/logo-desktop.svg"
+              alt="logo-desktop"
+              class="header-imgContainer-logo-desktop"
+            />
+            <img
+              src="./assetes/Logo-modo-noc.svg"
+              alt="logo-desktop-night"
+              class="header-imgContainer-logo-desktop-noc"
+            />
+          </figure>
         </div>
-        <div class="header-iconX" id="iconX">
-          <i class="fas fa-times"></i>
-        </div>
-        <figure class="header-imgContainer">
-          <img
-            src="./assetes/logo-mobile.svg"
-            alt="logo-mobile"
-            class="header-imgContainer-logo-mobile"
-          />
-          <img
-            src="./assetes/logo-mobile-modo-noct.svg"
-            alt="logo-mobile-night"
-            class="header-imgContainer-logo-mobile-noc"
-          />
-          <img
-            src="./assetes/logo-desktop.svg"
-            alt="logo-desktop"
-            class="header-imgContainer-logo-desktop"
-          />
-          <img
-            src="./assetes/Logo-modo-noc.svg"
-            alt="logo-desktop-night"
-            class="header-imgContainer-logo-desktop-noc"
-          />
-        </figure>
         <nav class="navbar">
           <ul class="navbar-items">
-            <li class="navbar-items-item" onclick="darkMode()">
-              <a href="#" class="navbar-items-item-link">modo nocturno</a>
+            <li class="navbar-items-item">
+              <a href="#" class="navbar-items-item-link mode" id="mode"
+                >modo nocturno</a
+              >
             </li>
             <li class="navbar-items-item">
               <a href="#favorites" class="navbar-items-item-link">favoritos</a>
@@ -74,31 +78,33 @@
 
     <main>
       <section class="principal">
-        <h1 class="principal-title">
-          Inspírate, busca, guarda, y crea los mejores
-          <span class="principal-title-GIFOS">GIFOS</span>
-        </h1>
-        <div class="principal-container">
-          <img
-            src="./assetes/ilustra_header.svg"
-            alt="ilustration-header"
-            class="principal-container-img"
-          />
-        </div>
-        <div class="principal-bar">
-          <input
-            type="text"
-            placeholder="Busca GIFOS y más"
-            class="principal-bar-searchBar"
-          />
-          <i class="fal fa-search principal-bar-icon"></i>
-          <i class="fal fa-times principal-bar-iconX"></i>
-        </div>
-        <div class="principal-introContainer">
-          <h5 class="principal-introContainer-subTitle">Trending:</h5>
-          <p class="principal-introContainer-paragraph">
-            Reactions, Entertainment, Sports, Stickers, Artists
-          </p>
+        <div class="principal-wrapper">
+          <h1 class="principal-title">
+            Inspírate, busca, guarda, y crea los mejores
+            <span class="principal-title-GIFOS">GIFOS</span>
+          </h1>
+          <div class="principal-container">
+            <img
+              src="./assetes/ilustra_header.svg"
+              alt="ilustration-header"
+              class="principal-container-img"
+            />
+          </div>
+          <div class="principal-bar">
+            <input
+              type="text"
+              placeholder="Busca GIFOS y más"
+              class="principal-bar-searchBar"
+            />
+            <i class="fal fa-search principal-bar-icon"></i>
+            <i class="fal fa-times principal-bar-iconX"></i>
+          </div>
+          <div class="principal-introContainer">
+            <h5 class="principal-introContainer-subTitle">Trending:</h5>
+            <p class="principal-introContainer-paragraph">
+              Reactions, Entertainment, Sports, Stickers, Artists
+            </p>
+          </div>
         </div>
       </section>
 
@@ -303,34 +309,35 @@
     </main>
 
     <footer class="footer">
-      <div class="footer-container">
-        <h6 class="footer-container-text">Compartir en:</h6>
-        <div class="footer-container-icons">
-          <a
-            href="https://www.facebook.com/"
-            rel="noreferrer noopener"
-            target="_blank"
-          >
-            <i class="fab fa-facebook-f footer-container-icons-icon"></i>
-          </a>
-          <a
-            href="https://twitter.com/"
-            rel="noreferrer noopener"
-            target="_blank"
-          >
-            <i class="fab fa-twitter footer-container-icons-icon"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/"
-            rel="noreferrer noopener"
-            target="_blank"
-          >
-            <i class="fab fa-instagram footer-container-icons-icon"></i>
-          </a>
+      <div class="footer-wrapper">
+        <div class="footer-container">
+          <h6 class="footer-container-text">Compartir en:</h6>
+          <div class="footer-container-icons">
+            <a
+              href="https://www.facebook.com/"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-f footer-container-icons-icon"></i>
+            </a>
+            <a
+              href="https://twitter.com/"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <i class="fab fa-twitter footer-container-icons-icon"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <i class="fab fa-instagram footer-container-icons-icon"></i>
+            </a>
+          </div>
         </div>
+        <h6 class="footer-container-pie">© GIFOS 2020 All Rights Reserved.</h6>
       </div>
-
-      <h6 class="footer-container-pie">© GIFOS 2020 All Rights Reserved.</h6>
     </footer>
     <div class="lineDown"></div>
     <script type="module" src="./scripts/main.js"></script>
