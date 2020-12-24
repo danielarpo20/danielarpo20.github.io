@@ -6,12 +6,12 @@ export const switchTheme = (mode) => {
     : null;
 
   if (currentTheme === "light") {
-    mode.toElement.innerHTML = "Modo Diurno";
+    mode.originalTarget.firstChild.data = "Modo Diurno";
     setNewLogo(mode, currentTheme);
     document.documentElement.setAttribute("data-theme", "dark");
     localStorage.setItem("theme", "dark");
   } else {
-    mode.toElement.innerHTML = "Modo Nocturno";
+    mode.originalTarget.firstChild.data = "Modo Nocturno";
     setNewLogo(mode, currentTheme);
     document.documentElement.setAttribute("data-theme", "light");
     localStorage.setItem("theme", "light");
@@ -34,6 +34,7 @@ const setNewLogo = (mode, theme) => {
   let imgDesktopDark = document.querySelector(
     ".header-imgContainer-logo-desktop-noc"
   );
+  
   imgDesktopLight.style.display = "none";
   imgDesktopDark.style.display = "none";
   imgMobileLight.style.display = "none";

@@ -65,27 +65,33 @@
 }
 
 .buttonArrow {
-  border: 1px solid var(--icon-text-color);
-  height: 40px;
-  width: 40px;
-  padding: .5em;
-  color: var(--icon-text-color);
-  font-size: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: transparent;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: none;
 }
 
 .buttonArrow:hover {
   background: var(--icon-text-color);
   color: var(--buttom-hover);
+}
+
+@media screen and (min-width: 1350px) {
+  .buttonArrow {
+    border: 1px solid var(--icon-text-color);
+    height: 35px;
+    width: 35px;
+    padding: .5em;
+    color: var(--icon-text-color);
+    font-size: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: transparent;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .buttonPagination {
@@ -517,7 +523,7 @@
 .principal-wrapper {
   width: 90%;
   margin: auto;
-  padding: 7em 0;
+  padding: 7em 0 2em;
 }
 
 .principal-title {
@@ -682,7 +688,7 @@
 
 .trending {
   background-color: var(--background-dark);
-  padding: 4em 0 6em;
+  padding: 4em 0;
 }
 
 .trending-textcontainer {
@@ -710,8 +716,16 @@
   margin: auto;
 }
 
+.trending-container {
+  height: 200px;
+}
+
 .trending-gifs {
-  margin-left: 2em;
+  margin-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
 }
 
 .trending-card {
@@ -785,6 +799,10 @@
   .trending-container {
     max-width: 80%;
     margin: auto;
+    padding-bottom: 5em;
+  }
+  .trending-textcontainer {
+    padding-bottom: 3em;
   }
   .trending-textcontainer-title {
     font-size: 25px;
@@ -792,15 +810,26 @@
   .trending-textcontainer-paragraph {
     font-size: 18px;
   }
+  .trending-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 300px;
+  }
+  .trending-container-buttom {
+    margin-top: 12%;
+  }
   .trending-gifs {
-    margin-left: 2em;
+    margin: 0 2em;
+    overflow: hidden;
   }
   .trending-card {
+    display: none;
     height: 275px;
     width: 357px;
   }
   .trending-card-back {
-    display: initial;
+    display: none;
     background: var(--icon-text-color);
     opacity: .6;
     position: relative;

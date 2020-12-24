@@ -1,6 +1,6 @@
 .trending {
     background-color: var(--background-dark);
-    padding: 4em 0 6em;
+    padding: 4em 0;
 
     &-textcontainer {
         text-align: center;
@@ -27,8 +27,14 @@
         }
     }
 
+    &-container {
+        height: 200px;
+    }
+
     &-gifs {
-        margin-left: 2em;
+        margin-left: 5%;
+        display: flex;
+        overflow: auto;
     }
 
     &-card {
@@ -101,9 +107,11 @@
         &-container {
             max-width: $maxWdthDesktop;
             margin: auto;
+            padding-bottom: 5em;
         }
 
         &-textcontainer {
+            padding-bottom: 3em;
             &-title {
                 font-size: $size25;
             }
@@ -113,16 +121,27 @@
             }
         }
 
+        &-container {
+            display: flex;
+            height: 300px;
+    
+            &-buttom {
+                margin-top: 12%;
+            }
+        }
+
         &-gifs {
-            margin-left: 2em;
+            margin: 0 2em;
+            overflow: hidden;
         }
 
         &-card {
+            display: none;
             height: 275px;
             width: 357px;
 
             &-back {
-                display: initial;
+                display: none;
                 background: var(--icon-text-color);
                 opacity: .6;
                 position: relative;

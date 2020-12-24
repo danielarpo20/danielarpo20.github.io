@@ -43,20 +43,26 @@
 }
 
 .buttonArrow {
-    border: 1px solid var(--icon-text-color);
-    height: 40px;
-    width: 40px;
-    padding: .5em;
-    color: var(--icon-text-color);
-    font-size: $size24;
-    display: flex;
-    align-items: center;
-    background: transparent;
-    justify-content: center;
+    display: none;
 }
 .buttonArrow:hover {
     background: var(--icon-text-color);
     color: var(--buttom-hover);
+}
+
+@media screen and (min-width: 1350px) {
+    .buttonArrow {
+        border: 1px solid var(--icon-text-color);
+        height: 35px;
+        width: 35px;
+        padding: .5em;
+        color: var(--icon-text-color);
+        font-size: $size24;
+        display: flex;
+        align-items: center;
+        background: transparent;
+        justify-content: center;
+    }
 }
 
 .buttonPagination {
