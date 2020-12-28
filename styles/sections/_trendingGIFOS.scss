@@ -6,7 +6,7 @@
         text-align: center;
         margin: auto;
         padding-bottom: 2em;
-        
+
         &-title {
             font-family: $Montserrat;
             font-weight: 700;
@@ -16,7 +16,7 @@
             margin: 0;
             padding-bottom: .5em;
         }
-        
+
         &-paragraph {
             font-family: $Roboto;
             font-size: $size16;
@@ -112,6 +112,7 @@
 
         &-textcontainer {
             padding-bottom: 3em;
+
             &-title {
                 font-size: $size25;
             }
@@ -124,7 +125,7 @@
         &-container {
             display: flex;
             height: 300px;
-    
+
             &-buttom {
                 margin-top: 12%;
             }
