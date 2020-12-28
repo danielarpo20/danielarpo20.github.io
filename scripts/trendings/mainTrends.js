@@ -16,7 +16,6 @@ export const getTrendings = async () => {
     card.alt = result.title;
     card.style.paddingRight = "1em";
     card.id = `img${index}`;
-    // console.log(card)
     document.activeElement.clientWidth < 1350
       ? (card.style.width = "200px")
       : (card.style.width = "300px");
@@ -25,7 +24,7 @@ export const getTrendings = async () => {
 };
 
 export function showCardBack() {
-  const card = document.querySelector('.trending-gifs');
+  const card = document.querySelector(".trending-gifs");
   card.addEventListener("mouseover", hover);
 }
 

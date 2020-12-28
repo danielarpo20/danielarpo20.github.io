@@ -1,4 +1,4 @@
-import { active, inactive } from "./navbar.js";
+import { active, inactive, refreshPage } from "./navbar.js";
 import { switchTheme } from "./darkMode.js";
 
 export function activeMenu() {
@@ -14,4 +14,9 @@ export function inactiveMenu() {
 export function darkMode() {
   const mode = document.querySelector(".mode");
   mode.addEventListener("click", switchTheme);
+}
+
+export function principalPage() {
+  const img = document.querySelector(".prueba");
+  img.addEventListener("click", refreshPage);
 }

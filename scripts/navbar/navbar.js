@@ -9,3 +9,13 @@ export const inactive = () => {
   document.querySelector(".header-icon").classList.remove("active");
   document.querySelector(".header-iconX").classList.remove("active");
 };
+
+export const refreshPage = () => {
+  console.log("hhhh");
+  const principalSection = document.querySelector(".principal");
+  const gifosSection = document.querySelector(".myGifos");
+  const favoritesSection = document.querySelector(".favorites");
+  principalSection.style.display = "initial";
+  gifosSection.style.display = "none";
+  favoritesSection.style.display = "none";
+};

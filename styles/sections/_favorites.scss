@@ -1,3 +1,7 @@
 .favorites {
     display: none;
+
+    &-wrapper {
+        background-color: var(--background-light);
+    }
 }

@@ -126,7 +126,7 @@
 
 .gifGalery {
   text-align: center;
-  padding-bottom: 4em;
+  padding: 6em 0 4em;
   max-width: 90%;
   margin: auto;
 }
@@ -983,7 +983,15 @@
   display: none;
 }
 
+.favorites-wrapper {
+  background-color: var(--background-light);
+}
+
 .myGifos {
   display: none;
+}
+
+.myGifos-wrapper {
+  background-color: var(--background-light);
 }
 /*# sourceMappingURL=styles.css.map */

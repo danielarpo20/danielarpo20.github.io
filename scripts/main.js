@@ -1,10 +1,17 @@
-import { activeMenu, inactiveMenu, darkMode } from "./navbar/mainNav.js";
+import {
+  activeMenu,
+  inactiveMenu,
+  darkMode,
+  principalPage,
+} from "./navbar/mainNav.js";
 import {
   getTrendings,
   nextSlide,
   previusSlideButtom,
   showCardBack,
 } from "./trendings/mainTrends.js";
+import { getFavorites } from "./favorites/mainFavorites.js";
+import { getGifos } from "./gifos/mianGifos.js";
 
 function main() {
   activeMenu();
@@ -14,6 +21,9 @@ function main() {
   nextSlide();
   previusSlideButtom();
   showCardBack();
+  getFavorites();
+  getGifos();
+  principalPage();
 }
 
 main();
