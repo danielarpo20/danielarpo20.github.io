@@ -11,7 +11,6 @@ export const inactive = () => {
 };
 
 export const refreshPage = () => {
-  console.log("hhhh");
   const principalSection = document.querySelector(".principal");
   const gifosSection = document.querySelector(".myGifos");
   const favoritesSection = document.querySelector(".favorites");

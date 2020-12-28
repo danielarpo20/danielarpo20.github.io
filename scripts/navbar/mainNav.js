@@ -17,6 +17,6 @@ export function darkMode() {
 }
 
 export function principalPage() {
-  const img = document.querySelector(".prueba");
+  const img = document.querySelector(".header-imgContainer");
   img.addEventListener("click", refreshPage);
 }
