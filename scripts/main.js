@@ -12,6 +12,7 @@ import {
 } from "./trendings/mainTrends.js";
 import { getFavorites } from "./favorites/mainFavorites.js";
 import { getGifos } from "./gifos/mianGifos.js";
+import { createGif } from "./createGif/mainCreate.js";
 
 function main() {
   activeMenu();
@@ -24,6 +25,7 @@ function main() {
   getFavorites();
   getGifos();
   principalPage();
+  createGif();
 }
 
 main();

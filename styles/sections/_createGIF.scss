@@ -1,3 +1,69 @@
 .createGIF {
     display: none;
+    position: relative;
+
+    &-wrapper {
+        background-color: var(--background-light);
+        height: 83vh;
+    }
+
+    &-record {
+        position: absolute;
+        top: 15em;
+        left: 10em;
+    }
+
+    &-tape {
+        position: absolute;
+        top: 25em;
+        left: 75em;
+    }
+
+    &-container {
+        padding: 6em 0 0 3em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-square {
+            border: 2px solid var(--icon-text-color);
+            height: 350px;
+            width: 48%;
+            margin: auto;
+            position: relative;
+
+            &-video {
+                border: 3px solid $color-greenLight;
+                height: 90%;
+                width: 95%;
+                margin: 2% auto;
+                position: relative;
+
+                &-broadness {
+                    background-color: var(--background-light);
+                    width: 102%;
+                    height: 80%;
+                    margin: 5% -.3em;
+                }
+                
+                &-highness {
+                    background-color: var(--background-light);
+                    height: 105%;
+                    width: 90%;
+                    margin: -48% 2em;
+                }
+            }
+        }
+
+        &-buttoms {
+            padding: 1em 0;
+        }
+
+        &-line {
+            border: 4px solid var(--icon-text-color);
+            border-radius: 20px;
+            width: 60%;
+            margin-bottom: 1em;
+        }
+    }
 }

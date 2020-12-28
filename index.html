@@ -72,7 +72,7 @@
               </a>
             </li>
           </ul>
-          <a href="#createGif" class="navbar-link">
+          <a href="#createGif" class="navbar-link" id="create">
             <button type="button" class="gifCreation">
               <i class="fal fa-plus gifCreation-icon"></i>
             </button>
@@ -284,43 +284,50 @@
       <!-- </div> -->
 
       <section class="createGIF">
-        <div class="animationCamara">
-          <img
-            src="./assetes/element-camara.svg"
-            alt="camara"
-            class="animationCamara-camera"
-          />
-          <img
-            src="./assetes/element-luz-camara.svg"
-            alt="luz-camara"
-            class="animationCamara-cameraLight"
-          />
-          <img
-            src="./assetes/element_cinta2.svg"
-            alt="cinta-grande"
-            class="animationCamara-bigTape"
-          />
-          <img
-            src="./assetes/element_cinta1.svg"
-            alt="cinta-pequela"
-            class="animationCamara-smallTape"
-          />
+        <div class="createGIF-wrapper">
+          <div class="animationCamara createGIF-record">
+            <img
+              src="./assetes/element-camara.svg"
+              alt="camara"
+              class="animationCamara-camera"
+            />
+            <img
+              src="./assetes/element-luz-camara.svg"
+              alt="luz-camara"
+              class="animationCamara-cameraLight"
+            />
+            <img
+              src="./assetes/element_cinta2.svg"
+              alt="cinta-grande"
+              class="animationCamara-bigTape"
+            />
+            <img
+              src="./assetes/element_cinta1.svg"
+              alt="cinta-pequela"
+              class="animationCamara-smallTape"
+            />
+          </div>
+
+          <div class="createGIF-container">
+            <div class="createGIF-container-square">
+              <div class="createGIF-container-square-video">
+                <div class="createGIF-container-square-video-broadness"></div>
+                <div class="createGIF-container-square-video-highness"></div>
+              </div>
+            </div>
+            <div class="createGIF-container-buttoms">
+              <button type="button" class="buttonPagination">1</button>
+              <button type="button" class="buttonPagination">2</button>
+              <button type="button" class="buttonPagination">3</button>
+            </div>
+            <div class="createGIF-container-line"></div>
+            <button type="button" class="button">COMENZAR</button>
+          </div>
+
+          <img src="./assetes/pelicula.svg" alt="pelicula" class="movieTape createGIF-tape" />
+          <!-- <img src="./assetes/pelicula-modo-noc.svg" alt=""> -->
+          <!-- <img src="./assetes/camara.svg" alt="camara" /> -->
         </div>
-        <div class="createGIF">
-          <img src="./assetes/" alt="" />
-          <img src="./assetes/camara-element-nofondo.png" alt="camara-noc" />
-          <img
-            src="./assetes/element-luz-camara.svg"
-            alt="luz-camara"
-            class="createGIF-animationCamara-cameraLight"
-          />
-          <img src="./assetes/element_cinta2-modo-noc.svg" alt="" />
-          <img src="./assetes/element_cinta1-modo-noc.svg" alt="luz-camara" />
-        </div>
-        <img src="./assetes/pelicula.svg" alt="pelicula" class="movieTape" />
-        <!-- <img src="./assetes/pelicula-modo-noc.svg" alt=""> -->
-        <!-- <img src="./assetes/camara.svg" alt="camara" /> -->
-        <!-- <button type="button" class="button">COMENZAR</button> -->
       </section>
     </main>
 
