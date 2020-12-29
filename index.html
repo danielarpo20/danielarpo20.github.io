@@ -193,6 +193,7 @@
             Mira los últimos GIFO de nuestra comunidad.
           </p>
         </div>
+
         <div class="trending-container">
           <button
             type="button"
@@ -201,13 +202,7 @@
           >
             <i class="fas fa-chevron-left"></i>
           </button>
-
-          <div class="trending-gifs">
-            <div class="trending-gifs-gif">
-              <img src="" alt="" />
-            </div>
-          </div>
-          
+          <div class="trending-container-gifs"></div>
           <button
             type="button"
             class="buttonArrow trending-container-buttom"
@@ -216,71 +211,66 @@
             <i class="fas fa-chevron-right"></i>
           </button>
         </div>
-      </section>
 
-      <!-- <div class="trending-card"> -->
-      <!-- <img class='trending-img' src="" alt="" /> -->
-
-      <!-- <div class="trending-card-mobile">
-          <div class="trending-card-mobile-iconX">
+        <div class="trending-cardBack">
+          <div class="trending-cardBack-iconContainer">
+            <div class="trending-cardBack-iconContainer-icon">
+              <i class="far fa-heart"></i>
+            </div>
+            <div class="trending-cardBack-iconContainer-icon">
+              <i class="fal fa-arrow-to-bottom"></i>
+            </div>
+            <div class="trending-cardBack-iconContainer-icon">
+              <i class="fas fa-expand-alt"></i>
+            </div>
+          </div>
+          <div class="trending-cardBack-infoContainer">
+            <h6 class="trending-cardBack-infoContainer-user">User</h6>
+            <p class="trending-cardBack-infoContainer-title">Titulo GIFO</p>
+          </div>
+        </div>
+        
+        <div class="trending-cardExpanded">
+          <div class="trending-cardExpanded-iconX">
             <i class="fal fa-times"></i>
           </div>
-          <img src="" alt="" />
-          <div class="trending-card-mobile-container">
-            <div class="trending-card-mobile-container-info">
-              <h3 class="trending-card-mobile-container-info-user">
-                User
-              </h3>
-              <h4 class="trending-card-mobile-container-info-title">
-                Titulo <span>GIFO</span>
-              </h4>
+          <div class="trending-cardExpanded-imageContainer">
+            <button
+              type="button"
+              class="buttonArrow trending-cardExpanded-imageContainer-buttom"
+              id="previus"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <img
+              class="buttonArrow trending-cardExpanded-imageContaine-image"
+            />
+            <button
+              type="button"
+              class="buttonArrow trending-cardExpanded-imageContainer-buttom"
+              id="next"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="trending-cardExpanded-container">
+            <div class="trending-cardExpanded-container-info">
+              <h3 class="trending-cardExpanded-container-info-user">User</h3>
+              <h4 class="trending-cardExpanded-container-info-title">Titulo</h4>
             </div>
-            <div class="trending-card-mobile-container-containerIcons">
-              <div
-                class="trending-card-mobile-container-containerIcons-icons"
-              >
-                <i
-                  class="far fa-heart trending-card-mobile-container-containerIcons-icons-icon"
-                ></i>
+            <div class="trending-cardExpanded-container-containerIcons">
+              <div class="trending-cardExpanded-container-containerIcons-heart">
+                <i class="far fa-heart"></i>
               </div>
               <div
-                class="trending-card-mobile-container-containerIcons-icons"
+                class="trending-cardExpanded-container-containerIcons-dowload"
               >
-                <i
-                  class="fal fa-arrow-to-bottom trending-card-mobile-container-containerIcons-icons-icon"
-                ></i>
+                <i class="fal fa-arrow-to-bottom"></i>
               </div>
             </div>
           </div>
-        </div> -->
-
-      <!-- <div class="trending-card-back">
-        <div class="trending-card-back-iconsContainer">
-          <div class="trending-card-back-iconsContainer-icons">
-            <i
-              class="far fa-heart trending-card-back-iconsContainer-icons-icon"
-            ></i>
-          </div>
-          <div class="trending-card-back-iconsContainer-icons">
-            <i
-              class="fal fa-arrow-to-bottom trending-card-back-iconsContainer-icons-icon"
-            ></i>
-          </div>
-          <div class="trending-card-back-iconsContainer-icons">
-            <i
-              class="fas fa-expand-alt trending-card-back-iconsContainer-icons-icon"
-            ></i>
-          </div>
         </div>
-        <div class="trending-card-back-info">
-          <h3 class="trending-card-back-info-user">User</h3>
-          <h4 class="trending-card-back-info-title">
-            Titulo <span>GIFO</span>
-          </h4>
-        </div>
-      </div> -->
-
-      <!-- </div> -->
+      </section>
 
       <section class="createGIF">
         <div class="createGIF-wrapper">
@@ -321,7 +311,11 @@
             <div class="createGIF-container-line"></div>
             <button type="button" class="button">COMENZAR</button>
           </div>
-          <img src="./assetes/pelicula.svg" alt="pelicula" class="movieTape createGIF-tape" />
+          <img
+            src="./assetes/pelicula.svg"
+            alt="pelicula"
+            class="movieTape createGIF-tape"
+          />
           <!-- <img src="./assetes/pelicula-modo-noc.svg" alt=""> -->
           <!-- <img src="./assetes/camara.svg" alt="camara" /> -->
         </div>

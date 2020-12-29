@@ -1,4 +1,4 @@
-// import {} from './general'
+import { getCards } from "./general.js";
 
 export function previusSlide() {
   const previusButtom = document.getElementById("previus");
@@ -11,15 +11,9 @@ export function nextSlide() {
 }
 
 export function showCardBack() {
-  const card = document.querySelector(".trending-gifs");
-  card.addEventListener("mouseover", hover);
+  const card = document.querySelector(".trending-container-gifs");
+  card.addEventListener("mouseover", getCards);
 }
-
-export const hover = async () => {
-  const card = document.getElementById(`img${1}`);
-  // card.style.color = 'tomato'
-};
-
 
 export const previusSlideButtom = async () => {
   console.log("previus");

@@ -721,7 +721,7 @@
   height: 200px;
 }
 
-.trending-gifs {
+.trending-container-gifs {
   margin-left: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -729,71 +729,82 @@
   overflow: auto;
 }
 
-.trending-card {
-  height: 187px;
-  width: 243px;
-  background: #50E3C2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.trending-cardBack {
+  display: none;
 }
 
-.trending-card-mobile {
+.trending-cardExpanded {
   display: none;
   background: rgba(255, 255, 255, 0.9);
-  height: inherit;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
-.trending-card-mobile-iconX {
+.trending-cardExpanded-iconX {
   color: var(--icon-text-color);
-  font-size: 20px;
+  font-size: 25px;
+  text-align: right;
+  margin: 2em 5%;
 }
 
-.trending-card-mobile-container {
+.trending-cardExpanded-imageContainer-buttom {
+  display: none;
+}
+
+.trending-cardExpanded-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  padding-top: 2em;
 }
 
-.trending-card-mobile-container-info {
+.trending-cardExpanded-container-info {
   color: var(--text-color);
 }
 
-.trending-card-mobile-container-info-user {
+.trending-cardExpanded-container-info-user {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
+  font-weight: 400;
   margin: 0;
   padding-bottom: .5em;
 }
 
-.trending-card-mobile-container-info-title {
+.trending-cardExpanded-container-info-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 16px;
   margin: 0;
 }
 
-.trending-card-mobile-container-containerIcons {
+.trending-cardExpanded-container-containerIcons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.trending-card-mobile-container-containerIcons-icons-icon {
+.trending-cardExpanded-container-containerIcons-heart {
   color: var(--icon-text-color);
   font-size: 20px;
-  padding: 1em;
+  padding: .5em 0 0 2em;
+  margin-right: 1em;
 }
 
-.trending-card-back {
-  display: none;
+.trending-cardExpanded-container-containerIcons-dowload {
+  color: var(--icon-text-color);
+  font-size: 20px;
+  padding: .3em .6em 0;
+  text-align: center;
+  border: 1px solid #9CAFC3;
+  border-radius: 5px;
 }
 
 @media screen and (min-width: 1350px) {
@@ -820,75 +831,78 @@
   .trending-container-buttom {
     margin-top: 12%;
   }
-  .trending-gifs {
+  .trending-container-gifs {
     margin: 0 2em;
     overflow: hidden;
   }
-  .trending-card {
+  .trending-cardBack {
     display: none;
-    height: 275px;
-    width: 357px;
-  }
-  .trending-card-back {
-    display: none;
-    background: var(--icon-text-color);
-    opacity: .6;
-    position: relative;
-    height: inherit;
-  }
-  .trending-card-back-iconsContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-  }
-  .trending-card-back-iconsContainer-icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-    background: #FFFFFF;
-    opacity: 0.7;
-    border-radius: 6px;
-    border-radius: 6px;
-    margin: 1em 1em 0 0;
-  }
-  .trending-card-back-iconsContainer-icons-icon {
-    color: var(--icon-text-color);
-    font-size: 18px;
-    padding: 0.5em;
-  }
-  .trending-card-back-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    height: 300px;
+    width: 316px;
+    background: var(--navbar-bg-mobile);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    justify-items: flex-end;
-    font-family: "Roboto", sans-serif;
-    color: #FFFFFF;
-    padding-left: 2em;
-    position: absolute;
-    bottom: 4em;
   }
-  .trending-card-back-info-user {
-    font-size: 15px;
+  .trending-cardBack-iconContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: end;
+        align-self: end;
+    margin: 1em 1em;
+  }
+  .trending-cardBack-iconContainer-icon {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 1em;
+    border-radius: 5px;
+    color: var(--icon-text-color);
+    text-align: center;
+    padding: .5em;
+    margin-left: .5em;
+  }
+  .trending-cardBack-iconContainer :hover {
+    background-color: #FFFFFF;
+  }
+  .trending-cardBack-infoContainer {
+    font-family: "Roboto", sans-serif;
+    padding: 9em 0 0 1em;
+  }
+  .trending-cardBack-infoContainer-user {
     margin: 0;
+    font-size: 15px;
+    font-weight: 300;
+    color: #FFFFFF;
     padding-bottom: .5em;
   }
-  .trending-card-back-info-title {
+  .trending-cardBack-infoContainer-title {
+    margin: 0;
     font-size: 16px;
     font-weight: 700;
-    margin: 0;
+    color: #FFFFFF;
   }
-  .trending-card-mobile {
-    display: none;
+  .trending-cardExpanded-iconX {
+    margin-right: 15%;
+  }
+  .trending-cardExpanded-imageContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    margin: auto;
+  }
+  .trending-cardExpanded-imageContainer-buttom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .trending-cardExpanded-imageContainer-image {
+    margin: 0 2em;
+  }
+  .trending-cardExpanded-container {
+    width: 50%;
+    margin: auto;
   }
 }
 
