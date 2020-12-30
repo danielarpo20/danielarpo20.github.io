@@ -1,4 +1,4 @@
-import { getCards } from "./general.js";
+import { getCardsBack, vanishCardsBack } from "./general.js";
 
 export function previusSlide() {
   const previusButtom = document.getElementById("previus");
@@ -11,8 +11,13 @@ export function nextSlide() {
 }
 
 export function showCardBack() {
-  const card = document.querySelector(".trending-container-gifs");
-  card.addEventListener("mouseover", getCards);
+  const card = document.querySelector(".trending-container-card-gifs");
+  card.addEventListener("mouseover", getCardsBack);
+}
+
+export function VanishCardBack() {
+  const card = document.querySelector(".trending-cardBack");
+  card.addEventListener("mouseout", vanishCardsBack);
 }
 
 export const previusSlideButtom = async () => {

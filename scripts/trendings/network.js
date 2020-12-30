@@ -2,7 +2,7 @@ import { apiConexion } from "../apiConection.js";
 
 export const getTrendings = async () => {
   const results = await apiConexion("trending");
-  const container = document.querySelector(".trending-container-gifs");
+  const container = document.querySelector(".trending-container-card-gifs");
   results.data.map((result, index) => {
     let card = document.createElement("img");
     card.src = result.images.downsized.url;

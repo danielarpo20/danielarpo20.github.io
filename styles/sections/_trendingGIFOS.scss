@@ -28,12 +28,13 @@
     }
 
     &-container {
-        height: 200px;
-
-        &-gifs {
-            margin-left: 5%;
-            display: flex;
-            overflow: auto;
+        &-card {
+            &-gifs {
+                height: 200px;
+                margin-left: 5%;
+                display: flex;
+                overflow: auto;
+            }
         }
     }
 
@@ -115,12 +116,6 @@
 
 @media screen and (min-width: 1350px) {
     .trending {
-        &-container {
-            max-width: $maxWdthDesktop;
-            margin: auto;
-            padding-bottom: 5em;
-        }
-
         &-textcontainer {
             padding-bottom: 3em;
 
@@ -134,26 +129,39 @@
         }
 
         &-container {
+            max-width: $maxWdthDesktop;
+            margin: auto;
+            padding-bottom: 5em;
             display: flex;
-            height: 300px;
+            justify-content: space-between;
 
             &-buttom {
-                margin-top: 12%;
+                margin-top: 11%;
             }
 
-            &-gifs {
-                margin: 0 2em;
-                overflow: hidden;
+            &-card {
+                width: 90%;
+
+                &-gifs {
+                    overflow: hidden;
+                    height: 300px;
+                    margin: 0 2em;
+                    position: relative;
+                }
             }
+
         }
 
         &-cardBack {
             display: none;
-            // display: flex;
             height: 300px;
             width: 316px;
-            background: var(--navbar-bg-mobile);
             flex-direction: column;
+            position: absolute;
+            width: 300px;
+            height: 100%;
+            background: var(--navbar-bg-mobile);
+            // transform: perspective(2000px) rotateY(-90deg);
 
             &-iconContainer {
                 display: flex;

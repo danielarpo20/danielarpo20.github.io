@@ -717,11 +717,8 @@
   margin: auto;
 }
 
-.trending-container {
+.trending-container-card-gifs {
   height: 200px;
-}
-
-.trending-container-gifs {
   margin-left: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -808,11 +805,6 @@
 }
 
 @media screen and (min-width: 1350px) {
-  .trending-container {
-    max-width: 80%;
-    margin: auto;
-    padding-bottom: 5em;
-  }
   .trending-textcontainer {
     padding-bottom: 3em;
   }
@@ -823,27 +815,40 @@
     font-size: 18px;
   }
   .trending-container {
+    max-width: 80%;
+    margin: auto;
+    padding-bottom: 5em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 300px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .trending-container-buttom {
-    margin-top: 12%;
+    margin-top: 11%;
   }
-  .trending-container-gifs {
-    margin: 0 2em;
+  .trending-container-card {
+    width: 90%;
+  }
+  .trending-container-card-gifs {
     overflow: hidden;
+    height: 300px;
+    margin: 0 2em;
+    position: relative;
   }
   .trending-cardBack {
     display: none;
     height: 300px;
     width: 316px;
-    background: var(--navbar-bg-mobile);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    background: var(--navbar-bg-mobile);
   }
   .trending-cardBack-iconContainer {
     display: -webkit-box;
@@ -1047,9 +1052,9 @@
 
 .createGIF-container-square-video-highness {
   background-color: var(--background-light);
-  height: 105%;
+  height: 110%;
   width: 90%;
-  margin: -48% 2em;
+  margin: -21em 2em;
 }
 
 .createGIF-container-buttoms {
