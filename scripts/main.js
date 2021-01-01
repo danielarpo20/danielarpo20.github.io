@@ -9,6 +9,8 @@ import {
   previusSlideButtom,
   showCardBack,
   VanishCardBack,
+  expandCard,
+  closeCardExpanded,
 } from "./trendings/mainTrends.js";
 import { getTrendings } from "./trendings/network.js";
 import { getFavorites } from "./favorites/mainFavorites.js";
@@ -28,6 +30,8 @@ function main() {
   principalPage();
   createGif();
   VanishCardBack();
+  expandCard();
+  closeCardExpanded();
 }
 
 main();

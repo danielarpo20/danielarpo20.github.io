@@ -202,18 +202,17 @@
           >
             <i class="fas fa-chevron-left"></i>
           </button>
-
           <div class="trending-container-card">
             <div class="trending-container-card-gifs">
               <div class="trending-cardBack">
                 <div class="trending-cardBack-iconContainer">
-                  <div class="trending-cardBack-iconContainer-icon">
+                  <div class="trending-cardBack-iconContainer-icon" id="heartIcon">
                     <i class="far fa-heart"></i>
                   </div>
-                  <div class="trending-cardBack-iconContainer-icon">
+                  <div class="trending-cardBack-iconContainer-icon" id="downloadIcon">
                     <i class="fal fa-arrow-to-bottom"></i>
                   </div>
-                  <div class="trending-cardBack-iconContainer-icon">
+                  <div class="trending-cardBack-iconContainer-icon" id="expandIcon">
                     <i class="fas fa-expand-alt"></i>
                   </div>
                 </div>
@@ -223,9 +222,7 @@
                 </div>
               </div>
             </div>
-
           </div>
-
           <button
             type="button"
             class="buttonArrow trending-container-buttom"
@@ -236,9 +233,10 @@
         </div>
 
         <div class="trending-cardExpanded">
-          <div class="trending-cardExpanded-iconX">
+          <div class="trending-cardExpanded-iconX" id="closeIcon">
             <i class="fal fa-times"></i>
           </div>
+
           <div class="trending-cardExpanded-imageContainer">
             <button
               type="button"
@@ -247,9 +245,7 @@
             >
               <i class="fas fa-chevron-left"></i>
             </button>
-            <img
-              class="buttonArrow trending-cardExpanded-imageContaine-image"
-            />
+            <img class="trending-cardExpanded-imageContainer-image"/>
             <button
               type="button"
               class="buttonArrow trending-cardExpanded-imageContainer-buttom"
@@ -258,10 +254,11 @@
               <i class="fas fa-chevron-right"></i>
             </button>
           </div>
+
           <div class="trending-cardExpanded-container">
             <div class="trending-cardExpanded-container-info">
-              <h3 class="trending-cardExpanded-container-info-user">User</h3>
-              <h4 class="trending-cardExpanded-container-info-title">Titulo</h4>
+              <h3 class="trending-cardExpanded-container-info-user"></h3>
+              <h4 class="trending-cardExpanded-container-info-title"></h4>
             </div>
             <div class="trending-cardExpanded-container-containerIcons">
               <div class="trending-cardExpanded-container-containerIcons-heart">

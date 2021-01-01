@@ -1,4 +1,9 @@
-import { getCardsBack, vanishCardsBack } from "./general.js";
+import {
+  getCardsBack,
+  vanishCardsBack,
+  cardExpanded,
+  closeCard,
+} from "./general.js";
 
 export function previusSlide() {
   const previusButtom = document.getElementById("previus");
@@ -18,6 +23,16 @@ export function showCardBack() {
 export function VanishCardBack() {
   const card = document.querySelector(".trending-cardBack");
   card.addEventListener("mouseout", vanishCardsBack);
+}
+
+export function expandCard() {
+  const expandIcon = document.getElementById("expandIcon");
+  expandIcon.addEventListener("click", cardExpanded);
+}
+
+export function closeCardExpanded() {
+  const closeIcon = document.getElementById("closeIcon");
+  closeIcon.addEventListener("click", closeCard);
 }
 
 export const previusSlideButtom = async () => {

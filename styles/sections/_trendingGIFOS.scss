@@ -59,6 +59,8 @@
         }
 
         &-imageContainer {
+            display: flex;
+            justify-content: space-between;
             &-buttom {
                 display: none;
             }
@@ -161,7 +163,6 @@
             width: 300px;
             height: 100%;
             background: var(--navbar-bg-mobile);
-            // transform: perspective(2000px) rotateY(-90deg);
 
             &-iconContainer {
                 display: flex;
@@ -216,10 +217,13 @@
 
                 &-buttom {
                     display: flex;
+                    margin-top: 6em;
                 }
 
                 &-image {
                     margin: 0 2em;
+                    width: 30em;
+                    height: 25em;
                 }
             }
 

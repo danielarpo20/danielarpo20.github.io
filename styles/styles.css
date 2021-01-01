@@ -747,6 +747,15 @@
   margin: 2em 5%;
 }
 
+.trending-cardExpanded-imageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .trending-cardExpanded-imageContainer-buttom {
   display: none;
 }
@@ -901,9 +910,12 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-top: 6em;
   }
   .trending-cardExpanded-imageContainer-image {
     margin: 0 2em;
+    width: 30em;
+    height: 25em;
   }
   .trending-cardExpanded-container {
     width: 50%;
