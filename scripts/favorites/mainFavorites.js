@@ -1,4 +1,4 @@
-import { favorites } from "./general.js";
+import { favorites } from "./favController.js";
 
 export function getFavorites() {
   let favoritesLink = document.getElementById("favorite");

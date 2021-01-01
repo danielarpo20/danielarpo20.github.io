@@ -3,7 +3,7 @@ import {
   vanishCardsBack,
   cardExpanded,
   closeCard,
-} from "./general.js";
+} from "./trendsController.js";
 
 export function previusSlide() {
   const previusButtom = document.getElementById("previus");
@@ -26,7 +26,7 @@ export function VanishCardBack() {
 }
 
 export function expandCard() {
-  const expandIcon = document.getElementById("expandIcon");
+  const expandIcon = document.querySelector(".fa-expand-alt");
   expandIcon.addEventListener("click", cardExpanded);
 }
 

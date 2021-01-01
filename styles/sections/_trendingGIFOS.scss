@@ -61,6 +61,7 @@
         &-imageContainer {
             display: flex;
             justify-content: space-between;
+
             &-buttom {
                 display: none;
             }
@@ -171,11 +172,11 @@
 
                 &-icon {
                     background-color: $color-white-opacity7;
-                    width: 1em;
+                    // width: 1em;
                     border-radius: 5px;
                     color: var(--icon-text-color);
                     text-align: center;
-                    padding: .5em;
+                    // padding: .5em;
                     margin-left: .5em;
                 }
 
@@ -233,4 +234,14 @@
             }
         }
     }
+}
+
+.fas {
+    padding: .5em;
+    border-radius: 5px;
+}
+
+.far {
+    padding: .5em;
+    border-radius: 5px;
 }

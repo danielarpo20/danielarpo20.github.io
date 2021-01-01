@@ -4,7 +4,6 @@ export const switchTheme = (mode) => {
   const currentTheme = localStorage.getItem("theme")
     ? localStorage.getItem("theme")
     : null;
-
   if (currentTheme === "light") {
     mode.originalTarget.firstChild.data = "Modo Diurno";
     setNewLogo(mode, currentTheme);
@@ -21,7 +20,6 @@ export const switchTheme = (mode) => {
 
 const setNewLogo = (mode, theme) => {
   const screenSize = mode.view.innerWidth;
-
   let imgMobileLight = document.querySelector(
     ".header-imgContainer-logo-mobile"
   );
@@ -34,12 +32,10 @@ const setNewLogo = (mode, theme) => {
   let imgDesktopDark = document.querySelector(
     ".header-imgContainer-logo-desktop-noc"
   );
-  
   imgDesktopLight.style.display = "none";
   imgDesktopDark.style.display = "none";
   imgMobileLight.style.display = "none";
   imgMobileDark.style.display = "none";
-
   if (screenSize < 1350) {
     if (theme === "light") {
       imgMobileDark.style.display = "initial";

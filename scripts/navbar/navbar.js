@@ -14,8 +14,8 @@ export const refreshPage = () => {
   const principalSection = document.querySelector(".principal");
   const gifosSection = document.querySelector(".myGifos");
   const favoritesSection = document.querySelector(".favorites");
-  const createSection = document.querySelector('.createGIF')
-  const trendingSection = document.querySelector('.trending')
+  const createSection = document.querySelector(".createGIF");
+  const trendingSection = document.querySelector(".trending");
   principalSection.style.display = "initial";
   trendingSection.style.display = "initial";
   gifosSection.style.display = "none";

@@ -1,4 +1,4 @@
-import { gifos } from "./general.js";
+import { gifos } from "./gifController.js";
 
 export function getGifos() {
   const favoritesLink = document.getElementById("gifos");
