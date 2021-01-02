@@ -745,19 +745,25 @@
   font-size: 25px;
   text-align: right;
   margin: 2em 5%;
+  cursor: pointer;
 }
 
 .trending-cardExpanded-imageContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .trending-cardExpanded-imageContainer-buttom {
   display: none;
+}
+
+.trending-cardExpanded-imageContainer-image {
+  width: 20em;
+  height: 20em;
 }
 
 .trending-cardExpanded-container {
@@ -800,17 +806,22 @@
 .trending-cardExpanded-container-containerIcons-heart {
   color: var(--icon-text-color);
   font-size: 20px;
-  padding: .5em 0 0 2em;
-  margin-right: 1em;
+  margin-right: .5em;
+  height: 2em;
+  width: 2em;
+  border: 1px solid #9CAFC3;
+  cursor: pointer;
 }
 
 .trending-cardExpanded-container-containerIcons-dowload {
   color: var(--icon-text-color);
   font-size: 20px;
-  padding: .3em .6em 0;
   text-align: center;
   border: 1px solid #9CAFC3;
   border-radius: 5px;
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1350px) {
@@ -873,6 +884,7 @@
     color: var(--icon-text-color);
     text-align: center;
     margin-left: .5em;
+    cursor: pointer;
   }
   .trending-cardBack-iconContainer :hover {
     background-color: #FFFFFF;
@@ -894,13 +906,10 @@
     font-weight: 700;
     color: #FFFFFF;
   }
-  .trending-cardExpanded-iconX {
-    margin-right: 15%;
-  }
   .trending-cardExpanded-imageContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 50%;
     margin: auto;
   }
@@ -916,8 +925,7 @@
     height: 25em;
   }
   .trending-cardExpanded-container {
-    width: 50%;
-    margin: auto;
+    width: 30em;
   }
 }
 

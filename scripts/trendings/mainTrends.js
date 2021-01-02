@@ -3,6 +3,7 @@ import {
   vanishCardsBack,
   cardExpanded,
   closeCard,
+  showCardMobile,
 } from "./trendsController.js";
 
 export function previusSlide() {
@@ -33,6 +34,11 @@ export function expandCard() {
 export function closeCardExpanded() {
   const closeIcon = document.getElementById("closeIcon");
   closeIcon.addEventListener("click", closeCard);
+}
+
+export function showExpandCardMobile() {
+  const card = document.querySelector(".trending-container-card-gifs");
+  card.addEventListener("click", cardExpanded);
 }
 
 export const previusSlideButtom = async () => {

@@ -56,14 +56,20 @@
             font-size: 25px;
             text-align: right;
             margin: 2em 5%;
+            cursor: pointer;
         }
 
         &-imageContainer {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
 
             &-buttom {
                 display: none;
+            }
+
+            &-image {
+                width: 20em;
+                height: 20em;
             }
         }
 
@@ -99,17 +105,22 @@
                 &-heart {
                     color: var(--icon-text-color);
                     font-size: $size20;
-                    padding: .5em 0 0 2em;
-                    margin-right: 1em;
+                    margin-right: .5em;
+                    height: 2em;
+                    width: 2em;
+                    border: 1px solid $buttom-active;
+                    cursor: pointer;
                 }
-
+                
                 &-dowload {
                     color: var(--icon-text-color);
                     font-size: $size20;
-                    padding: .3em .6em 0;
                     text-align: center;
                     border: 1px solid $buttom-active;
                     border-radius: 5px;
+                    height: 2em;
+                    width: 2em;
+                    cursor: pointer;
                 }
             }
         }
@@ -172,14 +183,12 @@
 
                 &-icon {
                     background-color: $color-white-opacity7;
-                    // width: 1em;
                     border-radius: 5px;
                     color: var(--icon-text-color);
                     text-align: center;
-                    // padding: .5em;
                     margin-left: .5em;
+                    cursor: pointer;
                 }
-
                 :hover {
                     background-color: $color-white;
                 }
@@ -207,12 +216,8 @@
         }
 
         &-cardExpanded {
-            &-iconX {
-                margin-right: 15%;
-            }
-
             &-imageContainer {
-                display: flex;
+                justify-content: space-between;
                 width: 50%;
                 margin: auto;
 
@@ -229,8 +234,7 @@
             }
 
             &-container {
-                width: 50%;
-                margin: auto;
+                width: 30em;
             }
         }
     }
