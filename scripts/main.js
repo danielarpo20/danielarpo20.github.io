@@ -11,10 +11,10 @@ import {
   VanishCardBack,
   expandCard,
   closeCardExpanded,
-  showExpandCardMobile
+  showExpandCardMobile,
 } from "./trendings/mainTrends.js";
 import { getTrendings } from "./trendings/network.js";
-import { getFavorites } from "./favorites/mainFavorites.js";
+import { getFavorites, addToFavorites } from "./favorites/mainFavorites.js";
 import { getGifos } from "./gifos/mianGifos.js";
 import { createGif } from "./createGif/mainCreate.js";
 
@@ -33,7 +33,8 @@ function main() {
   VanishCardBack();
   expandCard();
   closeCardExpanded();
-  showExpandCardMobile()
+  showExpandCardMobile();
+  addToFavorites();
 }
 
 main();

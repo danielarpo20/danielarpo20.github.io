@@ -111,7 +111,7 @@
                     border: 1px solid $buttom-active;
                     cursor: pointer;
                 }
-                
+
                 &-dowload {
                     color: var(--icon-text-color);
                     font-size: $size20;
@@ -125,7 +125,6 @@
             }
         }
     }
-
 }
 
 @media screen and (min-width: 1350px) {
@@ -168,11 +167,8 @@
 
         &-cardBack {
             display: none;
-            height: 300px;
-            width: 316px;
             flex-direction: column;
             position: absolute;
-            width: 300px;
             height: 100%;
             background: var(--navbar-bg-mobile);
 
@@ -189,6 +185,7 @@
                     margin-left: .5em;
                     cursor: pointer;
                 }
+
                 :hover {
                     background-color: $color-white;
                 }

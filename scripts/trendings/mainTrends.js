@@ -38,7 +38,7 @@ export function closeCardExpanded() {
 
 export function showExpandCardMobile() {
   const card = document.querySelector(".trending-container-card-gifs");
-  card.addEventListener("click", cardExpanded);
+  card.addEventListener("click", showCardMobile);
 }
 
 export const previusSlideButtom = async () => {
