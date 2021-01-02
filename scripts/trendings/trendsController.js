@@ -1,11 +1,15 @@
-export const getCardsBack = async () => {
+// export const previusSlideButtom = async () => {};
+
+// export const nextSlideButtom = async () => {};
+
+export const showCardBack = async () => {
   document.onmouseover = function (event) {
     const getIdElementHovered = event.target.id;
     let cardSpecific = document.getElementById(getIdElementHovered);
-    if (getIdElementHovered.includes("img")) {
+    if (getIdElementHovered.includes("gif")) {
       localStorage.clear();
-      localStorage.setItem("userGif", cardSpecific.user);
       localStorage.setItem("gif", cardSpecific.src);
+      localStorage.setItem("userGif", cardSpecific.user);
       localStorage.setItem("titleGif", cardSpecific.title);
       localStorage.setItem("idGif", cardSpecific.id);
       const cardBack = document.querySelector(".trending-cardBack");
@@ -19,19 +23,19 @@ export const getCardsBack = async () => {
       titleCard.innerText = cardSpecific.title;
       cardBack.style.left = `${cardSpecific.x}px`;
       cardBack.style.width = `${cardSpecific.width}px`;
-      if (document.activeElement.clientWidth > 1350) {
-        cardBack.style.display = "flex";
-      }
+      document.activeElement.clientWidth > 1350
+        ? (cardBack.style.display = "flex")
+        : null;
     }
   };
 };
 
-export const vanishCardsBack = () => {
+export const vanishCardBack = () => {
   const cardBack = document.querySelector(".trending-cardBack");
   cardBack.style.display = "none";
 };
 
-export const cardExpanded = async () => {
+export const showCardExpanded = async () => {
   const expandCard = document.querySelector(".trending-cardExpanded");
   const titleCard = document.querySelector(
     ".trending-cardExpanded-container-info-title"
@@ -50,7 +54,7 @@ export const cardExpanded = async () => {
   expandCard.style.display = "initial";
 };
 
-export const closeCard = () => {
+export const closeCardExpanded = () => {
   const getCardExpanded = document.querySelector(".trending-cardExpanded");
   getCardExpanded.style.display = "none";
 };

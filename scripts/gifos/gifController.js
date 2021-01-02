@@ -1,6 +1,6 @@
-import { inactive } from "../navbar/navbar.js";
+import { CloseMenuMobile } from "../navbar/navController.js";
 
-export const gifos = async () => {
+export const showGifosSection = async () => {
   const gifosSection = document.querySelector(".myGifos");
   const principalSection = document.querySelector(".principal");
   const favoritesSection = document.querySelector(".favorites");
@@ -9,5 +9,5 @@ export const gifos = async () => {
   principalSection.style.display = "none";
   favoritesSection.style.display = "none";
   createSection.style.display = "none";
-  inactive();
+  CloseMenuMobile();
 };

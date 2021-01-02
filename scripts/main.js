@@ -1,40 +1,50 @@
 import {
-  activeMenu,
-  inactiveMenu,
-  darkMode,
-  principalPage,
+  nemuIconClick,
+  xIconClick,
+  imageClick,
+  changeModeClick,
 } from "./navbar/mainNav.js";
+
 import {
-  nextSlide,
-  previusSlideButtom,
-  showCardBack,
-  VanishCardBack,
-  expandCard,
-  closeCardExpanded,
-  showExpandCardMobile,
+  getTrendingsGifs,
+  // previusButtonClick,
+  // nextSlide,
+  gifTrendingMouseover,
+  gifTrendingMouseout,
+  expandIconClick,
+  xIconCardExpandedClick,
+  CardMobileClick,
 } from "./trendings/mainTrends.js";
-import { getTrendings } from "./trendings/network.js";
-import { getFavorites, addToFavorites } from "./favorites/mainFavorites.js";
-import { getGifos } from "./gifos/mianGifos.js";
-import { createGif } from "./createGif/mainCreate.js";
+
+import {
+  favoritesLinkClick,
+  heartIconClick,
+} from "./favorites/mainFavorites.js";
+
+import { gifosLinkClick } from "./gifos/mianGifos.js";
+import { createGifClick } from "./createGif/mainCreate.js";
 
 function main() {
-  activeMenu();
-  inactiveMenu();
-  darkMode();
-  getTrendings();
-  nextSlide();
-  previusSlideButtom();
-  showCardBack();
-  getFavorites();
-  getGifos();
-  principalPage();
-  createGif();
-  VanishCardBack();
-  expandCard();
-  closeCardExpanded();
-  showExpandCardMobile();
-  addToFavorites();
+  nemuIconClick();
+  xIconClick();
+  imageClick();
+  changeModeClick();
+
+  getTrendingsGifs();
+  // previusButtonClick();
+  // nextButtonClick();
+  gifTrendingMouseover();
+  gifTrendingMouseout();
+  expandIconClick();
+  xIconCardExpandedClick();
+  CardMobileClick();
+
+
+  favoritesLinkClick();
+  heartIconClick();
+
+  gifosLinkClick();
+  createGifClick();
 }
 
 main();

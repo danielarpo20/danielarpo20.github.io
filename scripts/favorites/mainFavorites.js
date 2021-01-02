@@ -1,11 +1,11 @@
-import { favorites, favoritesList } from "./favController.js";
+import { showfavoritesSection, addToFavorites } from "./favController.js";
 
-export function getFavorites() {
+export function favoritesLinkClick() {
   const favoritesLink = document.getElementById("favorite");
-  favoritesLink.addEventListener("click", favorites);
+  favoritesLink.addEventListener("click", showfavoritesSection);
 }
 
-export function addToFavorites() {
-  const favoritesIcon = document.querySelector(".fa-heart");
-  favoritesIcon.addEventListener("click", favoritesList);
+export function heartIconClick() {
+  const heartIcon = document.querySelector(".fa-heart");
+  heartIcon.addEventListener("click", addToFavorites);
 }

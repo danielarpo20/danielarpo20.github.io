@@ -1,6 +1,6 @@
-import { showPage } from "./createController.js";
+import { showCreatePage } from "./createController.js";
 
-export function createGif() {
-  const createSection = document.getElementById("create");
-  createSection.addEventListener("click", showPage);
+export function createGifClick() {
+  const createLink = document.getElementById("create");
+  createLink.addEventListener("click", showCreatePage);
 }

@@ -1,4 +1,4 @@
-export const showPage = async () => {
+export const showCreatePage = async () => {
   const principalSection = document.querySelector(".principal");
   const trendingsSection = document.querySelector(".trending");
   const favoritesSection = document.querySelector(".favorites");

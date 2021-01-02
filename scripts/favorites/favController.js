@@ -1,40 +1,23 @@
-import { inactive } from "../navbar/navbar.js";
+import { CloseMenuMobile } from "../navbar/navController.js";
 
-export const favorites = async () => {
+export const showfavoritesSection = async () => {
   const favoritesSection = document.querySelector(".favorites");
   const principalSection = document.querySelector(".principal");
   const gifosSection = document.querySelector(".myGifos");
   const createSection = document.querySelector(".createGIF");
   const buttomSeeMore = document.querySelector(".button");
   const galeryContainer = document.querySelector(".gifGalery-container");
-  favoritesSection.style.display = "initial";
   principalSection.style.display = "none";
   gifosSection.style.display = "none";
   createSection.style.display = "none";
   buttomSeeMore.style.display = "none";
   galeryContainer.style.display = "none";
-  inactive();
-
-  const getInfoLocal = true;
-  if (getInfoLocal) {
-    const galeryNoContent = document.querySelector(".gifGalery-noContent");
-    const gifGaleryContainer = document.querySelector(".gifGalery-container");
-    galeryNoContent.style.display = "none";
-    gifGaleryContainer.style.display = "grid";
-    let card = document.createElement("img");
-    card.src = localStorage.getItem("gif");
-    card.style.width = "100%";
-    if (document.body.clientWidth < 1350) {
-      card.style.height = "10em";
-    } else {
-      card.style.height = "15em";
-    }
-    card.style.marginBottom = "2em";
-    gifGaleryContainer.appendChild(card);
-  }
+  favoritesSection.style.display = "initial";
+  CloseMenuMobile();
+  getFavoritesList();
 };
 
-export const favoritesList = async () => {
+export const addToFavorites = async () => {
   const heartIcon = document.querySelector(".fa-heart");
   heartIcon.className = "fas fa-heart";
   const favoriteList = [];
@@ -47,4 +30,23 @@ export const favoritesList = async () => {
   favoriteList.push(favoritesInformation);
   localStorage.setItem("favoritesList", favoritesInformation);
   favorites();
+};
+
+const getFavoritesList = async () => {
+  // Get info from local storage
+  // const storedFavorites = localStorage.getItem('')
+  const galeryNoContent = document.querySelector(".gifGalery-noContent");
+  const gifGaleryContainer = document.querySelector(".gifGalery-container");
+  if (storedFavorites) {
+    galeryNoContent.style.display = "none";
+    gifGaleryContainer.style.display = "grid";
+    let card = document.createElement("img");
+    card.src = localStorage.getItem("gif");
+    card.style.width = "100%";
+    document.body.clientWidth < 1350
+      ? (card.style.height = "10em")
+      : (card.style.height = "15em");
+    card.style.marginBottom = "2em";
+    gifGaleryContainer.appendChild(card);
+  }
 };

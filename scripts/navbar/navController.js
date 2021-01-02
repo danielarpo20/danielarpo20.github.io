@@ -1,4 +1,27 @@
-import { inactive } from "./navbar.js";
+export const goPrincpalPage = () => {
+  const principalSection = document.querySelector(".principal");
+  const gifosSection = document.querySelector(".myGifos");
+  const favoritesSection = document.querySelector(".favorites");
+  const createSection = document.querySelector(".createGIF");
+  const trendingSection = document.querySelector(".trending");
+  principalSection.style.display = "initial";
+  trendingSection.style.display = "initial";
+  gifosSection.style.display = "none";
+  favoritesSection.style.display = "none";
+  createSection.style.display = "none";
+};
+
+export const ShowMenuMobile = () => {
+  document.querySelector(".navbar").classList.add("active");
+  document.querySelector(".header-icon").classList.add("active");
+  document.querySelector(".header-iconX").classList.add("active");
+};
+
+export const CloseMenuMobile = () => {
+  document.querySelector(".navbar").classList.remove("active");
+  document.querySelector(".header-icon").classList.remove("active");
+  document.querySelector(".header-iconX").classList.remove("active");
+};
 
 export const switchTheme = (mode) => {
   const currentTheme = localStorage.getItem("theme")
@@ -15,7 +38,7 @@ export const switchTheme = (mode) => {
     document.documentElement.setAttribute("data-theme", "light");
     localStorage.setItem("theme", "light");
   }
-  inactive();
+  CloseMenuMobile();
 };
 
 const setNewLogo = (mode, theme) => {

@@ -1,6 +1,6 @@
-import { gifos } from "./gifController.js";
+import { showGifosSection } from "./gifController.js";
 
-export function getGifos() {
-  const favoritesLink = document.getElementById("gifos");
-  favoritesLink.addEventListener("click", gifos);
+export function gifosLinkClick() {
+  const gifosLink = document.getElementById("gifos");
+  gifosLink.addEventListener("click", showGifosSection);
 }

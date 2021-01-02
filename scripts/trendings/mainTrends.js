@@ -1,51 +1,62 @@
+import { apiConexion } from "../apiConection.js";
 import {
-  getCardsBack,
-  vanishCardsBack,
-  cardExpanded,
-  closeCard,
+  showCardBack,
+  vanishCardBack,
+  showCardExpanded,
+  closeCardExpanded,
   showCardMobile,
 } from "./trendsController.js";
 
-export function previusSlide() {
-  const previusButtom = document.getElementById("previus");
-  previusButtom.addEventListener("click", previusSlideButtom);
-}
+export const getTrendingsGifs = async () => {
+  const results = await apiConexion("trending");
+  const gifContainer = document.querySelector(".trending-container-card-gifs");
+  results.data.map((result, index) => {
+    let gifCard = document.createElement("img");
+    gifCard.src = result.images.downsized.url;
+    gifCard.alt = result.title;
+    gifCard.user = result.username;
+    gifCard.title = result.title;
+    gifCard.gifUrl = result.images.downsized.url;
+    gifCard.id = `gif${index}`;
+    gifCard.style.paddingRight = "1em";
+    document.activeElement.clientWidth < 1350
+      ? (gifCard.style.width = "200px")
+      : (gifCard.style.width = "300px");
+    gifContainer.appendChild(gifCard);
+  });
+};
 
-export function nextSlide() {
-  const nextButtom = document.getElementById("next");
-  nextButtom.addEventListener("click", nextSlideButtom);
-}
+// export function previusButtonClick() {
+//   const previusButtom = document.getElementById("previus");
+//   previusButtom.addEventListener("click", goToPreviusSlide);
+// }
 
-export function showCardBack() {
+// export function nextButtonClick() {
+//   const nextButtom = document.getElementById("next");
+//   nextButtom.addEventListener("click", goToNextSlide);
+// }
+
+export function gifTrendingMouseover() {
   const card = document.querySelector(".trending-container-card-gifs");
-  card.addEventListener("mouseover", getCardsBack);
+  card.addEventListener("mouseover", showCardBack);
 }
 
-export function VanishCardBack() {
+export function gifTrendingMouseout() {
   const card = document.querySelector(".trending-cardBack");
-  card.addEventListener("mouseout", vanishCardsBack);
+  card.addEventListener("mouseout", vanishCardBack);
 }
 
-export function expandCard() {
+export function expandIconClick() {
   const expandIcon = document.querySelector(".fa-expand-alt");
-  expandIcon.addEventListener("click", cardExpanded);
+  expandIcon.addEventListener("click", showCardExpanded);
 }
 
-export function closeCardExpanded() {
+export function xIconCardExpandedClick() {
   const closeIcon = document.getElementById("closeIcon");
-  closeIcon.addEventListener("click", closeCard);
+  closeIcon.addEventListener("click", closeCardExpanded);
 }
 
-export function showExpandCardMobile() {
+export function CardMobileClick() {
   const card = document.querySelector(".trending-container-card-gifs");
   card.addEventListener("click", showCardMobile);
 }
-
-export const previusSlideButtom = async () => {
-  console.log("previus");
-};
-
-export const nextSlideButtom = async () => {
-  console.log("next");
-  console.log(card);
-};
