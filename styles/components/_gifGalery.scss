@@ -4,8 +4,6 @@
     max-width: $maxWdthMobile;
     margin: auto;
 
-    &-img {}
-
     &-title {
         font-family: $Montserrat;
         font-weight: 700;
@@ -17,7 +15,22 @@
         margin: 0;
     }
 
+    &-noContent {
+        padding-top: 5em;
+        width: $maxWdthMobile;
+        margin: auto;
+
+        &-content {
+            color: $color-greenLight;
+            font-family: $Montserrat;
+            font-weight: 700px;
+            font-size: 22px;
+            line-height: 33px;
+        }
+    }
+
     &-container {
+        display: none;
         padding: 2em 0 3em;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -25,10 +38,6 @@
         grid-auto-columns: auto;
         grid-gap: 2em;
     }
-}
-
-.muestra {
-    background: var(--icon-text-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -46,6 +55,11 @@
 
         &-title {
             font-size: $size25;
+        }
+
+        &-noContent {
+            padding-top: 7em;
+            width: 40%;
         }
 
         &-container {

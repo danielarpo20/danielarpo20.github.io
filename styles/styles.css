@@ -143,7 +143,22 @@
   margin: 0;
 }
 
+.gifGalery-noContent {
+  padding-top: 5em;
+  width: 90%;
+  margin: auto;
+}
+
+.gifGalery-noContent-content {
+  color: #50E3C2;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700px;
+  font-size: 22px;
+  line-height: 33px;
+}
+
 .gifGalery-container {
+  display: none;
   padding: 2em 0 3em;
   display: -ms-grid;
   display: grid;
@@ -152,10 +167,6 @@
   grid-auto-rows: 120px;
   grid-auto-columns: auto;
   grid-gap: 2em;
-}
-
-.muestra {
-  background: var(--icon-text-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -172,6 +183,10 @@
   }
   .gifGalery-title {
     font-size: 25px;
+  }
+  .gifGalery-noContent {
+    padding-top: 7em;
+    width: 40%;
   }
   .gifGalery-container {
     -ms-grid-columns: (1fr)[4];
