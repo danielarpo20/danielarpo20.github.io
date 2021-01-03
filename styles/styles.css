@@ -568,7 +568,6 @@
 }
 
 .principal-bar {
-  height: 50px;
   width: 100%;
   margin: auto;
   background: transparent;
@@ -582,13 +581,38 @@
 }
 
 .principal-bar-searchBar {
+  height: 50px;
   width: 70%;
   margin-left: 2em;
-  height: inherit;
   border: none;
   background: transparent;
   font-family: "Roboto", sans-serif;
   color: var(--text-color);
+}
+
+.principal-bar-autoComplete {
+  display: none;
+  padding-left: 1.5em;
+  list-style: none;
+  cursor: default;
+}
+
+.principal-bar-autoComplete-results {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.principal-bar-autoComplete-results-icon {
+  color: #6B7989;
+}
+
+.principal-bar-autoComplete-results-list {
+  padding: .5em 0;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: #6B7989;
 }
 
 .principal-bar ::-webkit-input-placeholder {
@@ -621,6 +645,7 @@
   position: absolute;
   right: 1.2em;
   top: .5em;
+  cursor: pointer;
 }
 
 .principal-bar-iconX {
@@ -630,10 +655,7 @@
   position: absolute;
   right: 1.1em;
   top: .3em;
-}
-
-.principal-bar-containerIconX {
-  display: none;
+  cursor: pointer;
 }
 
 .principal :focus {
@@ -641,7 +663,7 @@
 }
 
 .principal-introContainer {
-  padding-top: 2em;
+  margin-top: 2em;
   width: 60%;
   margin: auto;
   color: var(--icon-text-color);
@@ -687,8 +709,11 @@
   .principal-bar {
     width: 50%;
   }
+  .principal-bar-searchBar {
+    width: 80%;
+  }
   .principal-introContainer {
-    padding-top: 5em;
+    margin-top: 5em;
   }
   .principal-introContainer-subTitle {
     font-size: 18px;

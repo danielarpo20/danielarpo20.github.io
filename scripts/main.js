@@ -21,6 +21,13 @@ import {
   heartIconClick,
 } from "./favorites/mainFavorites.js";
 
+import {
+  TypeSearchBar,
+  searchBarClick,
+  xIconSearchBar,
+  ListResultsClick,
+} from "./principal/principalMain.js";
+
 import { gifosLinkClick } from "./gifos/mianGifos.js";
 import { createGifClick } from "./createGif/mainCreate.js";
 
@@ -30,6 +37,11 @@ function main() {
   imageClick();
   changeModeClick();
 
+  TypeSearchBar();
+  searchBarClick();
+  xIconSearchBar();
+  ListResultsClick();
+
   getTrendingsGifs();
   // previusButtonClick();
   // nextButtonClick();
@@ -38,7 +50,6 @@ function main() {
   expandIconClick();
   xIconCardExpandedClick();
   CardMobileClick();
-
 
   favoritesLinkClick();
   heartIconClick();

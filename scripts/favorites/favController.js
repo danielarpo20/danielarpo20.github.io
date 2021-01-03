@@ -20,23 +20,30 @@ export const showfavoritesSection = async () => {
 export const addToFavorites = async () => {
   const heartIcon = document.querySelector(".fa-heart");
   heartIcon.className = "fas fa-heart";
-  const favoriteList = [];
+
+  const favorite = {};
+  favorite.favoriteList = [];
+  
   const favoritesInformation = {
     id: localStorage.getItem("idGif"),
     user: localStorage.getItem("userGif"),
     title: localStorage.getItem("titleGif"),
     src: localStorage.getItem("gif"),
+    isActive: localStorage.setItem("isActive", true),
   };
-  favoriteList.push(favoritesInformation);
-  localStorage.setItem("favoritesList", favoritesInformation);
-  favorites();
+  
+  favorite.favoriteList.push(favoritesInformation);
+  localStorage.setItem("favoritesList", JSON.stringify(favorite));
+  // localStorage.setItem("favoritesList", favoritesInformation);
+  showfavoritesSection();
 };
 
 const getFavoritesList = async () => {
   // Get info from local storage
-  // const storedFavorites = localStorage.getItem('')
+  const storedFavorites = localStorage.getItem('favoritesList')
   const galeryNoContent = document.querySelector(".gifGalery-noContent");
   const gifGaleryContainer = document.querySelector(".gifGalery-container");
+  // let storedFavorites = true
   if (storedFavorites) {
     galeryNoContent.style.display = "none";
     gifGaleryContainer.style.display = "grid";
