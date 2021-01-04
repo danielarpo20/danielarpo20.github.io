@@ -6,8 +6,8 @@
         content: '';
         position: absolute;
         top: 0;
-        left: 35%;
-        width: 30%;
+        left: 25%;
+        width: 50%;
         border-bottom: 3px solid $color-greenLight;
     }
     
@@ -59,6 +59,11 @@
     .serchingResult {
         &-gifGalery {
             max-width: $maxWdthDesktop;
+
+            :first-child:before {
+                left: 35%;
+                width: 30%;
+            }
 
             &-title {
                 font-size: $size25;

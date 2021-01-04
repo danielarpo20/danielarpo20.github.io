@@ -672,7 +672,7 @@
 }
 
 .principal-introContainer {
-  margin-top: 2em;
+  padding-top: 2em;
   width: 60%;
   margin: auto;
   color: var(--icon-text-color);
@@ -1148,8 +1148,8 @@
   content: '';
   position: absolute;
   top: 0;
-  left: 35%;
-  width: 30%;
+  left: 25%;
+  width: 50%;
   border-bottom: 3px solid #50E3C2;
 }
 
@@ -1201,6 +1201,10 @@
 @media screen and (min-width: 1350px) {
   .serchingResult-gifGalery {
     max-width: 80%;
+  }
+  .serchingResult-gifGalery :first-child:before {
+    left: 35%;
+    width: 30%;
   }
   .serchingResult-gifGalery-title {
     font-size: 25px;
