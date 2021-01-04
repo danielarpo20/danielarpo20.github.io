@@ -30,7 +30,14 @@ import {
 } from "./principal/principalMain.js";
 
 import { gifosLinkClick } from "./gifos/mianGifos.js";
-import { createGifClick } from "./createGif/mainCreate.js";
+import {
+  createGifClick,
+  buttonStartClick,
+  buttonRecordClick,
+  buttonFinishClick,
+  upGifoButonClick,
+  repeatButonClick,
+} from "./createGif/mainCreate.js";
 
 function main() {
   nemuIconClick();
@@ -57,7 +64,13 @@ function main() {
   heartIconClick();
 
   gifosLinkClick();
+
   createGifClick();
+  buttonStartClick();
+  buttonRecordClick();
+  buttonFinishClick();
+  upGifoButonClick();
+  repeatButonClick();
 }
 
 main();

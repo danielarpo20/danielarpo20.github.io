@@ -1,5 +1,5 @@
 .createGIF {
-    display: none;
+    // display: none;
     position: relative;
 
     &-wrapper {
@@ -27,7 +27,7 @@
 
         &-square {
             border: 2px solid var(--icon-text-color);
-            height: 350px;
+            height: 22em;
             width: 48%;
             margin: auto;
             position: relative;
@@ -45,12 +45,46 @@
                     height: 80%;
                     margin: 5% -.3em;
                 }
-                
+
                 &-highness {
                     background-color: var(--background-light);
                     height: 110%;
                     width: 90%;
                     margin: -21em 2em;
+                }
+
+                &-record {
+                    height: 100%;
+                    width: 100%;
+                    margin: auto;
+                    display: none;
+                }
+
+                &-firsStep {
+                    background-color: var(--background-light);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    width: 50%;
+                    margin: auto;
+
+                    &-title {
+                        font-family: $Montserrat;
+                        font-size: 25px;
+                        color: var(--icon-text-color);
+                        text-align: center;
+                        line-height: 35px;
+                    }
+
+                    &-text {
+                        font-family: $Roboto;
+                        font-size: 16px;
+                        color: --text-color;
+                        text-align: center;
+                        line-height: 28px;
+                    }
                 }
             }
         }
@@ -65,5 +99,25 @@
             width: 60%;
             margin-bottom: 1em;
         }
+
+        &-recordButon {
+            display: none;
+        }
+
+        &-finishButon {
+            display: none;
+        }
+
+        &-upGifoButon {
+            display: none;
+        }
     }
+}
+
+.muestra {
+    height: 100%;
+    width: 90%;
+    margin: auto;
+
+    background: tomato;
 }

@@ -1063,7 +1063,6 @@
 }
 
 .createGIF {
-  display: none;
   position: relative;
 }
 
@@ -1100,7 +1099,7 @@
 
 .createGIF-container-square {
   border: 2px solid var(--icon-text-color);
-  height: 350px;
+  height: 22em;
   width: 48%;
   margin: auto;
   position: relative;
@@ -1128,6 +1127,49 @@
   margin: -21em 2em;
 }
 
+.createGIF-container-square-video-record {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: none;
+}
+
+.createGIF-container-square-video-firsStep {
+  background-color: var(--background-light);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 50%;
+  margin: auto;
+}
+
+.createGIF-container-square-video-firsStep-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  color: var(--icon-text-color);
+  text-align: center;
+  line-height: 35px;
+}
+
+.createGIF-container-square-video-firsStep-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: --text-color;
+  text-align: center;
+  line-height: 28px;
+}
+
 .createGIF-container-buttoms {
   padding: 1em 0;
 }
@@ -1137,6 +1179,25 @@
   border-radius: 20px;
   width: 60%;
   margin-bottom: 1em;
+}
+
+.createGIF-container-recordButon {
+  display: none;
+}
+
+.createGIF-container-finishButon {
+  display: none;
+}
+
+.createGIF-container-upGifoButon {
+  display: none;
+}
+
+.muestra {
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  background: tomato;
 }
 
 .serchingResult {

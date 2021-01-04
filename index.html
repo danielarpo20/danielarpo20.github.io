@@ -281,21 +281,65 @@
               class="animationCamara-smallTape"
             />
           </div>
+
           <div class="createGIF-container">
             <div class="createGIF-container-square">
               <div class="createGIF-container-square-video">
                 <div class="createGIF-container-square-video-broadness"></div>
                 <div class="createGIF-container-square-video-highness"></div>
+                <div class="createGIF-container-square-video-firsStep">
+                  <h3 class="createGIF-container-square-video-firsStep-title">
+                    ¿Nos das acceso a tu cámara?
+                  </h3>
+                  <p class="createGIF-container-square-video-firsStep-text">
+                    El acceso a tu camara será válido sólo por el tiempo en el
+                    que estés creando el GIFO.
+                  </p>
+                </div>
+                <video
+                  id="recordVideo"
+                  autoplay="true"
+                  class="createGIF-container-square-video-record"
+                >
+                  No video support in your Browser
+                </video>
               </div>
             </div>
+
             <div class="createGIF-container-buttoms">
-              <button type="button" class="buttonPagination">1</button>
-              <button type="button" class="buttonPagination">2</button>
-              <button type="button" class="buttonPagination">3</button>
+              <button type="button" class="buttonPagination" id="one">1</button>
+              <button type="button" class="buttonPagination" id="two">2</button>
+              <button type="button" class="buttonPagination" id="three">
+                3
+              </button>
             </div>
             <div class="createGIF-container-line"></div>
-            <button type="button" class="button">COMENZAR</button>
+            <button type="button" class="button" id="startButon">
+              COMENZAR
+            </button>
+            <button
+              type="button"
+              class="button createGIF-container-recordButon"
+              id="recordButon"
+            >
+              GRABAR
+            </button>
+            <button
+              type="button"
+              class="button createGIF-container-finishButon"
+              id="finishButon"
+            >
+              FINALIZAR
+            </button>
+            <button
+              type="button"
+              class="button createGIF-container-upGifoButon"
+              id="upGifoButon"
+            >
+              SUBIR GIFO
+            </button>
           </div>
+
           <img
             src="./assetes/pelicula.svg"
             alt="pelicula"
