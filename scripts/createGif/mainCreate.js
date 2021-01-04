@@ -32,7 +32,9 @@ export function upGifoButonClick() {
   recordButton.addEventListener("click", saveVideo);
 }
 
-export function repeatButonClick() {
-  const recordButton = document.querySelector("#two");
-  recordButton.addEventListener("click", recordVideo);
+export function repeatLinkClick() {
+  const repeatLink = document.querySelector(
+    ".createGIF-container-buttoms-repeatLink"
+  );
+  repeatLink.addEventListener("click", recordVideo);
 }

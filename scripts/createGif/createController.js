@@ -11,6 +11,9 @@ const upGifoButon = document.querySelector("#upGifoButon");
 const firstButom = document.querySelector("#one");
 const secondButom = document.querySelector("#two");
 const thirdButom = document.querySelector("#three");
+const repeatLink = document.querySelector(
+  ".createGIF-container-buttoms-repeatLink"
+);
 
 export const showCreatePage = async () => {
   const principalSection = document.querySelector(".principal");
@@ -63,6 +66,7 @@ const videoError = () => {
 
 export const recordVideo = () => {
   recordButon.style.display = "none";
+  upGifoButon.style.display = "none";
   finishButon.style.display = "inherit";
   //Record video
   //Show timer
@@ -71,11 +75,13 @@ export const recordVideo = () => {
 export const finishVideo = () => {
   finishButon.style.display = "none";
   upGifoButon.style.display = "inherit";
+  repeatLink.style.display = "initial";
 };
 
 export const saveVideo = () => {
   finishButon.style.display = "none";
   upGifoButon.style.display = "none";
+  repeatLink.style.display = "none";
   const currentTheme = getCurrentTheme();
   thirdButom.style.backgroundColor =
     currentTheme === "dark" ? "#FFFFFF" : "#572EE5";

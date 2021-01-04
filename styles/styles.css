@@ -1063,6 +1063,7 @@
 }
 
 .createGIF {
+  display: none;
   position: relative;
 }
 
@@ -1172,6 +1173,52 @@
 
 .createGIF-container-buttoms {
   padding: 1em 0;
+  width: 50%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.createGIF-container-buttoms-repeatLink {
+  display: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  color: var(--icon-text-color);
+  letter-spacing: 0;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  padding-bottom: 0.5em;
+}
+
+.createGIF-container-buttoms :after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  border-bottom: 3px solid #50E3C2;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform .4s linear;
+  transition: -webkit-transform .4s linear;
+  transition: transform .4s linear;
+  transition: transform .4s linear, -webkit-transform .4s linear;
+}
+
+.createGIF-container-buttoms :hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 .createGIF-container-line {
@@ -1193,13 +1240,6 @@
   display: none;
 }
 
-.muestra {
-  height: 100%;
-  width: 90%;
-  margin: auto;
-  background: tomato;
-}
-
 .serchingResult {
   display: none;
   padding-top: 2em;
@@ -1209,7 +1249,7 @@
   content: '';
   position: absolute;
   top: 0;
-  left: 25%;
+  right: 0;
   width: 50%;
   border-bottom: 3px solid #50E3C2;
 }

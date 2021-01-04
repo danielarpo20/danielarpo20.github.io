@@ -1,5 +1,5 @@
 .createGIF {
-    // display: none;
+    display: none;
     position: relative;
 
     &-wrapper {
@@ -91,6 +91,41 @@
 
         &-buttoms {
             padding: 1em 0;
+            width: 50%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+            &-repeatLink {
+                display: none;
+                font-family: $Montserrat;
+                font-size: 13px;
+                color: var(--icon-text-color);
+                letter-spacing: 0;
+                text-transform: uppercase;
+                position: absolute;
+                right: 0;
+                cursor: pointer;
+                padding-bottom: 0.5em;
+            }
+
+            :after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                right: 0;
+                border-bottom: 3px solid $color-greenLight;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform .4s linear;
+            }
+
+            :hover:after {
+                transform: scaleX(1);
+                transform-origin: right;
+            }
         }
 
         &-line {
@@ -112,12 +147,4 @@
             display: none;
         }
     }
-}
-
-.muestra {
-    height: 100%;
-    width: 90%;
-    margin: auto;
-
-    background: tomato;
 }
