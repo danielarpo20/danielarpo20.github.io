@@ -6,18 +6,18 @@
         content: '';
         position: absolute;
         top: 0;
-        right: 0;
-        width: 50%;
+        right: 20%;
+        width: 60%;
         border-bottom: 3px solid $color-greenLight;
     }
-    
+
     &-gifGalery {
         text-align: center;
         padding: 4em 0 4em;
         max-width: $maxWdthMobile;
         margin: auto;
         position: relative;
-        
+
         &-title {
             font-family: $Montserrat;
             font-weight: 700;
@@ -57,13 +57,14 @@
 
 @media screen and (min-width: 1350px) {
     .serchingResult {
+        :first-child:before {
+            right: 35%;
+            width: 30%;
+        }
+
         &-gifGalery {
             max-width: $maxWdthDesktop;
 
-            :first-child:before {
-                left: 35%;
-                width: 30%;
-            }
 
             &-title {
                 font-size: $size25;

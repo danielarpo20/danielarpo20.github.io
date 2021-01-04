@@ -53,13 +53,6 @@
                     margin: -21em 2em;
                 }
 
-                &-record {
-                    height: 100%;
-                    width: 100%;
-                    margin: auto;
-                    display: none;
-                }
-
                 &-firsStep {
                     background-color: var(--background-light);
                     display: flex;
@@ -84,6 +77,69 @@
                         color: --text-color;
                         text-align: center;
                         line-height: 28px;
+                    }
+                }
+            }
+        }
+
+        &-recordContainer {
+            display: none;
+            height: 100%;
+            position: relative;
+            justify-content: center;
+
+            &-record {
+                height: 100%;
+                width: 100%;
+                margin: auto;
+            }
+
+            &-cardBack {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                bottom: 0;
+                width: 63%;
+                height: 100%;
+                background: var(--navbar-bg-mobile);
+
+                &-iconContainer {
+                    display: flex;
+                    align-self: end;
+                    margin: 1em 1em;
+
+                    &-icon {
+                        background-color: $color-white-opacity7;
+                        border-radius: 5px;
+                        color: var(--icon-text-color);
+                        text-align: center;
+                        margin-left: .5em;
+                        cursor: pointer;
+                    }
+
+                    :hover {
+                        background-color: $color-white;
+                    }
+                }
+
+                &-infoContainer {
+                    font-family: $Roboto;
+                    padding: 4em 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    &-icon {
+                        color: $color-greenLight;
+                        padding: 1em;
+                    }
+
+                    &-titleLoading {
+                        margin: 0;
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: $color-white;
                     }
                 }
             }

@@ -5,6 +5,7 @@ import {
   finishVideo,
   saveVideo,
   repeatVideo,
+  updateCardBackMessage,
 } from "./createController.js";
 
 export function createGifClick() {
@@ -37,4 +38,9 @@ export function repeatLinkClick() {
     ".createGIF-container-buttoms-repeatLink"
   );
   repeatLink.addEventListener("click", recordVideo);
+}
+
+export function prueba() {
+  const repeatLink = document.querySelector("#three");
+  repeatLink.addEventListener("click", updateCardBackMessage);
 }

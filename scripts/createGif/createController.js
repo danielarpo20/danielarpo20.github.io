@@ -2,7 +2,7 @@ const firstStep = document.querySelector(
   ".createGIF-container-square-video-firsStep"
 );
 const videoRecord = document.querySelector(
-  ".createGIF-container-square-video-record"
+  ".createGIF-container-recordContainer-record"
 );
 const startButon = document.querySelector("#startButon");
 const recordButon = document.querySelector("#recordButon");
@@ -14,6 +14,14 @@ const thirdButom = document.querySelector("#three");
 const repeatLink = document.querySelector(
   ".createGIF-container-buttoms-repeatLink"
 );
+const videoContainer = document.querySelector(
+  ".createGIF-container-recordContainer"
+);
+const cardBackContainer = document.querySelector(
+  ".createGIF-container-recordContainer-cardBack"
+);
+const iconCardBack = document.querySelector("#iconCardBack");
+const textCardBack = document.querySelector("#textCardBack");
 
 export const showCreatePage = async () => {
   const principalSection = document.querySelector(".principal");
@@ -34,7 +42,7 @@ export const showCreatePage = async () => {
 
 export const showVideo = async () => {
   firstStep.style.display = "none";
-  videoRecord.style.display = "initial";
+  videoContainer.style.display = "flex";
   const currentTheme = getCurrentTheme();
   secondButom.style.backgroundColor =
     currentTheme === "dark" ? "#FFFFFF" : "#572EE5";
@@ -82,6 +90,7 @@ export const saveVideo = () => {
   finishButon.style.display = "none";
   upGifoButon.style.display = "none";
   repeatLink.style.display = "none";
+  cardBackContainer.style.display = "initial";
   const currentTheme = getCurrentTheme();
   thirdButom.style.backgroundColor =
     currentTheme === "dark" ? "#FFFFFF" : "#572EE5";
@@ -94,6 +103,12 @@ export const saveVideo = () => {
 
 export const repeatVideo = () => {
   // recordVideo()
+};
+
+export const updateCardBackMessage = () => {
+  iconCardBack.className =
+    "fas fa-check createGIF-container-recordContainer-cardBack-infoContainer-icon";
+  textCardBack.innerText = "GIFO subido con éxito";
 };
 
 const getCurrentTheme = () => {

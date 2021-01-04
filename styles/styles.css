@@ -1128,13 +1128,6 @@
   margin: -21em 2em;
 }
 
-.createGIF-container-square-video-record {
-  height: 100%;
-  width: 100%;
-  margin: auto;
-  display: none;
-}
-
 .createGIF-container-square-video-firsStep {
   background-color: var(--background-light);
   display: -webkit-box;
@@ -1169,6 +1162,86 @@
   color: --text-color;
   text-align: center;
   line-height: 28px;
+}
+
+.createGIF-container-recordContainer {
+  display: none;
+  height: 100%;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.createGIF-container-recordContainer-record {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.createGIF-container-recordContainer-cardBack {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  width: 63%;
+  height: 100%;
+  background: var(--navbar-bg-mobile);
+}
+
+.createGIF-container-recordContainer-cardBack-iconContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: end;
+  margin: 1em 1em;
+}
+
+.createGIF-container-recordContainer-cardBack-iconContainer-icon {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  color: var(--icon-text-color);
+  text-align: center;
+  margin-left: .5em;
+  cursor: pointer;
+}
+
+.createGIF-container-recordContainer-cardBack-iconContainer :hover {
+  background-color: #FFFFFF;
+}
+
+.createGIF-container-recordContainer-cardBack-infoContainer {
+  font-family: "Roboto", sans-serif;
+  padding: 4em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.createGIF-container-recordContainer-cardBack-infoContainer-icon {
+  color: #50E3C2;
+  padding: 1em;
+}
+
+.createGIF-container-recordContainer-cardBack-infoContainer-titleLoading {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
 }
 
 .createGIF-container-buttoms {
@@ -1249,8 +1322,8 @@
   content: '';
   position: absolute;
   top: 0;
-  right: 0;
-  width: 50%;
+  right: 20%;
+  width: 60%;
   border-bottom: 3px solid #50E3C2;
 }
 
@@ -1300,12 +1373,12 @@
 }
 
 @media screen and (min-width: 1350px) {
+  .serchingResult :first-child:before {
+    right: 35%;
+    width: 30%;
+  }
   .serchingResult-gifGalery {
     max-width: 80%;
-  }
-  .serchingResult-gifGalery :first-child:before {
-    left: 35%;
-    width: 30%;
   }
   .serchingResult-gifGalery-title {
     font-size: 25px;
