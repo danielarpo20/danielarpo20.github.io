@@ -20,9 +20,14 @@ export function xIconSearchBar() {
   xIconSearchBar.addEventListener("click", exitAutocomplete);
 }
 
-export function ListResultsClick() {
-  const autocompleteResult = document.querySelector(
-    ".principal-bar-autoComplete-results-list"
-  );
-  autocompleteResult.addEventListener("click", searchGifByResult);
+export function listResultsClick() {
+  // const autocompleteResult = document.querySelector(
+  //   ".principal-bar-autoComplete-results-list"
+  // );
+  // autocompleteResult.addEventListener("click", searchGifByResult);
+}
+
+export function listResultsEnter(){
+  const searchBar = document.querySelector(".principal-bar-searchBar");
+  searchBar.addEventListener("mouseover", searchGifByResult);
 }

@@ -25,7 +25,8 @@ import {
   TypeSearchBar,
   searchBarClick,
   xIconSearchBar,
-  ListResultsClick,
+  listResultsClick,
+  listResultsEnter,
 } from "./principal/principalMain.js";
 
 import { gifosLinkClick } from "./gifos/mianGifos.js";
@@ -40,7 +41,8 @@ function main() {
   TypeSearchBar();
   searchBarClick();
   xIconSearchBar();
-  ListResultsClick();
+  listResultsClick();
+  listResultsEnter();
 
   getTrendingsGifs();
   // previusButtonClick();
