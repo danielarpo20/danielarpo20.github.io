@@ -1,9 +1,13 @@
 import {
   ShowMenuMobile,
   CloseMenuMobile,
-  goPrincpalPage,
   switchTheme,
 } from "./navController.js";
+import {
+  goPrincpalPage,
+  showfavoritesSection,
+  showGifosSection
+} from "../helper.js";
 
 export function imageClick() {
   const img = document.querySelector(".header-imgContainer");
@@ -21,6 +25,16 @@ export function xIconClick() {
 }
 
 export function changeModeClick() {
-  const mode = document.querySelector(".mode");
+  const mode = document.querySelector("#mode");
   mode.addEventListener("click", switchTheme);
+}
+
+export function favoritesLinkClick() {
+  const favoritesLink = document.getElementById("favorite");
+  favoritesLink.addEventListener("click", showfavoritesSection);
+}
+
+export function gifosLinkClick() {
+  const gifosLink = document.getElementById("gifos");
+  gifosLink.addEventListener("click", showGifosSection);
 }

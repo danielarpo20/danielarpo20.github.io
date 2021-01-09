@@ -1,15 +1,15 @@
-export const goPrincpalPage = () => {
-  const principalSection = document.querySelector(".principal");
-  const gifosSection = document.querySelector(".myGifos");
-  const favoritesSection = document.querySelector(".favorites");
-  const createSection = document.querySelector(".createGIF");
-  const trendingSection = document.querySelector(".trending");
-  principalSection.style.display = "initial";
-  trendingSection.style.display = "initial";
-  gifosSection.style.display = "none";
-  favoritesSection.style.display = "none";
-  createSection.style.display = "none";
-};
+import { getCurrentTheme, activeLinksMenu } from "../helper.js";
+
+let imgMobileLight = document.querySelector(".header-imgContainer-logo-mobile");
+let imgMobileDark = document.querySelector(
+  ".header-imgContainer-logo-mobile-noc"
+);
+let imgDesktopLight = document.querySelector(
+  ".header-imgContainer-logo-desktop"
+);
+let imgDesktopDark = document.querySelector(
+  ".header-imgContainer-logo-desktop-noc"
+);
 
 export const ShowMenuMobile = () => {
   document.querySelector(".navbar").classList.add("active");
@@ -24,37 +24,24 @@ export const CloseMenuMobile = () => {
 };
 
 export const switchTheme = (mode) => {
-  const currentTheme = localStorage.getItem("theme")
-    ? localStorage.getItem("theme")
-    : null;
+  const currentTheme = getCurrentTheme();
   if (currentTheme === "light") {
-    mode.originalTarget.firstChild.data = "Modo Diurno";
+    mode.target.firstChild.data = "Modo Diurno";
     setNewLogo(mode, currentTheme);
     document.documentElement.setAttribute("data-theme", "dark");
     localStorage.setItem("theme", "dark");
   } else {
-    mode.originalTarget.firstChild.data = "Modo Nocturno";
+    mode.target.firstChild.data = "Modo Nocturno";
     setNewLogo(mode, currentTheme);
     document.documentElement.setAttribute("data-theme", "light");
     localStorage.setItem("theme", "light");
   }
   CloseMenuMobile();
+  activeLinksMenu()
 };
 
 const setNewLogo = (mode, theme) => {
   const screenSize = mode.view.innerWidth;
-  let imgMobileLight = document.querySelector(
-    ".header-imgContainer-logo-mobile"
-  );
-  let imgMobileDark = document.querySelector(
-    ".header-imgContainer-logo-mobile-noc"
-  );
-  let imgDesktopLight = document.querySelector(
-    ".header-imgContainer-logo-desktop"
-  );
-  let imgDesktopDark = document.querySelector(
-    ".header-imgContainer-logo-desktop-noc"
-  );
   imgDesktopLight.style.display = "none";
   imgDesktopDark.style.display = "none";
   imgMobileLight.style.display = "none";

@@ -3,6 +3,7 @@ import {
   updatePositionsBar,
   exitAutocomplete,
   searchGifByResult,
+  showMoreSearchResults,
 } from "./principalController.js";
 
 export function searchBarClick() {
@@ -15,19 +16,19 @@ export function TypeSearchBar() {
   searchBar.addEventListener("keyup", getWatedResults);
 }
 
-export function xIconSearchBar() {
+export function xIconSearchBarClick() {
   const xIconSearchBar = document.querySelector(".principal-bar-iconX");
   xIconSearchBar.addEventListener("click", exitAutocomplete);
 }
 
 export function listResultsClick() {
-  // const autocompleteResult = document.querySelector(
-  //   ".principal-bar-autoComplete-results-list"
-  // );
-  // autocompleteResult.addEventListener("click", searchGifByResult);
+  const autocompleteResult = document.querySelector(
+    ".principal-bar-autoComplete"
+  );
+  autocompleteResult.addEventListener("click", searchGifByResult);
 }
 
-export function listResultsEnter(){
-  const searchBar = document.querySelector(".principal-bar-searchBar");
-  searchBar.addEventListener("mouseover", searchGifByResult);
+export function butonSeeMoreClick() {
+  const butonSeeMore = document.querySelector("#seeMoreButtonSearch");
+  butonSeeMore.addEventListener("click", showMoreSearchResults);
 }

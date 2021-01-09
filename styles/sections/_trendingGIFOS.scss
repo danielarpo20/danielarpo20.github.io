@@ -143,6 +143,7 @@
 
         &-container {
             max-width: $maxWdthDesktop;
+            height: 300px;
             margin: auto;
             padding-bottom: 5em;
             display: flex;
@@ -153,24 +154,31 @@
             }
 
             &-card {
-                width: 90%;
+                width: 100%;
+                overflow: hidden;
+                display: flex;
+                margin: 0 2em;
 
                 &-gifs {
-                    overflow: hidden;
-                    height: 300px;
-                    margin: 0 2em;
+                    height: 100%;
+                    width: 300px;
+                    margin-left: 0;
+                    margin: 0 1em;
                     position: relative;
+                    overflow: initial;
                 }
             }
 
         }
 
         &-cardBack {
-            display: none;
+            display: flex;
             flex-direction: column;
             position: absolute;
             height: 100%;
+            width: 100%;
             background: var(--navbar-bg-mobile);
+            z-index: -1;
 
             &-iconContainer {
                 display: flex;

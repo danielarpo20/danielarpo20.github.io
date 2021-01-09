@@ -1,11 +1,10 @@
 let URL = "https://api.giphy.com/v1/gifs/";
-let API_KEY = "YT7jyQD9w7OGA09QCwTZOYwLSK3spvsJ";
+let API_KEY = "5PfyzVIh2rOwMLGaDIQ2jjgM3y12913G";
 
-export const apiConexion = async (route, param = null) => {
-  let request;
-  param
-    ? (request = await fetch(`${URL}${route}?api_key=${API_KEY}&q=${param}`))
-    : (request = await fetch(`${URL}${route}?api_key=${API_KEY}`));
+export const apiConexion = async (route, param, limit, offset) => {
+  let request = await fetch(
+    `${URL}${route}?api_key=${API_KEY}&q=${param}&limit=${limit}&offset=${offset}`
+  );
   const result = await request.json();
   return result;
 };

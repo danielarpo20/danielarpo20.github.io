@@ -71,6 +71,11 @@
                         line-height: 35px;
                     }
 
+                    &-span {
+                        text-transform: uppercase;
+                        color: $color-greenLight;
+                    }
+
                     &-text {
                         font-family: $Roboto;
                         font-size: 16px;
@@ -151,6 +156,7 @@
             margin: auto;
             display: flex;
             justify-content: center;
+            align-items: center;
             position: relative;
 
             &-repeatLink {
@@ -181,6 +187,17 @@
             :hover:after {
                 transform: scaleX(1);
                 transform-origin: right;
+            }
+
+            &-timming {
+                display: none;
+                margin: 0 1em;
+                position: absolute;
+                right: 0;
+                color: var(--icon-text-color);
+                font-size: 20px;
+                font-weight: 700;
+                font-family: $Montserrat;
             }
         }
 

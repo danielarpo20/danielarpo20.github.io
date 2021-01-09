@@ -1,16 +1,11 @@
+import { getCurrentTheme } from "../helper.js";
+
 const firstStep = document.querySelector(
   ".createGIF-container-square-video-firsStep"
 );
 const videoRecord = document.querySelector(
   ".createGIF-container-recordContainer-record"
 );
-const startButon = document.querySelector("#startButon");
-const recordButon = document.querySelector("#recordButon");
-const finishButon = document.querySelector("#finishButon");
-const upGifoButon = document.querySelector("#upGifoButon");
-const firstButom = document.querySelector("#one");
-const secondButom = document.querySelector("#two");
-const thirdButom = document.querySelector("#three");
 const repeatLink = document.querySelector(
   ".createGIF-container-buttoms-repeatLink"
 );
@@ -20,28 +15,40 @@ const videoContainer = document.querySelector(
 const cardBackContainer = document.querySelector(
   ".createGIF-container-recordContainer-cardBack"
 );
+const startButon = document.querySelector("#startButon");
+const recordButon = document.querySelector("#recordButon");
+const finishButon = document.querySelector("#finishButon");
+const upGifoButon = document.querySelector("#upGifoButon");
+const firstButom = document.querySelector("#one");
+const secondButom = document.querySelector("#two");
+const thirdButom = document.querySelector("#three");
 const iconCardBack = document.querySelector("#iconCardBack");
 const textCardBack = document.querySelector("#textCardBack");
+const firstStepTitle = document.querySelector(
+  ".createGIF-container-square-video-firsStep-title"
+);
+const firstStepText = document.querySelector(
+  ".createGIF-container-square-video-firsStep-text"
+);
+const timing = document.querySelector(".createGIF-container-buttoms-timming");
+const video = document.querySelector("#recordVideo");
 
-export const showCreatePage = async () => {
-  const principalSection = document.querySelector(".principal");
-  const trendingsSection = document.querySelector(".trending");
-  const favoritesSection = document.querySelector(".favorites");
-  const gifosSection = document.querySelector(".myGifos");
-  const createSection = document.querySelector(".createGIF");
-  const currentTheme = getCurrentTheme();
-  firstButom.style.backgroundColor =
-    currentTheme === "dark" ? "#FFFFFF" : "#572EE5";
-  firstButom.style.color = currentTheme === "dark" ? "#000000" : "#FFFFFF";
-  principalSection.style.display = "none";
-  trendingsSection.style.display = "none";
-  favoritesSection.style.display = "none";
-  gifosSection.style.display = "none";
-  createSection.style.display = "initial";
-};
+// let recorder = RecordRTC(stream, {
+//   type: 'gif',
+//   frameRate: 1,
+//   quality: 10,
+//   width: 360,
+//   hidden: 240,
+//   onGifRecordingStarted: function() {
+//    console.log('started')
+//  },
+// });
 
 export const showVideo = async () => {
-  firstStep.style.display = "none";
+  // firstStep.style.display = "none";
+  firstStepTitle.innerText = "¿Nos das acceso a tu cámara?";
+  firstStepText.innerText =
+    "El acceso a tu camara será válido sólo por el tiempo en el que estés creando el GIFO.";
   videoContainer.style.display = "flex";
   const currentTheme = getCurrentTheme();
   secondButom.style.backgroundColor =
@@ -52,32 +59,37 @@ export const showVideo = async () => {
   startButon.style.display = "none";
   recordButon.style.display = "inherit";
 
-  navigator.getUserMedia =
-    navigator.getUserMedia ||
-    navigator.webkitGetUserMedia ||
-    navigator.mozGetUserMedia ||
-    navigator.msGetUserMedia ||
-    navigator.oGetUserMedia;
-
-  if (navigator.getUserMedia) {
-    navigator.getUserMedia({ video: true }, handleVideo, videoError);
-  }
 };
 
 const handleVideo = (stream) => {
-  document.querySelector("#recordVideo").srcObject = stream;
+  video.srcObject = stream;
+  video.play();
 };
 
 const videoError = () => {
   alert("There was a problem with the video");
 };
 
+// const startRecording = (stream, lengthInMS) => {
+//   try {
+//     const stream = await navigator.mediaDevices.getUserMedia({
+//       audio: false,
+//       video: {
+//         width: 480, 
+//         height: 320
+//       }
+//     })
+//   } catch(error) {
+
+//   }
+// };
+
 export const recordVideo = () => {
   recordButon.style.display = "none";
   upGifoButon.style.display = "none";
   finishButon.style.display = "inherit";
-  //Record video
   //Show timer
+  //Record video
 };
 
 export const finishVideo = () => {
@@ -101,19 +113,8 @@ export const saveVideo = () => {
   secondButom.style.color = currentTheme === "dark" ? "#FFFFFF" : "#572EE5";
 };
 
-export const repeatVideo = () => {
-  // recordVideo()
-};
-
 export const updateCardBackMessage = () => {
   iconCardBack.className =
     "fas fa-check createGIF-container-recordContainer-cardBack-infoContainer-icon";
   textCardBack.innerText = "GIFO subido con éxito";
-};
-
-const getCurrentTheme = () => {
-  const theme = localStorage.getItem("theme")
-    ? localStorage.getItem("theme")
-    : null;
-  return theme;
 };

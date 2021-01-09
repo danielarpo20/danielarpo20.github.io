@@ -3,33 +3,33 @@ import {
   xIconClick,
   imageClick,
   changeModeClick,
+  favoritesLinkClick,
+  gifosLinkClick,
 } from "./navbar/mainNav.js";
 
 import {
   getTrendingsGifs,
-  // previusButtonClick,
-  // nextSlide,
+  previusButtonClick,
+  nextButtonClick,
   gifTrendingMouseover,
   gifTrendingMouseout,
   expandIconClick,
   xIconCardExpandedClick,
   CardMobileClick,
+  downloadIconClick,
 } from "./trendings/mainTrends.js";
 
-import {
-  favoritesLinkClick,
-  heartIconClick,
-} from "./favorites/mainFavorites.js";
+import { heartIconClick } from "./favorites/mainFavorites.js";
 
 import {
   TypeSearchBar,
   searchBarClick,
-  xIconSearchBar,
+  xIconSearchBarClick,
   listResultsClick,
-  listResultsEnter,
+  butonSeeMoreClick,
 } from "./principal/principalMain.js";
 
-import { gifosLinkClick } from "./gifos/mianGifos.js";
+import {} from "./gifos/mianGifos.js";
 import {
   createGifClick,
   buttonStartClick,
@@ -45,26 +45,26 @@ function main() {
   xIconClick();
   imageClick();
   changeModeClick();
+  favoritesLinkClick();
+  gifosLinkClick();
 
   TypeSearchBar();
   searchBarClick();
-  xIconSearchBar();
+  xIconSearchBarClick();
   listResultsClick();
-  listResultsEnter();
+  butonSeeMoreClick();
 
   getTrendingsGifs();
-  // previusButtonClick();
-  // nextButtonClick();
+  previusButtonClick();
+  nextButtonClick();
   gifTrendingMouseover();
   gifTrendingMouseout();
   expandIconClick();
   xIconCardExpandedClick();
   CardMobileClick();
+  downloadIconClick();
 
-  favoritesLinkClick();
   heartIconClick();
-
-  gifosLinkClick();
 
   createGifClick();
   buttonStartClick();

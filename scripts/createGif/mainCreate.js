@@ -1,12 +1,11 @@
 import {
   showVideo,
-  showCreatePage,
   recordVideo,
   finishVideo,
   saveVideo,
-  repeatVideo,
   updateCardBackMessage,
 } from "./createController.js";
+import { showCreatePage } from "../helper.js";
 
 export function createGifClick() {
   const createLink = document.getElementById("create");

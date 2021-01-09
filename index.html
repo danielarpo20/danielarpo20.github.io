@@ -54,7 +54,7 @@
         <nav class="navbar">
           <ul class="navbar-items">
             <li class="navbar-items-item">
-              <a href="#" class="navbar-items-item-link mode" id="mode"
+              <a href="#" class="navbar-items-item-link" id="mode"
                 >modo nocturno</a
               >
             </li>
@@ -64,7 +64,7 @@
               >
             </li>
             <li class="navbar-items-item">
-              <a href="#mygifos" class="navbar-items-item-link"
+              <a href="#mygifos" class="navbar-items-item-link" id="mygifos"
                 >mis
                 <span class="navbar-items-item-link-gifos" id="gifos"
                   >gifos</span
@@ -115,7 +115,7 @@
 
         <section class="serchingResult" id="serchingResult">
           <div class="serchingResult-gifGalery">
-            <h1 class="serchingResult-gifGalery-title">Búsqueda</h1>
+            <h1 class="serchingResult-gifGalery-title"></h1>
             <div class="serchingResult-gifGalery-noContent">
               <img
                 src="./assetes/icon-busqueda-sin-resultado.svg"
@@ -126,7 +126,9 @@
               </h3>
             </div>
             <div class="serchingResult-gifGalery-container"></div>
-            <button type="button" class="button">VER MÁS</button>
+            <button type="button" class="button" id="seeMoreButtonSearch">
+              VER MÁS
+            </button>
           </div>
         </section>
       </section>
@@ -146,7 +148,9 @@
               </h3>
             </div>
             <div class="gifGalery-container"></div>
-            <button type="button" class="button">VER MÁS</button>
+            <button type="button" class="button" id="seeMoreFavorites">
+              VER MÁS
+            </button>
           </div>
         </div>
       </section>
@@ -166,7 +170,9 @@
               </h3>
             </div>
             <div class="gifGalery-container"></div>
-            <button type="button" class="button">VER MÁS</button>
+            <button type="button" class="button" id="seeMoreGifos">
+              VER MÁS
+            </button>
           </div>
         </div>
       </section>
@@ -187,27 +193,7 @@
           >
             <i class="fas fa-chevron-left"></i>
           </button>
-          <div class="trending-container-card">
-            <div class="trending-container-card-gifs">
-              <div class="trending-cardBack">
-                <div class="trending-cardBack-iconContainer">
-                  <div class="trending-cardBack-iconContainer-icon">
-                    <i class="far fa-heart"></i>
-                  </div>
-                  <div class="trending-cardBack-iconContainer-icon">
-                    <i class="fas fa-arrow-to-bottom"></i>
-                  </div>
-                  <div class="trending-cardBack-iconContainer-icon">
-                    <i class="fas fa-expand-alt"></i>
-                  </div>
-                </div>
-                <div class="trending-cardBack-infoContainer">
-                  <h6 class="trending-cardBack-infoContainer-user"></h6>
-                  <p class="trending-cardBack-infoContainer-title"></p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="trending-container-card"></div>
           <button
             type="button"
             class="buttonArrow trending-container-buttom"
@@ -289,11 +275,14 @@
                 <div class="createGIF-container-square-video-highness"></div>
                 <div class="createGIF-container-square-video-firsStep">
                   <h3 class="createGIF-container-square-video-firsStep-title">
-                    ¿Nos das acceso a tu cámara?
+                    Aquí podrás crear tus propios
+                    <span class="createGIF-container-square-video-firsStep-span"
+                      >gifos</span
+                    >
                   </h3>
                   <p class="createGIF-container-square-video-firsStep-text">
-                    El acceso a tu camara será válido sólo por el tiempo en el
-                    que estés creando el GIFO.
+                    ¡Crea tu GIFO en sólo 3 pasos! (sólo necesitas una cámara
+                    para grabar un video).
                   </p>
                 </div>
                 <div class="createGIF-container-recordContainer">
@@ -344,6 +333,7 @@
               <button type="button" class="buttonPagination" id="three">
                 3
               </button>
+              <p class="createGIF-container-buttoms-timming">00:00</p>
               <h2 class="createGIF-container-buttoms-repeatLink">
                 repetir captura
               </h2>
@@ -419,5 +409,6 @@
     </footer>
     <div class="lineDown"></div>
     <script type="module" src="./scripts/main.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
   </body>
 </html>

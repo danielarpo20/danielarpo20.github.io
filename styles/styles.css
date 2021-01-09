@@ -42,9 +42,6 @@
     background: var(--icon-text-color);
     color: var(--buttom-hover);
   }
-  .gifCreation:active {
-    background: #9CAFC3;
-  }
 }
 
 .button {
@@ -882,6 +879,7 @@
   }
   .trending-container {
     max-width: 80%;
+    height: 300px;
     margin: auto;
     padding-bottom: 5em;
     display: -webkit-box;
@@ -895,23 +893,34 @@
     margin-top: 11%;
   }
   .trending-container-card {
-    width: 90%;
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 2em;
   }
   .trending-container-card-gifs {
-    overflow: hidden;
-    height: 300px;
-    margin: 0 2em;
+    height: 100%;
+    width: 300px;
+    margin-left: 0;
+    margin: 0 1em;
     position: relative;
+    overflow: initial;
   }
   .trending-cardBack {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     position: absolute;
     height: 100%;
+    width: 100%;
     background: var(--navbar-bg-mobile);
+    z-index: -1;
   }
   .trending-cardBack-iconContainer {
     display: -webkit-box;
@@ -1156,6 +1165,11 @@
   line-height: 35px;
 }
 
+.createGIF-container-square-video-firsStep-span {
+  text-transform: uppercase;
+  color: #50E3C2;
+}
+
 .createGIF-container-square-video-firsStep-text {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -1254,6 +1268,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -1294,6 +1311,17 @@
           transform-origin: right;
 }
 
+.createGIF-container-buttoms-timming {
+  display: none;
+  margin: 0 1em;
+  position: absolute;
+  right: 0;
+  color: var(--icon-text-color);
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+
 .createGIF-container-line {
   border: 4px solid var(--icon-text-color);
   border-radius: 20px;
@@ -1324,7 +1352,7 @@
   top: 0;
   right: 20%;
   width: 60%;
-  border-bottom: 3px solid #50E3C2;
+  border-bottom: 2px solid #50E3C2;
 }
 
 .serchingResult-gifGalery {
