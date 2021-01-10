@@ -14,31 +14,8 @@ const trendingGifosContainer = document.querySelector(
   ".trending-container-card"
 );
 
-export const showCardBack = async (event) => {
-  const getIdElementHovered = event.target.id;
-  let cardSpecific = document.getElementById(getIdElementHovered);
-  if (getIdElementHovered.includes("gif")) {
-    localStorage.clear();
-    localStorage.setItem("gif", cardSpecific.src);
-    localStorage.setItem("userGif", cardSpecific.user);
-    localStorage.setItem("titleGif", cardSpecific.title);
-    localStorage.setItem("idGif", cardSpecific.id);
-    const cardBack = document.getElementById(getIdElementHovered);
-    document.activeElement.clientWidth > 1350
-      ? (cardBack.style.zIndex = "1")
-      : null;
-  }
-};
-
-export const vanishCardBack = (event) => {
-  // let gifCardId = event.fromElement.id;
-  // if (gifCardId.includes("gif")) {
-  //   let vanish = document.querySelector(`#${gifCardId}`);
-  //   vanish.style.display = "none";
-  // }
-};
-
 export const showCardExpanded = async () => {
+  console.log('go');
   const idGif = localStorage.getItem("idGif");
   const gifCard = document.getElementById(idGif);
   gifSourceCard.setAttribute("src", gifCard.src);

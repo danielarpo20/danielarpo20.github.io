@@ -11,8 +11,6 @@ import {
   getTrendingsGifs,
   previusButtonClick,
   nextButtonClick,
-  gifTrendingMouseover,
-  gifTrendingMouseout,
   expandIconClick,
   xIconCardExpandedClick,
   CardMobileClick,
@@ -57,8 +55,6 @@ function main() {
   getTrendingsGifs();
   previusButtonClick();
   nextButtonClick();
-  gifTrendingMouseover();
-  gifTrendingMouseout();
   expandIconClick();
   xIconCardExpandedClick();
   CardMobileClick();

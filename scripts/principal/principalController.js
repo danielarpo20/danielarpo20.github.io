@@ -1,4 +1,4 @@
-import { apiConexion } from "../apiConection.js";
+import { apiConection } from "../apiConection.js";
 
 const autoComplete = document.querySelector(".principal-bar-autoComplete");
 const searchBar = document.querySelector(".principal-bar-searchBar");
@@ -22,7 +22,7 @@ export const updatePositionsBar = async () => {
 };
 
 export const getWatedResults = async (event) => {
-  const result = await apiConexion("search/tags", event.target.value);
+  const result = await apiConection("search/tags", event.target.value);
   if (event.code === "Enter") {
     searchGifByResult(result.data[0]);
     updatePositionsBar();
@@ -73,7 +73,7 @@ const displaySearchGalery = (gifs, max) => {
 };
 
 const getApiSearchResults = async (param, limit, offset) => {
-  const results = await apiConexion("search", param, limit, offset);
+  const results = await apiConection("search", param, limit, offset);
   const data = results.data;
   return {
     data: data,

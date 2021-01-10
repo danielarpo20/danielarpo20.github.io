@@ -760,13 +760,23 @@
   margin: auto;
 }
 
+.trending-container {
+  overflow: hidden;
+}
+
+.trending-container-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: scroll;
+}
+
 .trending-container-card-gifs {
   height: 200px;
   margin-left: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: auto;
 }
 
 .trending-cardBack {
@@ -895,9 +905,6 @@
   .trending-container-card {
     width: 100%;
     overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     margin: 0 2em;
   }
   .trending-container-card-gifs {
@@ -906,7 +913,6 @@
     margin-left: 0;
     margin: 0 1em;
     position: relative;
-    overflow: initial;
   }
   .trending-cardBack {
     display: -webkit-box;
@@ -920,7 +926,10 @@
     height: 100%;
     width: 100%;
     background: var(--navbar-bg-mobile);
-    z-index: -1;
+    -webkit-transform: rotateX(90deg) scale(0);
+            transform: rotateX(90deg) scale(0);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
   }
   .trending-cardBack-iconContainer {
     display: -webkit-box;
@@ -978,6 +987,10 @@
   }
   .trending-cardExpanded-container {
     width: 30em;
+  }
+  .trending-container-card-gifs:hover .trending-cardBack {
+    -webkit-transform: rotateX(0) scale(1);
+            transform: rotateX(0) scale(1);
   }
 }
 

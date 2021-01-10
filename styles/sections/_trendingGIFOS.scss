@@ -28,12 +28,16 @@
     }
 
     &-container {
+        overflow: hidden;
+
         &-card {
+            display: flex;
+            overflow: scroll;
+
             &-gifs {
                 height: 200px;
                 margin-left: 5%;
                 display: flex;
-                overflow: auto;
             }
         }
     }
@@ -156,7 +160,6 @@
             &-card {
                 width: 100%;
                 overflow: hidden;
-                display: flex;
                 margin: 0 2em;
 
                 &-gifs {
@@ -165,7 +168,6 @@
                     margin-left: 0;
                     margin: 0 1em;
                     position: relative;
-                    overflow: initial;
                 }
             }
 
@@ -178,7 +180,8 @@
             height: 100%;
             width: 100%;
             background: var(--navbar-bg-mobile);
-            z-index: -1;
+            transform: rotateX(90deg) scale(0);
+            transition: all 0.4s ease;
 
             &-iconContainer {
                 display: flex;
@@ -242,6 +245,10 @@
                 width: 30em;
             }
         }
+    }
+
+    .trending-container-card-gifs:hover .trending-cardBack {
+        transform: rotateX(0) scale(1);
     }
 }
 
