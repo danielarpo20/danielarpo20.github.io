@@ -10,12 +10,12 @@ import {
 
 const gifContainer = document.querySelector(".trending-container-card");
 const gifWrapper = document.querySelector(".trending-container-card-gifs");
-const cardBack = document.querySelector(".trending-cardBack");
+const cardBack = document.querySelector(".cardBack");
 const cardBackUser = document.querySelector(
-  ".trending-cardBack-infoContainer-user"
+  ".cardBack-infoContainer-user"
 );
 const cardBackTitle = document.querySelector(
-  ".trending-cardBack-infoContainer-title"
+  ".cardBack-infoContainer-title"
 );
 
 export const getTrendingsGifs = async () => {
@@ -53,9 +53,7 @@ export function nextButtonClick() {
 }
 
 export function expandIconClick() {
-  const expandIcon = document.querySelector(
-    ".trending-cardBack-iconContainer-icon"
-  );
+  const expandIcon = document.querySelector("#expandIcon");
   expandIcon.addEventListener("click", showCardExpanded);
 }
 

@@ -132,6 +132,22 @@
             line-height: $size25;
         }
     }
+
+    &-noContent {
+        display: none;
+        text-align: center;
+        padding-top: 5em;
+        width: $maxWdthMobile;
+        margin: auto;
+
+        &-content {
+            color: $color-greenLight;
+            font-family: $Montserrat;
+            font-weight: 700px;
+            font-size: 22px;
+            line-height: 33px;
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {

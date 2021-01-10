@@ -5,6 +5,7 @@ const searchBar = document.querySelector(".principal-bar-searchBar");
 const searchIcon = document.querySelector(".principal-bar-icon");
 const xIcon = document.querySelector(".principal-bar-iconX");
 const searchingSection = document.querySelector(".serchingResult");
+const searchNoResults = document.querySelector(".principal-noContent");
 const introContainer = document.querySelector(".principal-introContainer");
 const gifGalerySection = document.querySelector(".serchingResult-gifGalery");
 const butonSeeMore = document.querySelector("#seeMoreButtonSearch");
@@ -13,6 +14,15 @@ const gifResultsContainer = document.querySelector(
 );
 const gifGaleryTitle = document.querySelector(
   ".serchingResult-gifGalery-title"
+);
+const cardBackUser = document.querySelector(".cardBack-infoContainer-user");
+const cardBackTitle = document.querySelector(".cardBack-infoContainer-title");
+const gifWrapper = document.querySelector(
+  ".serchingResult-gifGalery-container-searchWrapper"
+);
+const cardBack = document.querySelector(".cardBack");
+const gifContainer = document.querySelector(
+  ".serchingResult-gifGalery-container"
 );
 
 export const updatePositionsBar = async () => {
@@ -24,8 +34,13 @@ export const updatePositionsBar = async () => {
 export const getWatedResults = async (event) => {
   const result = await apiConection("search/tags", event.target.value);
   if (event.code === "Enter") {
-    searchGifByResult(result.data[0]);
-    updatePositionsBar();
+    if (!result.data.length) {
+      searchNoResults.style.display = "block";
+      introContainer.style.display = "none";
+    } else {
+      searchGifByResult(result.data[0]);
+      updatePositionsBar();
+    }
   }
   if (result.data.length) {
     autoComplete.innerHTML = "";
@@ -55,20 +70,34 @@ export const exitAutocomplete = () => {
   searchBar.value = "";
   searchIcon.style.left = "auto";
   searchIcon.style.right = "1.2em";
+  searchNoResults.style.display = "none";
+  introContainer.style.display = "block";
 };
 
 const displaySearchGalery = (gifs, max) => {
   let data = gifs.data;
+  gifWrapper.removeChild(gifWrapper.childNodes[1]);
   for (let i = 0; i < max; i++) {
-    let cardGifResult = document.createElement("img");
-    cardGifResult.src = data[i].images.downsized.url;
-    cardGifResult.alt = data[i].title;
-    cardGifResult.user = data[i].username;
-    cardGifResult.title = data[i].title;
-    cardGifResult.id = `gif${i}`;
-    cardGifResult.style.width = "100%";
-    cardGifResult.style.height = "200px";
-    gifResultsContainer.appendChild(cardGifResult);
+    if (!data[i]) {
+      butonSeeMore.style.display = "none";
+      butonSeeMore.click = 0;
+    } else {
+      cardBackUser.innerText = data[i].username || "none";
+      cardBackTitle.innerText = data[i].title;
+      let wrapperClone = gifWrapper.cloneNode(true);
+      let cardBackClone = cardBack.cloneNode(true);
+      let cardGifResult = document.createElement("img");
+      cardGifResult.src = data[i].images.downsized.url;
+      cardGifResult.alt = data[i].title;
+      cardGifResult.user = data[i].username || "none";
+      cardGifResult.title = data[i].title;
+      cardGifResult.id = `gif${i}`;
+      cardGifResult.style.width = "100%";
+      cardGifResult.style.height = "200px";
+      wrapperClone.appendChild(cardBackClone);
+      wrapperClone.appendChild(cardGifResult);
+      gifResultsContainer.appendChild(wrapperClone);
+    }
   }
 };
 
@@ -100,6 +129,7 @@ export const searchGifByResult = async (event) => {
 
 export const showMoreSearchResults = async () => {
   let nextClick = butonSeeMore.pagination / 12;
+  console.log(nextClick);
   butonSeeMore.click = butonSeeMore.click + 1;
   butonSeeMore.nextValue = butonSeeMore.nextValue + 12;
   const results = await getApiSearchResults(

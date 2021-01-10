@@ -42,10 +42,6 @@
         }
     }
 
-    &-cardBack {
-        display: none;
-    }
-
     &-cardExpanded {
         display: none;
         background: $color-white-opacity9;
@@ -173,56 +169,6 @@
 
         }
 
-        &-cardBack {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            background: var(--navbar-bg-mobile);
-            transform: rotateX(90deg) scale(0);
-            transition: all 0.4s ease;
-
-            &-iconContainer {
-                display: flex;
-                align-self: end;
-                margin: 1em 1em;
-
-                &-icon {
-                    background-color: $color-white-opacity7;
-                    border-radius: 5px;
-                    color: var(--icon-text-color);
-                    text-align: center;
-                    margin-left: .5em;
-                    cursor: pointer;
-                }
-
-                :hover {
-                    background-color: $color-white;
-                }
-            }
-
-            &-infoContainer {
-                font-family: $Roboto;
-                padding: 9em 0 0 1em;
-
-                &-user {
-                    margin: 0;
-                    font-size: 15px;
-                    font-weight: 300;
-                    color: $color-white;
-                    padding-bottom: .5em;
-                }
-
-                &-title {
-                    margin: 0;
-                    font-size: 16px;
-                    font-weight: 700;
-                    color: $color-white;
-                }
-            }
-        }
-
         &-cardExpanded {
             &-imageContainer {
                 justify-content: space-between;
@@ -247,7 +193,7 @@
         }
     }
 
-    .trending-container-card-gifs:hover .trending-cardBack {
+    .trending-container-card-gifs:hover .cardBack {
         transform: rotateX(0) scale(1);
     }
 }

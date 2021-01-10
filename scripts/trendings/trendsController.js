@@ -1,4 +1,4 @@
-const cardBack = document.querySelector(".trending-cardBack");
+const cardBack = document.querySelector(".cardBack");
 const expandCard = document.querySelector(".trending-cardExpanded");
 const titleCard = document.querySelector(
   ".trending-cardExpanded-container-info-title"
@@ -14,14 +14,14 @@ const trendingGifosContainer = document.querySelector(
   ".trending-container-card"
 );
 
-export const showCardExpanded = async () => {
-  console.log('go');
-  const idGif = localStorage.getItem("idGif");
-  const gifCard = document.getElementById(idGif);
-  gifSourceCard.setAttribute("src", gifCard.src);
-  userCard.innerText = localStorage.getItem("userGif") || "none";
-  titleCard.innerText = localStorage.getItem("titleGif");
-  expandCard.style.display = "initial";
+export const showCardExpanded = () => {
+  // const idGif = localStorage.getItem("idGif");
+  // const gifCard = document.getElementById(idGif);
+  // gifSourceCard.setAttribute("src", gifCard.src);
+  // userCard.innerText = localStorage.getItem("userGif") || "none";
+  // titleCard.innerText = localStorage.getItem("titleGif");
+  // expandCard.style.display = "initial";
+  console.log("go");
 };
 
 export const closeCardExpanded = () => {
