@@ -88,9 +88,12 @@
         }
 
         &-recordContainer {
-            display: none;
+            position: absolute;
+            top: 0;
             height: 100%;
-            position: relative;
+            width: 100%;
+            transform: rotateX(90deg) scale(0);
+            transition: all 0.4s ease;
             justify-content: center;
 
             &-record {
@@ -103,13 +106,14 @@
                 display: none;
                 flex-direction: column;
                 position: absolute;
+                left: 0;
                 bottom: 0;
-                width: 63%;
+                width: 100%;
                 height: 100%;
                 background: var(--navbar-bg-mobile);
 
                 &-iconContainer {
-                    display: flex;
+                    display: none;
                     align-self: end;
                     margin: 1em 1em;
 
@@ -138,6 +142,7 @@
                     &-icon {
                         color: $color-greenLight;
                         padding: 1em;
+                        animation: spin-reverse 1s infinite linear;
                     }
 
                     &-titleLoading {
@@ -219,5 +224,23 @@
         &-upGifoButon {
             display: none;
         }
+    }
+}
+
+@keyframes spin-reverse {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(45deg);
+    }
+
+    50% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }

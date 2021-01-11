@@ -35,7 +35,8 @@ import {
   buttonFinishClick,
   upGifoButonClick,
   repeatLinkClick,
-  prueba,
+  linkButonClick,
+  downloadButonClick,
 } from "./createGif/mainCreate.js";
 
 function main() {
@@ -68,7 +69,8 @@ function main() {
   buttonFinishClick();
   upGifoButonClick();
   repeatLinkClick();
-  prueba();
+  linkButonClick();
+  downloadButonClick();
 }
 
 main();

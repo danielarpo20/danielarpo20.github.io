@@ -11,12 +11,8 @@ import {
 const gifContainer = document.querySelector(".trending-container-card");
 const gifWrapper = document.querySelector(".trending-container-card-gifs");
 const cardBack = document.querySelector(".cardBack");
-const cardBackUser = document.querySelector(
-  ".cardBack-infoContainer-user"
-);
-const cardBackTitle = document.querySelector(
-  ".cardBack-infoContainer-title"
-);
+const cardBackUser = document.querySelector(".cardBack-infoContainer-user");
+const cardBackTitle = document.querySelector(".cardBack-infoContainer-title");
 
 export const getTrendingsGifs = async () => {
   const results = await apiConection("trending");
@@ -53,7 +49,7 @@ export function nextButtonClick() {
 }
 
 export function expandIconClick() {
-  const expandIcon = document.querySelector("#expandIcon");
+  const expandIcon = document.querySelector(".fa-arrow-to-bottom");
   expandIcon.addEventListener("click", showCardExpanded);
 }
 

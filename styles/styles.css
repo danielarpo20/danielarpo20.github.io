@@ -1215,9 +1215,14 @@
 }
 
 .createGIF-container-recordContainer {
-  display: none;
+  position: absolute;
+  top: 0;
   height: 100%;
-  position: relative;
+  width: 100%;
+  -webkit-transform: rotateX(90deg) scale(0);
+          transform: rotateX(90deg) scale(0);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1236,17 +1241,17 @@
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
+  left: 0;
   bottom: 0;
-  width: 63%;
+  width: 100%;
   height: 100%;
   background: var(--navbar-bg-mobile);
 }
 
 .createGIF-container-recordContainer-cardBack-iconContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
       align-self: end;
   margin: 1em 1em;
 }
@@ -1285,6 +1290,8 @@
 .createGIF-container-recordContainer-cardBack-infoContainer-icon {
   color: #50E3C2;
   padding: 1em;
+  -webkit-animation: spin-reverse 1s infinite linear;
+          animation: spin-reverse 1s infinite linear;
 }
 
 .createGIF-container-recordContainer-cardBack-infoContainer-titleLoading {
@@ -1375,6 +1382,44 @@
 
 .createGIF-container-upGifoButon {
   display: none;
+}
+
+@-webkit-keyframes spin-reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  50% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  50% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .serchingResult {

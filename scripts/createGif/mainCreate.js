@@ -1,9 +1,10 @@
 import {
   showVideo,
   recordVideo,
-  finishVideo,
-  saveVideo,
-  updateCardBackMessage,
+  stopVideo,
+  uploadVideo,
+  openGifLink,
+  downloadGif,
 } from "./createController.js";
 import { showCreatePage } from "../helper.js";
 
@@ -24,22 +25,27 @@ export function buttonRecordClick() {
 
 export function buttonFinishClick() {
   const recordButton = document.querySelector("#finishButon");
-  recordButton.addEventListener("click", finishVideo);
+  recordButton.addEventListener("click", stopVideo);
 }
 
 export function upGifoButonClick() {
   const recordButton = document.querySelector("#upGifoButon");
-  recordButton.addEventListener("click", saveVideo);
+  recordButton.addEventListener("click", uploadVideo);
 }
 
 export function repeatLinkClick() {
   const repeatLink = document.querySelector(
     ".createGIF-container-buttoms-repeatLink"
   );
-  repeatLink.addEventListener("click", recordVideo);
+  repeatLink.addEventListener("click", showVideo);
 }
 
-export function prueba() {
-  const repeatLink = document.querySelector("#three");
-  repeatLink.addEventListener("click", updateCardBackMessage);
+export function linkButonClick() {
+  const searchButon = document.querySelector(".fa-link");
+  searchButon.addEventListener("click", openGifLink);
+}
+
+export function downloadButonClick() {
+  const downloadButon = document.querySelector(".fa-arrow-to-bottom");
+  downloadButon.addEventListener("click", downloadGif);
 }
