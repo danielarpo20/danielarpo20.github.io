@@ -46,6 +46,11 @@ export function linkButonClick() {
 }
 
 export function downloadButonClick() {
-  const downloadButon = document.querySelector(".fa-arrow-to-bottom");
+  const downloadButon = document.querySelector(".createGIF-icondown");
   downloadButon.addEventListener("click", downloadGif);
+}
+
+export function firstStepButonClick() {
+  const oneButton = document.querySelector("#one");
+  oneButton.addEventListener("click", showVideo);
 }

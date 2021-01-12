@@ -6,7 +6,7 @@ import {
 import {
   goPrincpalPage,
   showfavoritesSection,
-  showGifosSection
+  showGifosSection,
 } from "../helper.js";
 
 export function imageClick() {

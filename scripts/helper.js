@@ -1,5 +1,6 @@
 import { CloseMenuMobile } from "./navbar/navController.js";
 import { getFavoritesList } from "./favorites/favController.js";
+import { showGifosGalery } from "./gifos/gifController.js";
 
 const principalSection = document.querySelector(".principal");
 const trendingsSection = document.querySelector(".trending");
@@ -64,6 +65,8 @@ export const showGifosSection = async () => {
   createSection.style.display = "none";
   searchSection.style.display = "none";
   CloseMenuMobile();
+
+  showGifosGalery();
 };
 
 export const showCreatePage = async () => {

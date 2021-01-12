@@ -37,6 +37,7 @@ import {
   repeatLinkClick,
   linkButonClick,
   downloadButonClick,
+  firstStepButonClick,
 } from "./createGif/mainCreate.js";
 
 function main() {
@@ -71,6 +72,7 @@ function main() {
   repeatLinkClick();
   linkButonClick();
   downloadButonClick();
+  firstStepButonClick();
 }
 
 main();

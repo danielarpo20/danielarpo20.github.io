@@ -20,14 +20,23 @@ export const uploadTogiphy = async (parameters) => {
       parameters
     );
     let requestJson = await request.json();
+    console.log(requestJson);
     return requestJson;
   } catch (error) {}
 };
 
-export const getGifById = async (param) => {
+export const getBlobById = async (param) => {
   try {
     let request = await fetch(`${URL_GETBYID}${param}/giphy.gif`);
     let blobResult = await request.blob();
     return blobResult;
+  } catch (error) {}
+};
+
+export const getGifById = async (id) => {
+  try {
+    let request = await fetch(`${URL}${id}?api_key=${API_KEY}`);
+    let requestJson = await request.json();
+    return requestJson;
   } catch (error) {}
 };

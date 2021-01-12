@@ -1,5 +1,5 @@
 import { getCurrentTheme } from "../helper.js";
-import { uploadTogiphy, getGifById } from "../apiConection.js";
+import { uploadTogiphy, getBlobById } from "../apiConection.js";
 
 const firstStep = document.querySelector(
   ".createGIF-container-square-video-firsStep"
@@ -140,19 +140,17 @@ export const uploadVideo = async () => {
   try {
     const formData = new FormData();
     formData.append("file", gifBlob, "myGif.gif");
-
     const parameters = {
       method: "POST",
       body: formData,
       json: true,
     };
     console.log(formData.get("file"));
-
     let result = await uploadTogiphy(parameters);
-    console.log(result);
     gifCreatedId = result.data.id;
-    gifCreatedUrl = `https://media.giphy.com/media/${result.data.id}/giphy.gif`;
+    gifCreatedUrl = `https://media.giphy.com/media/${gifCreatedId}/giphy.gif`;
     updateCardBackMessage();
+    saveGifoInLocal(gifCreatedId);
   } catch (error) {
     console.error(error);
   }
@@ -200,8 +198,7 @@ export const openGifLink = () => {
 };
 
 export const downloadGif = async () => {
-  console.log(gifCreatedUrl);
-  let result = await getGifById(gifCreatedId);
+  let result = await getBlobById(gifCreatedId);
   const gifUrl = URL.createObjectURL(result);
   const saveGif = document.createElement("a");
   saveGif.href = gifUrl;
@@ -210,4 +207,10 @@ export const downloadGif = async () => {
   document.body.appendChild(saveGif);
   saveGif.click();
   document.body.removeChild(saveGif);
+};
+
+export const saveGifoInLocal = (gifUrl) => {
+  let actualGif = JSON.parse(localStorage.getItem("myGifs")) || [];
+  actualGif.push(gifUrl);
+  localStorage.setItem("myGifs", JSON.parse(actualGif));
 };

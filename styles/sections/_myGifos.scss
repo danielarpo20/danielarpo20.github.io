@@ -4,4 +4,144 @@
     &-wrapper {
         background-color: var(--background-light);
     }
+
+    &-gifGalery {
+        text-align: center;
+        padding: 6em 0 0;
+        max-width: $maxWdthMobile;
+        margin: auto;
+
+        &-title {
+            font-family: $Montserrat;
+            font-weight: 700;
+            font-size: $size20;
+            color: var(--icon-text-color);
+            text-align: center;
+            line-height: $size30;
+            text-transform: capitalize;
+            margin: 0;
+        }
+
+        &-noContent {
+            padding-top: 5em;
+            width: $maxWdthMobile;
+            margin: auto;
+
+            &-content {
+                color: $color-greenLight;
+                font-family: $Montserrat;
+                font-weight: 700px;
+                font-size: 22px;
+                line-height: 33px;
+            }
+        }
+
+        &-container {
+            padding: 2em 0 .5em;
+            display: none;
+            padding-bottom: 1em;
+            // display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-row-gap: 1em;
+            grid-column-gap: 5%;
+        }
+    }
+
+    &-cardBack {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .myGifos {
+        &-gifGalery {
+            &-container {
+                grid-template-columns: repeat(3, 1fr);
+                grid-row-gap: 2em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .myGifos {
+        &-gifGalery {
+            max-width: $maxWdthDesktop;
+
+            &-title {
+                font-size: $size25;
+            }
+
+            &-noContent {
+                padding-top: 7em;
+                width: 40%;
+            }
+
+            &-container {
+                padding: 5em 0 7em;
+                grid-template-columns: repeat(4, 1fr);
+
+                &-searchWrapper {
+                    position: relative;
+                    height: 200px;
+                }
+            }
+        }
+
+        &-cardBack {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: var(--navbar-bg-mobile);
+            transform: rotateX(90deg) scale(0);
+            transition: all 0.4s ease;
+
+            &-iconContainer {
+                display: flex;
+                align-self: end;
+                margin: 1em 1em;
+
+                &-icon {
+                    background-color: $color-white-opacity7;
+                    border-radius: 5px;
+                    color: var(--icon-text-color);
+                    text-align: center;
+                    margin-left: .5em;
+                    cursor: pointer;
+                }
+
+                :hover {
+                    background-color: $color-white;
+                }
+            }
+
+            &-infoContainer {
+                font-family: $Roboto;
+                padding: 0 1em 2em 1em;
+                text-align: left;
+
+                &-user {
+                    margin: 0;
+                    font-size: 15px;
+                    font-weight: 300;
+                    color: $color-white;
+                    padding-bottom: .5em;
+                }
+
+                &-title {
+                    margin: 0;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
+
+.myGifos-gifGalery-container-searchWrapper:hover .myGifos-cardBack {
+    transform: rotateX(0) scale(1);
 }

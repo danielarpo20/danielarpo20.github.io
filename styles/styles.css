@@ -1509,11 +1509,215 @@
   background-color: var(--background-light);
 }
 
+.favorites-gifGalery {
+  text-align: center;
+  padding: 6em 0 4em;
+  max-width: 90%;
+  margin: auto;
+}
+
+.favorites-gifGalery-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--icon-text-color);
+  text-align: center;
+  line-height: 30px;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.favorites-gifGalery-noContent {
+  padding-top: 5em;
+  width: 90%;
+  margin: auto;
+}
+
+.favorites-gifGalery-noContent-content {
+  color: #50E3C2;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700px;
+  font-size: 22px;
+  line-height: 33px;
+}
+
+.favorites-gifGalery-container {
+  display: none;
+  padding: 2em 0 3em;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 1em;
+  grid-column-gap: 5%;
+}
+
+@media screen and (min-width: 768px) {
+  .favorites-gifGalery-container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 2em;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .favorites-gifGalery {
+    max-width: 80%;
+  }
+  .favorites-gifGalery-title {
+    font-size: 25px;
+  }
+  .favorites-gifGalery-noContent {
+    padding-top: 7em;
+    width: 40%;
+  }
+  .favorites-gifGalery-container {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .myGifos {
   display: none;
 }
 
 .myGifos-wrapper {
   background-color: var(--background-light);
+}
+
+.myGifos-gifGalery {
+  text-align: center;
+  padding: 6em 0 0;
+  max-width: 90%;
+  margin: auto;
+}
+
+.myGifos-gifGalery-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--icon-text-color);
+  text-align: center;
+  line-height: 30px;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.myGifos-gifGalery-noContent {
+  padding-top: 5em;
+  width: 90%;
+  margin: auto;
+}
+
+.myGifos-gifGalery-noContent-content {
+  color: #50E3C2;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700px;
+  font-size: 22px;
+  line-height: 33px;
+}
+
+.myGifos-gifGalery-container {
+  padding: 2em 0 .5em;
+  display: none;
+  padding-bottom: 1em;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 1em;
+  grid-column-gap: 5%;
+}
+
+.myGifos-cardBack {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .myGifos-gifGalery-container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 2em;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .myGifos-gifGalery {
+    max-width: 80%;
+  }
+  .myGifos-gifGalery-title {
+    font-size: 25px;
+  }
+  .myGifos-gifGalery-noContent {
+    padding-top: 7em;
+    width: 40%;
+  }
+  .myGifos-gifGalery-container {
+    padding: 5em 0 7em;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  .myGifos-gifGalery-container-searchWrapper {
+    position: relative;
+    height: 200px;
+  }
+  .myGifos-cardBack {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: var(--navbar-bg-mobile);
+    -webkit-transform: rotateX(90deg) scale(0);
+            transform: rotateX(90deg) scale(0);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  .myGifos-cardBack-iconContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: end;
+        align-self: end;
+    margin: 1em 1em;
+  }
+  .myGifos-cardBack-iconContainer-icon {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    color: var(--icon-text-color);
+    text-align: center;
+    margin-left: .5em;
+    cursor: pointer;
+  }
+  .myGifos-cardBack-iconContainer :hover {
+    background-color: #FFFFFF;
+  }
+  .myGifos-cardBack-infoContainer {
+    font-family: "Roboto", sans-serif;
+    padding: 0 1em 2em 1em;
+    text-align: left;
+  }
+  .myGifos-cardBack-infoContainer-user {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 300;
+    color: #FFFFFF;
+    padding-bottom: .5em;
+  }
+  .myGifos-cardBack-infoContainer-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+  }
+}
+
+.myGifos-gifGalery-container-searchWrapper:hover .myGifos-cardBack {
+  -webkit-transform: rotateX(0) scale(1);
+          transform: rotateX(0) scale(1);
 }
 /*# sourceMappingURL=styles.css.map */
