@@ -27,7 +27,7 @@ import {
   butonSeeMoreClick,
 } from "./principal/principalMain.js";
 
-import {} from "./gifos/mianGifos.js";
+import { trashIconClick } from "./gifos/mianGifos.js";
 import {
   createGifClick,
   buttonStartClick,
@@ -53,6 +53,8 @@ function main() {
   xIconSearchBarClick();
   listResultsClick();
   butonSeeMoreClick();
+
+  trashIconClick();
 
   getTrendingsGifs();
   previusButtonClick();

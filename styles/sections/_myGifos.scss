@@ -23,7 +23,7 @@
         }
 
         &-noContent {
-            padding-top: 5em;
+            padding: 5em 0;
             width: $maxWdthMobile;
             margin: auto;
 
@@ -33,6 +33,8 @@
                 font-weight: 700px;
                 font-size: 22px;
                 line-height: 33px;
+                margin: 0;
+                padding-top: 1em;
             }
         }
 
@@ -40,7 +42,6 @@
             padding: 2em 0 .5em;
             display: none;
             padding-bottom: 1em;
-            // display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-row-gap: 1em;
             grid-column-gap: 5%;
@@ -73,7 +74,7 @@
             }
 
             &-noContent {
-                padding-top: 7em;
+                padding-top: 5em;
                 width: 40%;
             }
 

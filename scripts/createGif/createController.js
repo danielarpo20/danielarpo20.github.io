@@ -1,12 +1,6 @@
 import { getCurrentTheme } from "../helper.js";
 import { uploadTogiphy, getBlobById } from "../apiConection.js";
 
-const firstStep = document.querySelector(
-  ".createGIF-container-square-video-firsStep"
-);
-const videoRecord = document.querySelector(
-  ".createGIF-container-recordContainer-record"
-);
 const repeatLink = document.querySelector(
   ".createGIF-container-buttoms-repeatLink"
 );
@@ -124,6 +118,7 @@ export const stopVideo = async () => {
 
 export const uploadVideo = async () => {
   cardBackContainer.style.display = "initial";
+  video.style.display = "none";
   finishButon.style.display = "none";
   upGifoButon.style.display = "none";
   repeatLink.style.display = "none";
@@ -151,6 +146,7 @@ export const uploadVideo = async () => {
     gifCreatedUrl = `https://media.giphy.com/media/${gifCreatedId}/giphy.gif`;
     updateCardBackMessage();
     saveGifoInLocal(gifCreatedId);
+    location.reload();
   } catch (error) {
     console.error(error);
   }
@@ -212,5 +208,5 @@ export const downloadGif = async () => {
 export const saveGifoInLocal = (gifUrl) => {
   let actualGif = JSON.parse(localStorage.getItem("myGifs")) || [];
   actualGif.push(gifUrl);
-  localStorage.setItem("myGifs", JSON.parse(actualGif));
+  localStorage.setItem("myGifs", JSON.stringify(actualGif));
 };

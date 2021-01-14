@@ -103,7 +103,7 @@
   font-size: 18px;
   text-align: center;
   font-family: "Roboto", sans-serif;
-  margin-left: .5em;
+  margin: 0 .5em;
   cursor: pointer;
 }
 
@@ -182,7 +182,7 @@
     font-size: 25px;
   }
   .gifGalery-noContent {
-    padding-top: 7em;
+    padding-top: 5em;
     width: 40%;
   }
   .gifGalery-container {
@@ -1154,23 +1154,23 @@
 .createGIF-container-square-video {
   border: 3px solid #50E3C2;
   height: 90%;
-  width: 95%;
+  width: 93%;
   margin: 2% auto;
   position: relative;
 }
 
 .createGIF-container-square-video-broadness {
   background-color: var(--background-light);
-  width: 102%;
+  width: 103%;
   height: 80%;
-  margin: 5% -.3em;
+  margin: 2em -.5em;
 }
 
 .createGIF-container-square-video-highness {
   background-color: var(--background-light);
-  height: 110%;
+  height: 107%;
   width: 90%;
-  margin: -21em 2em;
+  margin: -20.5em 2em;
 }
 
 .createGIF-container-square-video-firsStep {
@@ -1370,6 +1370,7 @@
   border-radius: 20px;
   width: 60%;
   margin-bottom: 1em;
+  display: inline-table;
 }
 
 .createGIF-container-recordButon {
@@ -1602,7 +1603,7 @@
 }
 
 .myGifos-gifGalery-noContent {
-  padding-top: 5em;
+  padding: 5em 0;
   width: 90%;
   margin: auto;
 }
@@ -1613,6 +1614,8 @@
   font-weight: 700px;
   font-size: 22px;
   line-height: 33px;
+  margin: 0;
+  padding-top: 1em;
 }
 
 .myGifos-gifGalery-container {
@@ -1645,7 +1648,7 @@
     font-size: 25px;
   }
   .myGifos-gifGalery-noContent {
-    padding-top: 7em;
+    padding-top: 5em;
     width: 40%;
   }
   .myGifos-gifGalery-container {

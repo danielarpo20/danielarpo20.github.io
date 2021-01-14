@@ -35,22 +35,22 @@
             &-video {
                 border: 3px solid $color-greenLight;
                 height: 90%;
-                width: 95%;
+                width: 93%;
                 margin: 2% auto;
                 position: relative;
 
                 &-broadness {
                     background-color: var(--background-light);
-                    width: 102%;
+                    width: 103%;
                     height: 80%;
-                    margin: 5% -.3em;
+                    margin: 2em -.5em;
                 }
 
                 &-highness {
                     background-color: var(--background-light);
-                    height: 110%;
+                    height: 107%;
                     width: 90%;
-                    margin: -21em 2em;
+                    margin: -20.5em 2em;
                 }
 
                 &-firsStep {
@@ -211,6 +211,7 @@
             border-radius: 20px;
             width: 60%;
             margin-bottom: 1em;
+            display: inline-table;
         }
 
         &-recordButon {

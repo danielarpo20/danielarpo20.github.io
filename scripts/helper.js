@@ -65,7 +65,6 @@ export const showGifosSection = async () => {
   createSection.style.display = "none";
   searchSection.style.display = "none";
   CloseMenuMobile();
-
   showGifosGalery();
 };
 

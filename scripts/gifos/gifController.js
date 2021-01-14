@@ -1,39 +1,27 @@
 import { getGifById } from "../apiConection.js";
 
 const galeryContainer = document.querySelector(".myGifos-gifGalery-container");
+const gifosNoContent = document.querySelector(".myGifos-gifGalery-noContent");
+const cardBackGifos = document.querySelector(".myGifos-cardBack");
 const gifWrapper = document.querySelector(
   ".myGifos-gifGalery-container-searchWrapper"
 );
-const cardBackGifos = document.querySelector(".myGifos-cardBack");
 const cardBackGifosUser = document.querySelector(
   ".myGifos-cardBack-infoContainer-user"
 );
 const cardBackGifosTitle = document.querySelector(
   ".myGifos-cardBack-infoContainer-title"
 );
-const gifosNoContent = document.querySelector(".myGifos-gifGalery-noContent");
 
 export const showGifosGalery = async () => {
-  //GET GIFOS localStorage
-  //   localStorage.setItem("myGifs", gifExaples);
-  //   const gifosToShow = await takeLocalInfo();
-  //   console.log(gifosToShow);
-  //
-
-  let gifExaples = [
-    "https://media1.giphy.com/media/GJalVbOOHUmRYU7vnY/giphy.gif?cid=8e746c294db83b8acefad3dc58165dceed258f4a8c6ebf6a&rid=giphy.gif",
-    "https://media1.giphy.com/media/GJalVbOOHUmRYU7vnY/giphy.gif?cid=8e746c294db83b8acefad3dc58165dceed258f4a8c6ebf6a&rid=giphy.gif",
-    "https://media1.giphy.com/media/GJalVbOOHUmRYU7vnY/giphy.gif?cid=8e746c294db83b8acefad3dc58165dceed258f4a8c6ebf6a&rid=giphy.gif",
-    "https://media1.giphy.com/media/GJalVbOOHUmRYU7vnY/giphy.gif?cid=8e746c294db83b8acefad3dc58165dceed258f4a8c6ebf6a&rid=giphy.gif",
-    "https://media1.giphy.com/media/GJalVbOOHUmRYU7vnY/giphy.gif?cid=8e746c294db83b8acefad3dc58165dceed258f4a8c6ebf6a&rid=giphy.gif",
-  ];
-
-  if (gifExaples.length) {
+  const gifosToShow = await takeLocalInfo();
+  if (gifosToShow.length) {
     gifWrapper.removeChild(gifWrapper.childNodes[1]);
     galeryContainer.removeChild(galeryContainer.childNodes[1]);
+    galeryContainer.innerHTML = "";
     gifosNoContent.style.display = "none";
     galeryContainer.style.display = "grid";
-    gifExaples.map((gifo, index) => {
+    gifosToShow.map((gifo, index) => {
       cardBackGifosUser.innerText = "Yo :3";
       cardBackGifosTitle.innerText = "My Gifo";
       let gifWrapperClone = gifWrapper.cloneNode(true);
@@ -48,20 +36,22 @@ export const showGifosGalery = async () => {
       gifWrapperClone.appendChild(gifCard);
       galeryContainer.appendChild(gifWrapperClone);
     });
-  } else {
   }
 };
 
-export const takeLocalInfo = () => {
-  // let gifosIds = JSON.parse(localStorage.getItem("myGifs")) || [];
-  let gifosIds = ["GJalVbOOHUmRYU7vnY", "GJalVbOOHUmRYU7vnY"];
-  const urlArray = [];
-  console.log(urlArray);
+async function takeLocalInfo() {
+  let gifosIds = JSON.parse(localStorage.getItem("myGifs")) || [];
   if (gifosIds.length) {
-    gifosIds.map(async (id) => {
-      const results = await getGifById(id);
-      urlArray.push(results.data.images.original.url);
-    });
+    const urlArray = await Promise.all(
+      gifosIds.map(async (id) => {
+        const results = await getGifById(id);
+        return results.data.images.original.url;
+      })
+    );
     return urlArray;
   }
+}
+
+export const deleteGifo = () => {
+  console.log("si");
 };

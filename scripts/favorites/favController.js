@@ -19,7 +19,6 @@ export const addToFavorites = async () => {
 
   favorite.favoriteList.push(favoritesInformation);
   localStorage.setItem("favoritesList", JSON.stringify(favorite));
-  // localStorage.setItem("favoritesList", favoritesInformation);
   showfavoritesSection();
 };
 
