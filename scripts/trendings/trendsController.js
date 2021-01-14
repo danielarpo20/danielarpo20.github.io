@@ -15,13 +15,13 @@ const trendingGifosContainer = document.querySelector(
 );
 
 export const showCardExpanded = () => {
-  // console.log('');
-  const idGif = localStorage.getItem("idGif");
-  const gifCard = document.getElementById(idGif);
-  gifSourceCard.setAttribute("src", gifCard.src);
-  userCard.innerText = localStorage.getItem("userGif") || "none";
-  titleCard.innerText = localStorage.getItem("titleGif");
-  expandCard.style.display = "initial";
+  console.log('hola');
+  // const idGif = localStorage.getItem("idGif");
+  // const gifCard = document.getElementById(idGif);
+  // gifSourceCard.setAttribute("src", gifCard.src);
+  // userCard.innerText = localStorage.getItem("userGif") || "none";
+  // titleCard.innerText = localStorage.getItem("titleGif");
+  // expandCard.style.display = "initial";
 };
 
 export const closeCardExpanded = () => {

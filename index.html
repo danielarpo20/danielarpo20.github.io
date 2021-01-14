@@ -64,7 +64,10 @@
               >
             </li>
             <li class="navbar-items-item">
-              <a href="#mygifos" class="navbar-items-item-link" id="mygifos"
+              <a
+                href="#gifosSection"
+                class="navbar-items-item-link"
+                id="mygifos"
                 >mis
                 <span class="navbar-items-item-link-gifos" id="gifos"
                   >gifos</span
@@ -124,7 +127,7 @@
 
         <section class="serchingResult" id="serchingResult">
           <div class="serchingResult-gifGalery">
-            <h1 class="serchingResult-gifGalery-title"></h1>
+            <h3 class="serchingResult-gifGalery-title"></h3>
             <div class="serchingResult-gifGalery-container">
               <div class="serchingResult-gifGalery-container-searchWrapper">
                 <div class="cardBack">
@@ -175,7 +178,7 @@
         </div>
       </section>
 
-      <section class="myGifos" id="mygifos">
+      <section class="myGifos" id="gifosSection">
         <div class="myGifos-wrapper">
           <div class="myGifos-gifGalery">
             <img src="./assetes/icon-mis-gifos.svg" alt="gifos" />
@@ -199,11 +202,8 @@
                     <div class="myGifos-cardBack-iconContainer-icon">
                       <i class="fas fa-arrow-to-bottom"></i>
                     </div>
-                    <div
-                      class="myGifos-cardBack-iconContainer-icon"
-                      id="expandIcon"
-                    >
-                      <i class="fas fa-expand-alt expandIcon"></i>
+                    <div class="myGifos-cardBack-iconContainer-icon">
+                      <i class="fas fa-expand-alt"></i>
                     </div>
                   </div>
                   <div class="myGifos-cardBack-infoContainer">
@@ -271,21 +271,11 @@
             <i class="fal fa-times"></i>
           </div>
           <div class="trending-cardExpanded-imageContainer">
-            <button
-              type="button"
-              class="buttonArrow trending-cardExpanded-imageContainer-buttom"
-              id="previus"
-            >
-              <i class="fas fa-chevron-left"></i>
-            </button>
-            <img class="trending-cardExpanded-imageContainer-image" />
-            <button
-              type="button"
-              class="buttonArrow trending-cardExpanded-imageContainer-buttom"
-              id="next"
-            >
-              <i class="fas fa-chevron-right"></i>
-            </button>
+            <img
+              class="trending-cardExpanded-imageContainer-image"
+              alt=""
+              src="#"
+            />
           </div>
           <div class="trending-cardExpanded-container">
             <div class="trending-cardExpanded-container-info">
@@ -299,7 +289,7 @@
               <div
                 class="trending-cardExpanded-container-containerIcons-dowload"
               >
-                <i class="far fa-arrow-to-bottom"></i>
+                <i class="far fa-arrow-to-bottom cardExpanded-expandIcon"></i>
               </div>
             </div>
           </div>
@@ -351,7 +341,6 @@
                 <div class="createGIF-container-recordContainer">
                   <video
                     id="recordVideo"
-                    autoplay="true"
                     class="createGIF-container-recordContainer-record"
                   >
                     No video support in your Browser

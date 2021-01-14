@@ -991,10 +991,6 @@
     position: relative;
   }
   .trending-cardExpanded-imageContainer {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 50%;
     margin: auto;
   }
   .trending-cardExpanded-imageContainer-buttom {

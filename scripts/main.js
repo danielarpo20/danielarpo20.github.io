@@ -15,6 +15,7 @@ import {
   xIconCardExpandedClick,
   CardMobileClick,
   downloadIconClick,
+  downloadIconCardExpandedClick,
 } from "./trendings/mainTrends.js";
 
 import { heartIconClick } from "./favorites/mainFavorites.js";
@@ -28,6 +29,7 @@ import {
 } from "./principal/principalMain.js";
 
 import { trashIconClick } from "./gifos/mianGifos.js";
+
 import {
   createGifClick,
   buttonStartClick,
@@ -63,6 +65,7 @@ function main() {
   xIconCardExpandedClick();
   CardMobileClick();
   downloadIconClick();
+  downloadIconCardExpandedClick();
 
   heartIconClick();
 

@@ -49,8 +49,11 @@ export function nextButtonClick() {
 }
 
 export function expandIconClick() {
-  const expandIcon = document.querySelector(".fa-arrow-to-bottom");
-  expandIcon.addEventListener("click", showCardExpanded);
+  const expandIcon = document.querySelectorAll(".fa-expand-alt");
+  for(let icon of expandIcon) {
+    console.log(icon);
+    icon.addEventListener("click", showCardExpanded);
+  }
 }
 
 export function xIconCardExpandedClick() {
@@ -65,5 +68,10 @@ export function CardMobileClick() {
 
 export function downloadIconClick() {
   const heartIcon = document.querySelector(".fa-arrow-to-bottom");
+  heartIcon.addEventListener("click", downloadGif);
+}
+
+export function downloadIconCardExpandedClick() {
+  const heartIcon = document.querySelector(".cardExpanded-expandIcon");
   heartIcon.addEventListener("click", downloadGif);
 }
