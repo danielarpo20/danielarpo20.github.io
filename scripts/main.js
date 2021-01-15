@@ -15,7 +15,6 @@ import {
   xIconCardExpandedClick,
   CardMobileClick,
   downloadIconClick,
-  downloadIconCardExpandedClick,
 } from "./trendings/mainTrends.js";
 
 import { heartIconClick } from "./favorites/mainFavorites.js";
@@ -42,7 +41,7 @@ import {
   firstStepButonClick,
 } from "./createGif/mainCreate.js";
 
-function main() {
+async function main() {
   nemuIconClick();
   xIconClick();
   imageClick();
@@ -58,14 +57,13 @@ function main() {
 
   trashIconClick();
 
-  getTrendingsGifs();
+  await getTrendingsGifs();
   previusButtonClick();
   nextButtonClick();
   expandIconClick();
   xIconCardExpandedClick();
   CardMobileClick();
   downloadIconClick();
-  downloadIconCardExpandedClick();
 
   heartIconClick();
 

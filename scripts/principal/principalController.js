@@ -1,4 +1,5 @@
 import { apiConection } from "../apiConection.js";
+import { downloadIconClick, expandIconClick } from "../trendings/mainTrends.js";
 
 const autoComplete = document.querySelector(".principal-bar-autoComplete");
 const searchBar = document.querySelector(".principal-bar-searchBar");
@@ -74,7 +75,7 @@ export const exitAutocomplete = () => {
   introContainer.style.display = "block";
 };
 
-const displaySearchGalery = (gifs, max) => {
+const displaySearchGalery = async (gifs, max) => {
   let data = gifs.data;
   gifWrapper.removeChild(gifWrapper.childNodes[1]);
   for (let i = 0; i < max; i++) {
@@ -99,6 +100,8 @@ const displaySearchGalery = (gifs, max) => {
       gifResultsContainer.appendChild(wrapperClone);
     }
   }
+  await downloadIconClick();
+  await expandIconClick();
 };
 
 const getApiSearchResults = async (param, limit, offset) => {
@@ -129,7 +132,6 @@ export const searchGifByResult = async (event) => {
 
 export const showMoreSearchResults = async () => {
   let nextClick = butonSeeMore.pagination / 12;
-  console.log(nextClick);
   butonSeeMore.click = butonSeeMore.click + 1;
   butonSeeMore.nextValue = butonSeeMore.nextValue + 12;
   const results = await getApiSearchResults(

@@ -20,7 +20,6 @@ export const uploadTogiphy = async (parameters) => {
       parameters
     );
     let requestJson = await request.json();
-    console.log(requestJson);
     return requestJson;
   } catch (error) {}
 };

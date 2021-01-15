@@ -2,22 +2,22 @@ import { getGifById } from "../apiConection.js";
 
 const galeryContainer = document.querySelector(".myGifos-gifGalery-container");
 const gifosNoContent = document.querySelector(".myGifos-gifGalery-noContent");
-const cardBackGifos = document.querySelector(".myGifos-cardBack");
+const cardBackGifos = document.querySelector(".cardBack");
 const gifWrapper = document.querySelector(
   ".myGifos-gifGalery-container-searchWrapper"
 );
 const cardBackGifosUser = document.querySelector(
-  ".myGifos-cardBack-infoContainer-user"
+  ".cardBack-infoContainer-user"
 );
 const cardBackGifosTitle = document.querySelector(
-  ".myGifos-cardBack-infoContainer-title"
+  ".cardBack-infoContainer-title"
 );
 
 export const showGifosGalery = async () => {
   const gifosToShow = await takeLocalInfo();
   if (gifosToShow.length) {
-    gifWrapper.removeChild(gifWrapper.childNodes[1]);
-    galeryContainer.removeChild(galeryContainer.childNodes[1]);
+    // gifWrapper.removeChild(gifWrapper.childNodes[1]);
+    // galeryContainer.removeChild(galeryContainer.childNodes[1]);
     galeryContainer.innerHTML = "";
     gifosNoContent.style.display = "none";
     galeryContainer.style.display = "grid";

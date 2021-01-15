@@ -5,8 +5,8 @@ import {
   showCardMobile,
   goToNextSlide,
   goToPreviusSlide,
-  downloadGif,
 } from "./trendsController.js";
+import { downloadGif } from "../createGif/createController.js";
 
 const gifContainer = document.querySelector(".trending-container-card");
 const gifWrapper = document.querySelector(".trending-container-card-gifs");
@@ -16,8 +16,6 @@ const cardBackTitle = document.querySelector(".cardBack-infoContainer-title");
 
 export const getTrendingsGifs = async () => {
   const results = await apiConection("trending");
-  gifWrapper.removeChild(gifWrapper.childNodes[1]);
-  gifContainer.removeChild(gifContainer.childNodes[1]);
   results.data.map((result, index) => {
     cardBackUser.innerText = result.username || "none";
     cardBackTitle.innerText = result.title;
@@ -50,9 +48,8 @@ export function nextButtonClick() {
 
 export function expandIconClick() {
   const expandIcon = document.querySelectorAll(".fa-expand-alt");
-  for(let icon of expandIcon) {
-    console.log(icon);
-    icon.addEventListener("click", showCardExpanded);
+  for (let iconExp of expandIcon) {
+    iconExp.addEventListener("click", showCardExpanded);
   }
 }
 
@@ -67,11 +64,8 @@ export function CardMobileClick() {
 }
 
 export function downloadIconClick() {
-  const heartIcon = document.querySelector(".fa-arrow-to-bottom");
-  heartIcon.addEventListener("click", downloadGif);
-}
-
-export function downloadIconCardExpandedClick() {
-  const heartIcon = document.querySelector(".cardExpanded-expandIcon");
-  heartIcon.addEventListener("click", downloadGif);
+  const heartIcon = document.querySelectorAll(".fa-arrow-to-bottom");
+  for (let iconDown of heartIcon) {
+    iconDown.addEventListener("click", downloadGif);
+  }
 }

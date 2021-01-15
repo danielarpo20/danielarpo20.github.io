@@ -278,6 +278,7 @@
 .animationCamara-smallTape {
   position: absolute;
   left: 0;
+  top: 0;
   margin-top: -3em;
   -webkit-animation: TapeBig 10s infinite;
           animation: TapeBig 10s infinite;
@@ -1014,12 +1015,12 @@
 }
 
 .fas {
-  padding: .5em;
+  padding: .5em .2em;
   border-radius: 5px;
 }
 
 .far {
-  padding: .5em;
+  padding: .5em .2em;
   border-radius: 5px;
 }
 
@@ -1715,7 +1716,7 @@
   }
 }
 
-.myGifos-gifGalery-container-searchWrapper:hover .myGifos-cardBack {
+.myGifos-gifGalery-container-searchWrapper:hover .cardBack {
   -webkit-transform: rotateX(0) scale(1);
           transform: rotateX(0) scale(1);
 }

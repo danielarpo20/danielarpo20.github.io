@@ -14,14 +14,16 @@ const trendingGifosContainer = document.querySelector(
   ".trending-container-card"
 );
 
-export const showCardExpanded = () => {
-  console.log('hola');
-  // const idGif = localStorage.getItem("idGif");
-  // const gifCard = document.getElementById(idGif);
-  // gifSourceCard.setAttribute("src", gifCard.src);
-  // userCard.innerText = localStorage.getItem("userGif") || "none";
-  // titleCard.innerText = localStorage.getItem("titleGif");
-  // expandCard.style.display = "initial";
+export const showCardExpanded = (event) => {
+  gifSourceCard.setAttribute(
+    "src",
+    event.target.offsetParent.nextElementSibling.currentSrc
+  );
+  userCard.innerText =
+    event.target.offsetParent.lastElementChild.childNodes[1].innerText;
+  titleCard.innerText =
+    event.target.offsetParent.lastElementChild.childNodes[3].innerText;
+  expandCard.style.display = "initial";
 };
 
 export const closeCardExpanded = () => {
@@ -48,16 +50,4 @@ export const goToNextSlide = () => {
 
 export const goToPreviusSlide = () => {
   trendingGifosContainer.scrollLeft -= 400;
-};
-
-export const downloadGif = async (event) => {
-  let url = await fetch(event.url);
-  let blobObject = await url.blob();
-  let objectUrl = URL.createObjectURL(blobObject);
-  let saveGif = document.createElement("a");
-  saveGif.href = objectUrl;
-  saveGif.download = `${event.name}.gif`;
-  document.body.appendChild(saveGif);
-  saveGif.click();
-  document.body.removeChild(saveGif);
 };

@@ -110,9 +110,7 @@ export const stopVideo = async () => {
       recorder.destroy();
       recorder = null;
     });
-  } catch (error) {
-    console.error(error);
-  }
+  } catch (error) {}
   stopTimer();
 };
 
@@ -140,16 +138,13 @@ export const uploadVideo = async () => {
       body: formData,
       json: true,
     };
-    console.log(formData.get("file"));
     let result = await uploadTogiphy(parameters);
     gifCreatedId = result.data.id;
     gifCreatedUrl = `https://media.giphy.com/media/${gifCreatedId}/giphy.gif`;
     updateCardBackMessage();
     saveGifoInLocal(gifCreatedId);
-    location.reload();
-  } catch (error) {
-    console.error(error);
-  }
+    // location.reload();
+  } catch (error) {}
 };
 
 const updateCardBackMessage = () => {
@@ -193,9 +188,25 @@ export const openGifLink = () => {
   window.open(gifCreatedUrl);
 };
 
-export const downloadGif = async () => {
-  let result = await getBlobById(gifCreatedId);
-  const gifUrl = URL.createObjectURL(result);
+export const downloadGif = async (event) => {
+  let url;
+  console.log(event);
+  if (event.target.offsetParent.nextElementSibling) {
+    console.log('peq');
+    url = event.target.offsetParent.nextElementSibling.currentSrc;
+  }
+  if (event.target.offsetParent.childNodes[3].firstElementChild.currentSrc) {
+    url = event.target.offsetParent.childNodes[3].firstElementChild.currentSrc;
+    console.log('gra');
+  }
+  let blobResult;
+  if (url) {
+    let request = await fetch(url);
+    blobResult = await request.blob();
+  } else {
+    blobResult = await getBlobById(gifCreatedId);
+  }
+  const gifUrl = URL.createObjectURL(blobResult);
   const saveGif = document.createElement("a");
   saveGif.href = gifUrl;
   saveGif.download = "myGifo.gif";

@@ -75,16 +75,16 @@
               </a>
             </li>
           </ul>
-          <a href="#createGif" class="navbar-link" id="create">
+          <form action="#createGif" class="navbar-link" id="create">
             <button type="button" class="gifCreation">
               <i class="fal fa-plus gifCreation-icon"></i>
             </button>
-          </a>
+          </form>
         </nav>
       </div>
     </header>
 
-    <main class="general">
+    <main>
       <section class="principal">
         <div class="principal-wrapper">
           <h1 class="principal-title">
@@ -130,23 +130,25 @@
             <h3 class="serchingResult-gifGalery-title"></h3>
             <div class="serchingResult-gifGalery-container">
               <div class="serchingResult-gifGalery-container-searchWrapper">
+
                 <div class="cardBack">
                   <div class="cardBack-iconContainer">
-                    <div class="cardBack-iconContainer-icon">
+                    <button type="button" class="cardBack-iconContainer-icon">
                       <i class="far fa-heart"></i>
-                    </div>
-                    <div class="cardBack-iconContainer-icon">
+                    </button>
+                    <button type="button" class="cardBack-iconContainer-icon">
                       <i class="fas fa-arrow-to-bottom"></i>
-                    </div>
-                    <div class="cardBack-iconContainer-icon" id="expandIcon">
+                    </button>
+                    <button type="button" class="cardBack-iconContainer-icon">
                       <i class="fas fa-expand-alt"></i>
-                    </div>
+                    </buttons>
                   </div>
                   <div class="cardBack-infoContainer">
                     <h6 class="cardBack-infoContainer-user"></h6>
                     <p class="cardBack-infoContainer-title"></p>
                   </div>
                 </div>
+
               </div>
             </div>
             <button type="button" class="button" id="seeMoreButtonSearch">
@@ -193,25 +195,7 @@
               </h3>
             </div>
             <div class="myGifos-gifGalery-container">
-              <div class="myGifos-gifGalery-container-searchWrapper">
-                <div class="myGifos-cardBack">
-                  <div class="myGifos-cardBack-iconContainer">
-                    <div class="myGifos-cardBack-iconContainer-icon" id="trash">
-                      <i class="fas fa-trash-alt"></i>
-                    </div>
-                    <div class="myGifos-cardBack-iconContainer-icon">
-                      <i class="fas fa-arrow-to-bottom"></i>
-                    </div>
-                    <div class="myGifos-cardBack-iconContainer-icon">
-                      <i class="fas fa-expand-alt"></i>
-                    </div>
-                  </div>
-                  <div class="myGifos-cardBack-infoContainer">
-                    <h6 class="myGifos-cardBack-infoContainer-user"></h6>
-                    <p class="myGifos-cardBack-infoContainer-title"></p>
-                  </div>
-                </div>
-              </div>
+              <div class="myGifos-gifGalery-container-searchWrapper"></div>
             </div>
             <button type="button" class="button" id="seeMoreGifos">
               VER MÁS
@@ -237,25 +221,7 @@
             <i class="fas fa-chevron-left"></i>
           </button>
           <div class="trending-container-card">
-            <div class="trending-container-card-gifs">
-              <div class="cardBack">
-                <div class="cardBack-iconContainer">
-                  <div class="cardBack-iconContainer-icon">
-                    <i class="far fa-heart"></i>
-                  </div>
-                  <div class="cardBack-iconContainer-icon">
-                    <i class="fas fa-arrow-to-bottom"></i>
-                  </div>
-                  <div class="cardBack-iconContainer-icon">
-                    <i class="fas fa-expand-alt"></i>
-                  </div>
-                </div>
-                <div class="cardBack-infoContainer">
-                  <h6 class="cardBack-infoContainer-user"></h6>
-                  <p class="cardBack-infoContainer-title"></p>
-                </div>
-              </div>
-            </div>
+            <div class="trending-container-card-gifs"></div>
           </div>
           <button
             type="button"
@@ -289,7 +255,7 @@
               <div
                 class="trending-cardExpanded-container-containerIcons-dowload"
               >
-                <i class="far fa-arrow-to-bottom cardExpanded-expandIcon"></i>
+                <i class="far fa-arrow-to-bottom"></i>
               </div>
             </div>
           </div>
@@ -316,11 +282,10 @@
             />
             <img
               src="./assetes/element_cinta1.svg"
-              alt="cinta-pequela"
+              alt="cinta-pequeña"
               class="animationCamara-smallTape"
             />
           </div>
-
           <div class="createGIF-container">
             <div class="createGIF-container-square">
               <div class="createGIF-container-square-video">
@@ -380,7 +345,6 @@
                 </div>
               </div>
             </div>
-
             <div class="createGIF-container-buttoms">
               <button type="button" class="buttonPagination" id="one">1</button>
               <button type="button" class="buttonPagination" id="two">2</button>
@@ -424,8 +388,6 @@
             alt="pelicula"
             class="movieTape createGIF-tape"
           />
-          <!-- <img src="./assetes/pelicula-modo-noc.svg" alt=""> -->
-          <!-- <img src="./assetes/camara.svg" alt="camara" /> -->
         </div>
       </section>
     </main>
