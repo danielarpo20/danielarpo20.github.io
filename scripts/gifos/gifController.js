@@ -1,4 +1,6 @@
 import { getGifById } from "../apiConection.js";
+import { downloadIconClick, expandIconClick } from "../trendings/mainTrends.js";
+import { heartIconClick } from "../favorites/mainFavorites.js";
 
 const galeryContainer = document.querySelector(".myGifos-gifGalery-container");
 const gifosNoContent = document.querySelector(".myGifos-gifGalery-noContent");
@@ -37,6 +39,9 @@ export const showGifosGalery = async () => {
       galeryContainer.appendChild(gifWrapperClone);
     });
   }
+  await downloadIconClick();
+  await expandIconClick();
+  await heartIconClick();
 };
 
 async function takeLocalInfo() {

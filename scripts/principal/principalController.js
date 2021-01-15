@@ -1,5 +1,6 @@
 import { apiConection } from "../apiConection.js";
 import { downloadIconClick, expandIconClick } from "../trendings/mainTrends.js";
+import { heartIconClick } from "../favorites/mainFavorites.js";
 
 const autoComplete = document.querySelector(".principal-bar-autoComplete");
 const searchBar = document.querySelector(".principal-bar-searchBar");
@@ -102,6 +103,7 @@ const displaySearchGalery = async (gifs, max) => {
   }
   await downloadIconClick();
   await expandIconClick();
+  await heartIconClick();
 };
 
 const getApiSearchResults = async (param, limit, offset) => {

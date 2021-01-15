@@ -192,12 +192,10 @@ export const downloadGif = async (event) => {
   let url;
   console.log(event);
   if (event.target.offsetParent.nextElementSibling) {
-    console.log('peq');
     url = event.target.offsetParent.nextElementSibling.currentSrc;
   }
   if (event.target.offsetParent.childNodes[3].firstElementChild.currentSrc) {
     url = event.target.offsetParent.childNodes[3].firstElementChild.currentSrc;
-    console.log('gra');
   }
   let blobResult;
   if (url) {

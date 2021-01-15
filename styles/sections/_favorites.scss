@@ -78,3 +78,7 @@
         }
     }
 }
+
+.gifGalery-container:hover .cardBack {
+    transform: rotateX(0) scale(1);
+}

@@ -1,22 +1,29 @@
+import { showfavoritesSection } from "../helper.js";
+
 const heartIcon = document.querySelector(".fa-heart");
 const storedFavorites = localStorage.getItem("favoritesList");
 const galeryNoContent = document.querySelector(".gifGalery-noContent");
 const gifGaleryContainer = document.querySelector(".gifGalery-container");
 
-export const addToFavorites = async () => {
+export const addToFavorites = async (event) => {
+  let url;
+  if (event.target.offsetParent.nextElementSibling) {
+    url = event.target.offsetParent.nextElementSibling.currentSrc;
+  }
+  if (event.target.offsetParent.childNodes[3].firstElementChild.currentSrc) {
+    url = event.target.offsetParent.childNodes[3].firstElementChild.currentSrc;
+  }
+  console.log(event);
+
   heartIcon.className = "fas fa-heart";
 
   const favorite = {};
   favorite.favoriteList = [];
-
   const favoritesInformation = {
-    id: localStorage.getItem("idGif"),
-    user: localStorage.getItem("userGif"),
-    title: localStorage.getItem("titleGif"),
-    src: localStorage.getItem("gif"),
-    isActive: localStorage.setItem("isActive", true),
+    user: event.target.offsetParent.lastElementChild.children[0].innerText,
+    title: event.target.offsetParent.lastElementChild.children[1].innerText,
+    src: url,
   };
-
   favorite.favoriteList.push(favoritesInformation);
   localStorage.setItem("favoritesList", JSON.stringify(favorite));
   showfavoritesSection();
