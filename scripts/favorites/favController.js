@@ -1,9 +1,23 @@
 import { showfavoritesSection } from "../helper.js";
+import { downloadIconClick, expandIconClick } from "../trendings/mainTrends.js";
+import { heartIconClick } from "../favorites/mainFavorites.js";
 
-const heartIcon = document.querySelector(".fa-heart");
-const storedFavorites = localStorage.getItem("favoritesList");
-const galeryNoContent = document.querySelector(".gifGalery-noContent");
-const gifGaleryContainer = document.querySelector(".gifGalery-container");
+const cardBackGifos = document.querySelector(".cardBack");
+const galeryNoContent = document.querySelector(
+  ".favorites-gifGalery-noContent"
+);
+const gifGaleryContainer = document.querySelector(
+  ".favorites-gifGalery-container"
+);
+const cardBackGifosUser = document.querySelector(
+  ".cardBack-infoContainer-user"
+);
+const cardBackGifosTitle = document.querySelector(
+  ".cardBack-infoContainer-title"
+);
+const gifWrapper = document.querySelector(
+  ".favorites-gifGalery-container-searchWrapper"
+);
 
 export const addToFavorites = async (event) => {
   let url;
@@ -13,35 +27,44 @@ export const addToFavorites = async (event) => {
   if (event.target.offsetParent.childNodes[3].firstElementChild.currentSrc) {
     url = event.target.offsetParent.childNodes[3].firstElementChild.currentSrc;
   }
-  console.log(event);
+  event.originalTarget.className = "fas fa-heart";
 
-  heartIcon.className = "fas fa-heart";
-
-  const favorite = {};
-  favorite.favoriteList = [];
+  let favoriteList = JSON.parse(localStorage.getItem("favoritesList")) || [];
+  console.log(favoriteList);
   const favoritesInformation = {
     user: event.target.offsetParent.lastElementChild.children[0].innerText,
     title: event.target.offsetParent.lastElementChild.children[1].innerText,
     src: url,
   };
-  favorite.favoriteList.push(favoritesInformation);
-  localStorage.setItem("favoritesList", JSON.stringify(favorite));
+  console.log(favoritesInformation);
+  favoriteList.push(favoritesInformation);
+  localStorage.setItem("favoritesList", JSON.stringify(favoriteList));
   showfavoritesSection();
 };
 
-export const getFavoritesList = async () => {
-  // Get info from local storage
-  // let storedFavorites = true
-  if (storedFavorites) {
+export const showFavoritesGalery = async () => {
+  let favLocal = JSON.parse(localStorage.getItem("favoritesList")) || [];
+  if (favLocal.length) {
+    gifGaleryContainer.innerHTML = "";
     galeryNoContent.style.display = "none";
     gifGaleryContainer.style.display = "grid";
-    let card = document.createElement("img");
-    card.src = localStorage.getItem("gif");
-    card.style.width = "100%";
-    document.body.clientWidth < 1350
-      ? (card.style.height = "10em")
-      : (card.style.height = "15em");
-    card.style.marginBottom = "2em";
-    gifGaleryContainer.appendChild(card);
+    favLocal.map((fav) => {
+      cardBackGifosUser.innerText = fav.user;
+      cardBackGifosTitle.innerText = fav.title;
+      let gifWrapperClone = gifWrapper.cloneNode(true);
+      let cardBackGifosClone = cardBackGifos.cloneNode(true);
+      let card = document.createElement("img");
+      card.src = fav.src;
+      card.alt = "favorites gifs";
+      card.user = "";
+      card.style.width = "100%";
+      card.style.height = "100%";
+      gifWrapperClone.appendChild(cardBackGifosClone);
+      gifWrapperClone.appendChild(card);
+      gifGaleryContainer.appendChild(gifWrapperClone);
+    });
   }
+  await downloadIconClick();
+  await expandIconClick();
+  await heartIconClick();
 };

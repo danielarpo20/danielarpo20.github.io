@@ -7,7 +7,7 @@
 
     &-gifGalery {
         text-align: center;
-        padding: 6em 0 4em;
+        padding: 6em 0 0;
         max-width: $maxWdthMobile;
         margin: auto;
 
@@ -23,7 +23,7 @@
         }
 
         &-noContent {
-            padding-top: 5em;
+            padding-top: 5em 0;
             width: $maxWdthMobile;
             margin: auto;
 
@@ -33,17 +33,22 @@
                 font-weight: 700px;
                 font-size: 22px;
                 line-height: 33px;
+                margin: 0;
+                padding-top: 1em;
             }
         }
 
         &-container {
-            display: none;
             padding: 2em 0 3em;
-            // display: grid;
+            display: none;
             grid-template-columns: repeat(2, 1fr);
             grid-row-gap: 1em;
             grid-column-gap: 5%;
         }
+    }
+
+    &-cardBack {
+        display: none;
     }
 }
 
@@ -68,17 +73,75 @@
             }
 
             &-noContent {
-                padding-top: 7em;
+                padding: 5em 2em;
                 width: 40%;
             }
 
             &-container {
                 grid-template-columns: repeat(4, 1fr);
+                padding: 4em 0 5em;
+
+                &-searchWrapper {
+                    position: relative;
+                    height: 200px;
+                }
+            }
+        }
+
+        &-cardBack {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: var(--navbar-bg-mobile);
+            transform: rotateX(90deg) scale(0);
+            transition: all 0.4s ease;
+
+            &-iconContainer {
+                display: flex;
+                align-self: end;
+                margin: 1em 1em;
+
+                &-icon {
+                    background-color: $color-white-opacity7;
+                    border-radius: 5px;
+                    color: var(--icon-text-color);
+                    text-align: center;
+                    margin-left: .5em;
+                    cursor: pointer;
+                }
+
+                :hover {
+                    background-color: $color-white;
+                }
+            }
+
+            &-infoContainer {
+                font-family: $Roboto;
+                padding: 0 1em 2em 1em;
+                text-align: left;
+
+                &-user {
+                    margin: 0;
+                    font-size: 15px;
+                    font-weight: 300;
+                    color: $color-white;
+                    padding-bottom: .5em;
+                }
+
+                &-title {
+                    margin: 0;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $color-white;
+                }
             }
         }
     }
 }
 
-.gifGalery-container:hover .cardBack {
+.favorites-gifGalery-container-searchWrapper:hover .cardBack {
     transform: rotateX(0) scale(1);
 }

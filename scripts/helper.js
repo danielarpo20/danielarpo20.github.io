@@ -1,5 +1,5 @@
 import { CloseMenuMobile } from "./navbar/navController.js";
-import { getFavoritesList } from "./favorites/favController.js";
+import { showFavoritesGalery } from "./favorites/favController.js";
 import { showGifosGalery } from "./gifos/gifController.js";
 
 const principalSection = document.querySelector(".principal");
@@ -50,7 +50,7 @@ export const showfavoritesSection = async () => {
   createSection.style.display = "none";
   searchSection.style.display = "none";
   CloseMenuMobile();
-  getFavoritesList();
+  showFavoritesGalery();
 };
 
 export const showGifosSection = async () => {
