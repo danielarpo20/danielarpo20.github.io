@@ -13,12 +13,17 @@ const getCardExpanded = document.querySelector(".trending-cardExpanded");
 const trendingGifosContainer = document.querySelector(
   ".trending-container-card"
 );
+const iconHeartCardExpand = document.querySelector(
+  ".trending-cardExpanded-container-containerIcons-heart"
+);
 
 export const showCardExpanded = (event) => {
   gifSourceCard.setAttribute(
     "src",
     event.target.offsetParent.nextElementSibling.currentSrc
   );
+  iconHeartCardExpand.firstElementChild.className =
+    event.target.offsetParent.childNodes[1].childNodes[1].firstElementChild.className;
   userCard.innerText =
     event.target.offsetParent.lastElementChild.childNodes[1].innerText;
   titleCard.innerText =

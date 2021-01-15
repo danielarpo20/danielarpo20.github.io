@@ -8,6 +8,7 @@
     --text-color: #000000;
     --icon-hover: #572EE5;
     --line-color: #572EE5;
+    --backgroundCardExpanded: rgba(255, 255, 255, 0.9);
 }
 
 [data-theme='dark'] {
@@ -19,6 +20,7 @@
     --text-color: #FFFFFF;
     --icon-hover: #FFFFFF;
     --line-color: #000000;
+    --backgroundCardExpanded: rgba(34, 34, 34, 0.95);
 }
 
 $color-white: #FFFFFF;

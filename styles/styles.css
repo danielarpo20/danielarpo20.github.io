@@ -7,6 +7,7 @@
   --text-color: #000000;
   --icon-hover: #572EE5;
   --line-color: #572EE5;
+  --backgroundCardExpanded: rgba(255, 255, 255, 0.9);
 }
 
 [data-theme='dark'] {
@@ -18,6 +19,7 @@
   --text-color: #FFFFFF;
   --icon-hover: #FFFFFF;
   --line-color: #000000;
+  --backgroundCardExpanded: rgba(34, 34, 34, 0.95);
 }
 
 .gifCreation {
@@ -227,7 +229,7 @@
   .cardBack-iconContainer-icon {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 5px;
-    color: var(--icon-text-color);
+    color: var(--line-color);
     text-align: center;
     margin-left: .5em;
     cursor: pointer;
@@ -862,7 +864,7 @@
 
 .trending-cardExpanded {
   display: none;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--backgroundCardExpanded);
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -872,9 +874,9 @@
 
 .trending-cardExpanded-iconX {
   color: var(--icon-text-color);
-  font-size: 25px;
+  font-size: 30px;
   text-align: right;
-  margin: 2em 5%;
+  margin: 2em 15%;
   cursor: pointer;
 }
 
@@ -935,6 +937,7 @@
 
 .trending-cardExpanded-container-containerIcons-heart {
   color: var(--icon-text-color);
+  text-align: center;
   font-size: 20px;
   margin-right: .5em;
   height: 2em;

@@ -44,7 +44,7 @@
 
     &-cardExpanded {
         display: none;
-        background: $color-white-opacity9;
+        background: var(--backgroundCardExpanded);
         width: 100vw;
         height: 100vh;
         position: fixed;
@@ -53,9 +53,9 @@
 
         &-iconX {
             color: var(--icon-text-color);
-            font-size: 25px;
+            font-size: 30px;
             text-align: right;
-            margin: 2em 5%;
+            margin: 2em 15%;
             cursor: pointer;
         }
 
@@ -104,6 +104,7 @@
 
                 &-heart {
                     color: var(--icon-text-color);
+                    text-align: center;
                     font-size: $size20;
                     margin-right: .5em;
                     height: 2em;

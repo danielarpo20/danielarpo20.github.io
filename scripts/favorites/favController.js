@@ -30,13 +30,11 @@ export const addToFavorites = async (event) => {
   event.originalTarget.className = "fas fa-heart";
 
   let favoriteList = JSON.parse(localStorage.getItem("favoritesList")) || [];
-  console.log(favoriteList);
   const favoritesInformation = {
     user: event.target.offsetParent.lastElementChild.children[0].innerText,
     title: event.target.offsetParent.lastElementChild.children[1].innerText,
     src: url,
   };
-  console.log(favoritesInformation);
   favoriteList.push(favoritesInformation);
   localStorage.setItem("favoritesList", JSON.stringify(favoriteList));
   showfavoritesSection();
@@ -53,6 +51,8 @@ export const showFavoritesGalery = async () => {
       cardBackGifosTitle.innerText = fav.title;
       let gifWrapperClone = gifWrapper.cloneNode(true);
       let cardBackGifosClone = cardBackGifos.cloneNode(true);
+      cardBackGifosClone.childNodes[1].firstElementChild.firstElementChild.className =
+        "fas fa-heart";
       let card = document.createElement("img");
       card.src = fav.src;
       card.alt = "favorites gifs";
