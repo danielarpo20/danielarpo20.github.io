@@ -23,8 +23,8 @@ export const showGifosGalery = async () => {
     galeryContainer.innerHTML = "";
     gifosNoContent.style.display = "none";
     galeryContainer.style.display = "grid";
-    iconTrash.firstElementChild.className = "fas fa-trash-alt";
     gifosToShow.map((gifo, index) => {
+      iconTrash.firstElementChild.className = "fas fa-trash-alt";
       cardBackGifosUser.innerText = "Yo :3";
       cardBackGifosTitle.innerText = "My Gifo";
       let gifWrapperClone = gifWrapper.cloneNode(true);
@@ -71,5 +71,10 @@ export const removeGifo = async (event) => {
   });
   localGifs.splice(idToRemove, 1);
   localStorage.setItem("myGifs", JSON.stringify(localGifs));
-  showGifosGalery();
+  if (!localGifs.length) {
+    gifosNoContent.style.display = "block";
+    galeryContainer.style.display = "none";
+  } else {
+    showGifosGalery();
+  }
 };
