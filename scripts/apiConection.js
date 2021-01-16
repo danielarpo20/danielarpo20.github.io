@@ -1,7 +1,7 @@
 let URL = "https://api.giphy.com/v1/gifs/";
 let URL_UPLOAD = "https://upload.giphy.com/v1/gifs";
 let URL_GETBYID = "https://media.giphy.com/media/";
-let API_KEY = "PtK7NH6K9Gk0Ja94EylfMy08G62HUnNj";
+let API_KEY = "bK5xZQSv0Z4vMDD4cZ0W8xGItGGQj8aB";
 
 export const apiConection = async (route, param, limit, offset) => {
   try {
