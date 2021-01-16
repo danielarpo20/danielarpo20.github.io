@@ -1,6 +1,6 @@
 # GIFOS PROJECT - ACAMICA
 
-This project use HTML, CSS, SASS and JAVASCRIPT and use 'mobile first' approach.
+This project uses HTML, CSS, SASS and JAVASCRIPT and use 'mobile first' approach.
 
 # Resources
 
