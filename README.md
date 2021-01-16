@@ -18,11 +18,11 @@ This project use HTML, CSS, SASS and JAVASCRIPT and use 'mobile first' approach.
 ## Web Site Url
 
 ```
-
+https://danielarpo20.github.io/	
 ```
 
 ## Repository Url
 
 ```
-https://github.com/danielarpo20/GIFOSacamica/tree/develop
+https://github.com/danielarpo20/GIFOSacamica
 ```
