@@ -1,6 +1,7 @@
 import { getGifById } from "../apiConection.js";
 import { downloadIconClick, expandIconClick } from "../trendings/mainTrends.js";
 import { heartIconClick } from "../favorites/mainFavorites.js";
+import { trashIconClick } from "./mianGifos.js";
 
 const galeryContainer = document.querySelector(".myGifos-gifGalery-container");
 const gifosNoContent = document.querySelector(".myGifos-gifGalery-noContent");
@@ -14,6 +15,7 @@ const cardBackGifosUser = document.querySelector(
 const cardBackGifosTitle = document.querySelector(
   ".cardBack-infoContainer-title"
 );
+const iconTrash = document.querySelector(".trash");
 
 export const showGifosGalery = async () => {
   const gifosToShow = await takeLocalInfo();
@@ -21,12 +23,14 @@ export const showGifosGalery = async () => {
     galeryContainer.innerHTML = "";
     gifosNoContent.style.display = "none";
     galeryContainer.style.display = "grid";
+    iconTrash.firstElementChild.className = "fas fa-trash-alt";
     gifosToShow.map((gifo, index) => {
       cardBackGifosUser.innerText = "Yo :3";
       cardBackGifosTitle.innerText = "My Gifo";
       let gifWrapperClone = gifWrapper.cloneNode(true);
       let cardBackGifosClone = cardBackGifos.cloneNode(true);
       let gifCard = document.createElement("img");
+      gifCard.id = index;
       gifCard.src = gifo;
       gifCard.alt = "My gifo";
       gifCard.user = "Personal";
@@ -40,6 +44,7 @@ export const showGifosGalery = async () => {
   await downloadIconClick();
   await expandIconClick();
   await heartIconClick();
+  await trashIconClick();
 };
 
 async function takeLocalInfo() {
@@ -55,6 +60,19 @@ async function takeLocalInfo() {
   }
 }
 
-export const deleteGifo = () => {
-  console.log("si");
+export const removeGifo = async (event) => {
+  let localGifs = JSON.parse(localStorage.getItem("myGifs")) || [];
+  let gifoIdToRemove = event.target.offsetParent.nextSibling.id;
+  console.log(localGifs);
+  console.log(gifoIdToRemove);
+  let idToRemove;
+  localGifs.forEach((gifo, index) => {
+    if (index == gifoIdToRemove) {
+      idToRemove = index;
+    }
+  });
+  console.log(idToRemove);
+  localGifs.splice(idToRemove, 1);
+  localStorage.setItem("myGifs", JSON.stringify(localGifs));
+  showGifosGalery();
 };
