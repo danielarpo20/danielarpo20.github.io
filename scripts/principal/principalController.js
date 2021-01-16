@@ -23,9 +23,6 @@ const gifWrapper = document.querySelector(
   ".serchingResult-gifGalery-container-searchWrapper"
 );
 const cardBack = document.querySelector(".cardBack");
-const gifContainer = document.querySelector(
-  ".serchingResult-gifGalery-container"
-);
 
 export const updatePositionsBar = async () => {
   searchBar.style.marginLeft = "4em";
@@ -76,9 +73,18 @@ export const exitAutocomplete = () => {
   introContainer.style.display = "block";
 };
 
+export const noShowResult = () => {
+  exitAutocomplete();
+  searchingSection.style.display = "none";
+  searchNoResults.style.display = "none";
+  introContainer.style.display = "block";
+};
+
 const displaySearchGalery = async (gifs, max) => {
   let data = gifs.data;
-  gifWrapper.removeChild(gifWrapper.childNodes[1]);
+  if (gifWrapper.childNodes[1]) {
+    gifWrapper.removeChild(gifWrapper.childNodes[1]);
+  }
   for (let i = 0; i < max; i++) {
     if (!data[i]) {
       butonSeeMore.style.display = "none";

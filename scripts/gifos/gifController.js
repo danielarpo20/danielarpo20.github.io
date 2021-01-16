@@ -17,9 +17,7 @@ const cardBackGifosTitle = document.querySelector(
 
 export const showGifosGalery = async () => {
   const gifosToShow = await takeLocalInfo();
-  if (gifosToShow.length) {
-    // gifWrapper.removeChild(gifWrapper.childNodes[1]);
-    // galeryContainer.removeChild(galeryContainer.childNodes[1]);
+  if (gifosToShow && gifosToShow.length) {
     galeryContainer.innerHTML = "";
     gifosNoContent.style.display = "none";
     galeryContainer.style.display = "grid";

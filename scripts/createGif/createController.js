@@ -50,7 +50,6 @@ export const showVideo = async () => {
   firstButom.style.backgroundColor = "transparent";
   firstButom.style.color = currentTheme === "dark" ? "#FFFFFF" : "#572EE5";
   startButon.style.display = "none";
-  recordButon.style.display = "inherit";
   upGifoButon.style.display = "none";
   repeatLink.style.display = "none";
   await getStream();
@@ -70,6 +69,8 @@ const getStream = async () => {
     streamContainer = stream;
     video.srcObject = stream;
     video.play();
+    recordButon.style.display = "inherit";
+    video.style.display = "inherit";
     return stream;
   } catch (error) {
     alert("Unable to capture your camera.");
@@ -143,7 +144,6 @@ export const uploadVideo = async () => {
     gifCreatedUrl = `https://media.giphy.com/media/${gifCreatedId}/giphy.gif`;
     updateCardBackMessage();
     saveGifoInLocal(gifCreatedId);
-    // location.reload();
   } catch (error) {}
 };
 
@@ -218,4 +218,12 @@ export const saveGifoInLocal = (gifUrl) => {
   let actualGif = JSON.parse(localStorage.getItem("myGifs")) || [];
   actualGif.push(gifUrl);
   localStorage.setItem("myGifs", JSON.stringify(actualGif));
+};
+
+export const refreshNewRecord = () => {
+  const currentTheme = getCurrentTheme();
+  cardBackContainer.style.display = "none";
+  thirdButom.style.backgroundColor = "transparent";
+  thirdButom.style.color = currentTheme === "dark" ? "#FFFFFF" : "#572EE5";
+  startButon.style.display = "inherit";
 };

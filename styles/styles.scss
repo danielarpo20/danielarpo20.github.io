@@ -2,15 +2,11 @@
 @import './lib/variables';
 
 // Common styles
-@import './lib/darkMode';
+@import './lib/variables';
 
 // Components
 @import './components/buttons';
-@import './components/cardHover';
-@import './components/searchBox';
-@import './components/loadingVideo';
 @import './components/lineStyle';
-@import './components/gifGalery';
 @import './components/cardBack';
 
 // Animations

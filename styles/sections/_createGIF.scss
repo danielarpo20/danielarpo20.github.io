@@ -114,7 +114,7 @@
 
                 &-iconContainer {
                     display: none;
-                    align-self: end;
+                    justify-content: end;
                     margin: 1em 1em;
 
                     &-icon {
@@ -124,6 +124,7 @@
                         text-align: center;
                         margin-left: .5em;
                         cursor: pointer;
+                        padding: 0 .5em;
                     }
 
                     :hover {

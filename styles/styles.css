@@ -22,6 +22,30 @@
   --backgroundCardExpanded: rgba(34, 34, 34, 0.95);
 }
 
+:root {
+  --background-light: #FFFFFF;
+  --icon-text-color: #572EE5;
+  --buttom-hover: #FFFFFF;
+  --navbar-bg-mobile: rgba(87, 46, 229, 0.90);
+  --background-dark: #F3F5F8;
+  --text-color: #000000;
+  --icon-hover: #572EE5;
+  --line-color: #572EE5;
+  --backgroundCardExpanded: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme='dark'] {
+  --background-light: #37383C;
+  --icon-text-color: #FFFFFF;
+  --buttom-hover: #000000;
+  --navbar-bg-mobile: rgba(34, 34, 34, 0.95);
+  --background-dark: #222326;
+  --text-color: #FFFFFF;
+  --icon-hover: #FFFFFF;
+  --line-color: #000000;
+  --backgroundCardExpanded: rgba(34, 34, 34, 0.95);
+}
+
 .gifCreation {
   display: none;
 }
@@ -125,72 +149,6 @@
 .lineDown {
   height: 5px;
   background-color: var(--line-color);
-}
-
-.gifGalery {
-  text-align: center;
-  padding: 6em 0 4em;
-  max-width: 90%;
-  margin: auto;
-}
-
-.gifGalery-title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  color: var(--icon-text-color);
-  text-align: center;
-  line-height: 30px;
-  text-transform: capitalize;
-  margin: 0;
-}
-
-.gifGalery-noContent {
-  padding-top: 5em;
-  width: 90%;
-  margin: auto;
-}
-
-.gifGalery-noContent-content {
-  color: #50E3C2;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700px;
-  font-size: 22px;
-  line-height: 33px;
-}
-
-.gifGalery-container {
-  display: none;
-  padding: 2em 0 3em;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  grid-row-gap: 1em;
-  grid-column-gap: 5%;
-}
-
-@media screen and (min-width: 768px) {
-  .gifGalery-container {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 2em;
-  }
-}
-
-@media screen and (min-width: 1350px) {
-  .gifGalery {
-    max-width: 80%;
-  }
-  .gifGalery-title {
-    font-size: 25px;
-  }
-  .gifGalery-noContent {
-    padding-top: 5em;
-    width: 40%;
-  }
-  .gifGalery-container {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 .cardBack {
@@ -1250,9 +1208,9 @@
 
 .createGIF-container-recordContainer-cardBack-iconContainer {
   display: none;
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   margin: 1em 1em;
 }
 
@@ -1263,6 +1221,7 @@
   text-align: center;
   margin-left: .5em;
   cursor: pointer;
+  padding: 0 .5em;
 }
 
 .createGIF-container-recordContainer-cardBack-iconContainer :hover {

@@ -5,6 +5,7 @@ import {
   uploadVideo,
   openGifLink,
   downloadGif,
+  refreshNewRecord,
 } from "./createController.js";
 import { showCreatePage } from "../helper.js";
 
@@ -52,5 +53,5 @@ export function downloadButonClick() {
 
 export function firstStepButonClick() {
   const oneButton = document.querySelector("#one");
-  oneButton.addEventListener("click", showVideo);
+  oneButton.addEventListener("click", refreshNewRecord);
 }

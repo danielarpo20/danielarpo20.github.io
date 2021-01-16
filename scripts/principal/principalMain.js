@@ -1,7 +1,7 @@
 import {
   getWatedResults,
   updatePositionsBar,
-  exitAutocomplete,
+  noShowResult,
   searchGifByResult,
   showMoreSearchResults,
 } from "./principalController.js";
@@ -18,7 +18,7 @@ export function TypeSearchBar() {
 
 export function xIconSearchBarClick() {
   const xIconSearchBar = document.querySelector(".principal-bar-iconX");
-  xIconSearchBar.addEventListener("click", exitAutocomplete);
+  xIconSearchBar.addEventListener("click", noShowResult);
 }
 
 export function listResultsClick() {

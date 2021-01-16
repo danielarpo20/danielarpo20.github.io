@@ -1,4 +1,3 @@
-const cardBack = document.querySelector(".cardBack");
 const expandCard = document.querySelector(".trending-cardExpanded");
 const titleCard = document.querySelector(
   ".trending-cardExpanded-container-info-title"

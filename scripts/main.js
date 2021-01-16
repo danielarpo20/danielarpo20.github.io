@@ -48,15 +48,12 @@ async function main() {
   changeModeClick();
   favoritesLinkClick();
   gifosLinkClick();
-
   TypeSearchBar();
   searchBarClick();
   xIconSearchBarClick();
   listResultsClick();
   butonSeeMoreClick();
-
   trashIconClick();
-
   await getTrendingsGifs();
   previusButtonClick();
   nextButtonClick();
@@ -64,9 +61,7 @@ async function main() {
   xIconCardExpandedClick();
   CardMobileClick();
   downloadIconClick();
-
   heartIconClick();
-
   createGifClick();
   buttonStartClick();
   buttonRecordClick();

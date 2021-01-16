@@ -37,7 +37,7 @@ export const switchTheme = (mode) => {
     localStorage.setItem("theme", "light");
   }
   CloseMenuMobile();
-  activeLinksMenu()
+  activeLinksMenu();
 };
 
 const setNewLogo = (mode, theme) => {
