@@ -190,7 +190,6 @@ export const openGifLink = () => {
 
 export const downloadGif = async (event) => {
   let url;
-  console.log(event);
   if (event.target.offsetParent.nextElementSibling) {
     url = event.target.offsetParent.nextElementSibling.currentSrc;
   }

@@ -63,15 +63,12 @@ async function takeLocalInfo() {
 export const removeGifo = async (event) => {
   let localGifs = JSON.parse(localStorage.getItem("myGifs")) || [];
   let gifoIdToRemove = event.target.offsetParent.nextSibling.id;
-  console.log(localGifs);
-  console.log(gifoIdToRemove);
   let idToRemove;
   localGifs.forEach((gifo, index) => {
     if (index == gifoIdToRemove) {
       idToRemove = index;
     }
   });
-  console.log(idToRemove);
   localGifs.splice(idToRemove, 1);
   localStorage.setItem("myGifs", JSON.stringify(localGifs));
   showGifosGalery();
