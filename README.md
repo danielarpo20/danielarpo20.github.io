@@ -1,6 +1,7 @@
 # GIFOS PROJECT - ACAMICA
 
 This project uses HTML, CSS, SASS and JAVASCRIPT and use 'mobile first' approach.
+You can see the project [Here](https://danielarpo20.github.io/	)
 
 # Resources
 
@@ -24,5 +25,5 @@ https://danielarpo20.github.io/
 ## Repository Url
 
 ```
-https://github.com/danielarpo20/GIFOSacamica
+https://github.com/danielarpo20/danielarpo20.github.io
 ```
