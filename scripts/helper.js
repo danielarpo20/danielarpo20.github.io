@@ -1,6 +1,7 @@
 import { CloseMenuMobile } from "./navbar/navController.js";
 import { showFavoritesGalery } from "./favorites/favController.js";
 import { showGifosGalery } from "./gifos/gifController.js";
+import { refreshNewRecord } from "./createGif/createController.js";
 
 const principalSection = document.querySelector(".principal");
 const trendingsSection = document.querySelector(".trending");
@@ -70,6 +71,7 @@ export const showGifosSection = async () => {
 
 export const showCreatePage = async () => {
   activeLinksMenu();
+  refreshNewRecord();
   const currentTheme = getCurrentTheme();
   gifCreation.style.background = "#9CAFC3";
   gifCreation.style.color = "#FFFFFF";
