@@ -16,6 +16,8 @@ const cardBackTitle = document.querySelector(".cardBack-infoContainer-title");
 
 export const getTrendingsGifs = async () => {
   const results = await apiConection("trending");
+  console.log(gifContainer);
+  gifContainer.removeChild(gifContainer.childNodes[1])
   results.data.map((result, index) => {
     cardBackUser.innerText = result.username || "none";
     cardBackTitle.innerText = result.title;
