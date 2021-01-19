@@ -33,13 +33,10 @@ export const updatePositionsBar = async () => {
 export const getWatedResults = async (event) => {
   const result = await apiConection("search/tags", event.target.value);
   if (event.code === "Enter") {
-    if (!result.data.length) {
-      searchNoResults.style.display = "block";
-      introContainer.style.display = "none";
-    } else {
-      searchGifByResult(result.data[0]);
-      updatePositionsBar();
-    }
+    let newEvent = event;
+    newEvent.name = event.target.value;
+    searchGifByResult(newEvent);
+    updatePositionsBar();
   }
   if (result.data.length) {
     autoComplete.innerHTML = "";
@@ -122,8 +119,12 @@ const getApiSearchResults = async (param, limit, offset) => {
 };
 
 export const searchGifByResult = async (event) => {
+  let searchValue;
+  searchValue = event.name ? event.name : event.target.textContent;
+  if (!searchValue) {
+    searchValue = searchBar.value;
+  }
   exitAutocomplete();
-  const searchValue = event.target ? event.target.textContent : event.name;
   event.user = searchValue;
   butonSeeMore.value = searchValue;
   butonSeeMore.style.display = "inline-block";
@@ -134,8 +135,14 @@ export const searchGifByResult = async (event) => {
   introContainer.style.display = "none";
   gifResultsContainer.innerHTML = "";
   let data = await getApiSearchResults(searchValue);
-  butonSeeMore.pagination = data.count;
-  displaySearchGalery(data, 12);
+  if (!data.data.length) {
+    searchNoResults.style.display = "block";
+    introContainer.style.display = "none";
+    butonSeeMore.style.display = "none";
+  } else {
+    butonSeeMore.pagination = data.count;
+    displaySearchGalery(data, 12);
+  }
 };
 
 export const showMoreSearchResults = async () => {

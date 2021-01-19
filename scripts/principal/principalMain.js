@@ -28,6 +28,11 @@ export function listResultsClick() {
   autocompleteResult.addEventListener("click", searchGifByResult);
 }
 
+export function iconSearchClick() {
+  const searchIcon = document.querySelector(".principal-bar-icon");
+  searchIcon.addEventListener("click", searchGifByResult);
+}
+
 export function butonSeeMoreClick() {
   const butonSeeMore = document.querySelector("#seeMoreButtonSearch");
   butonSeeMore.addEventListener("click", showMoreSearchResults);

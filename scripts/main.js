@@ -24,6 +24,7 @@ import {
   searchBarClick,
   xIconSearchBarClick,
   listResultsClick,
+  iconSearchClick,
   butonSeeMoreClick,
 } from "./principal/principalMain.js";
 
@@ -52,6 +53,7 @@ async function main() {
   searchBarClick();
   xIconSearchBarClick();
   listResultsClick();
+  iconSearchClick();
   butonSeeMoreClick();
   trashIconClick();
   await getTrendingsGifs();
