@@ -60,8 +60,10 @@ export function xIconCardExpandedClick() {
 }
 
 export function CardMobileClick() {
-  const card = document.querySelector(".trending-container-card-gifs");
-  card.addEventListener("click", showCardMobile);
+  const cards = document.querySelectorAll(".trending-container-card-gifs");
+  for (let card of cards) {
+    card.addEventListener("click", showCardMobile);
+  }
 }
 
 export function downloadIconClick() {

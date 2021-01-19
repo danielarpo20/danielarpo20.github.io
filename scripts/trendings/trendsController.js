@@ -15,6 +15,7 @@ const trendingGifosContainer = document.querySelector(
 const iconHeartCardExpand = document.querySelector(
   ".trending-cardExpanded-container-containerIcons-heart"
 );
+const cardBackUser = document.querySelector(".cardBack-infoContainer");
 
 export const showCardExpanded = (event) => {
   gifSourceCard.setAttribute(
@@ -34,16 +35,12 @@ export const closeCardExpanded = () => {
   getCardExpanded.style.display = "none";
 };
 
-export const showCardMobile = () => {
+export const showCardMobile = (event) => {
   if (document.activeElement.clientWidth < 1350) {
-    document.onmouseover = function (event) {
-      const getIdElementHovered = event.target.id;
-    };
-    const idGif = localStorage.getItem("idGif");
-    const gifCard = document.getElementById(idGif);
+    const gifCard = document.getElementById(event.target.id);
     gifSourceCard.setAttribute("src", gifCard.src);
-    userCard.innerText = localStorage.getItem("userGif") || "none";
-    titleCard.innerText = localStorage.getItem("titleGif");
+    userCard.innerText = cardBackUser.childNodes[1].innerText || "none";
+    titleCard.innerText = cardBackUser.childNodes[3].innerText;
     getCardExpanded.style.display = "initial";
   }
 };
