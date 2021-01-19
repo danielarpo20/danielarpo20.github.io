@@ -34,7 +34,7 @@ export const addToFavorites = async (event) => {
     title: event.target.offsetParent.lastElementChild.children[1].innerText,
     src: url,
   };
-  favoriteList.push(favoritesInformation);
+  favoriteList.unshift(favoritesInformation);
   localStorage.setItem("favoritesList", JSON.stringify(favoriteList));
   showfavoritesSection();
 };
