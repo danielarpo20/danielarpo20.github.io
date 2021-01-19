@@ -27,8 +27,7 @@ export const addToFavorites = async (event) => {
   if (event.target.offsetParent.childNodes[3].firstElementChild.currentSrc) {
     url = event.target.offsetParent.childNodes[3].firstElementChild.currentSrc;
   }
-  event.originalTarget.className = "fas fa-heart";
-
+  event.target.className = "fas fa-heart";
   let favoriteList = JSON.parse(localStorage.getItem("favoritesList")) || [];
   const favoritesInformation = {
     user: event.target.offsetParent.lastElementChild.children[0].innerText,
